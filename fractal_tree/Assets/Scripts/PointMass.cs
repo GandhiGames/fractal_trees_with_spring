@@ -26,7 +26,7 @@ public class PointMass
         m_Damping *= factor;
     }
 
-    public void Update()
+    public void DoUpdate()
     {
         velocity += m_Acceleration;
         position += velocity;

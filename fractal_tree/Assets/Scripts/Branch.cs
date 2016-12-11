@@ -8,21 +8,20 @@ namespace FractalTree
     public class Branch : MonoBehaviour
     {
         public static float LengthDegradation = 0.67f;
+		public PointMass startPoint { get { return m_Spring.start; } }
+		public PointMass endPoint { get { return m_Spring.end; } }
 
-        public Vector2 start { get { return m_PointMass[0].position; } }
-        public Vector2 end { get { return m_PointMass[1].position; } }
         public float thickness;
-        public Color color;
+        
+		public Color color;
         public Branch owner;
-        public bool hasBranched { get; set; }
+        
+		public bool hasBranched { get; set; }
 
         private SpriteRenderer m_Renderer;
-
         private Vector2 m_PreviousStart;
         private Vector2 m_PreviousEnd;
-
         private Spring m_Spring;
-        private PointMass[] m_PointMass;
 
         void Awake()
         {
@@ -33,7 +32,7 @@ namespace FractalTree
         public void Setup(Branch owner, Vector2 end, float thickness, Color color)
         {
             this.owner = owner;
-            Setup(owner.start, end, thickness, color);
+			Setup(owner.endPoint.position, end, thickness, color);
         }
 
         public void Setup(Vector2 start, Vector2 end, float thickness, Color color)
@@ -41,11 +40,12 @@ namespace FractalTree
             this.thickness = thickness;
             this.color = color;
 
-            m_PointMass = new PointMass[2];
-            m_PointMass[0] = new PointMass(start, 1f);
-            m_PointMass[1] = new PointMass(end, 1f);
+           // m_PointMass = new PointMass[2];
+           // m_PointMass[0] = new PointMass(start, 1f);
+           // m_PointMass[1] = new PointMass(end, 1f);
 
-            m_Spring.Setup(m_PointMass[0], m_PointMass[1], 0.002f, 0.02f);
+			m_Spring.Setup(new PointMass(start, 1f), 
+				new PointMass(end, 1f), 0.002f, 0.02f);
 
             UpdateSprite();
             UpdateColor();
@@ -55,9 +55,9 @@ namespace FractalTree
         {
             var newBranch = ((GameObject)Instantiate(gameObject)).GetComponent<Branch>();
 
-            var dir = (end - start) * LengthDegradation;
+			var dir = (endPoint.position - startPoint.position) * LengthDegradation;
             var dirRot = dir.Rotate(angle);
-            var newEnd = end + dirRot;
+			var newEnd = endPoint.position + dirRot;
 
             newBranch.Setup(this, newEnd, this.thickness, this.color);
 
@@ -68,22 +68,16 @@ namespace FractalTree
         {
             if (owner != null)
             {
-                m_PointMass[0].position = owner.end;
+				startPoint.position = owner.endPoint.position;
             }
 
             m_Spring.DoUpdate();
 
-            foreach(var point in m_PointMass)
-            {
-                point.Update();
-            }
-
             // position not updated this step.
-            if (m_PreviousStart != start || m_PreviousEnd != end) 
+			if (m_PreviousStart != startPoint.position || m_PreviousEnd != endPoint.position) 
             {
                 UpdateSprite();
             }
-
 
             UpdateColor();
 
@@ -92,15 +86,17 @@ namespace FractalTree
 
         private void UpdateSprite()
         {
-            m_PreviousStart = start;
-            m_PreviousEnd = end;
+			m_PreviousStart = startPoint.position;
+			m_PreviousEnd = endPoint.position;
 
-            var heading = end - start;
+			var heading = endPoint.position - startPoint.position;
             var distance = heading.magnitude;
             var direction = heading / distance;
 
             //Debug.Log("Start: " + start);
-            Vector3 centerPos = new Vector3(start.x + end.x, start.y + end.y) / 2;
+            Vector3 centerPos = new Vector3(
+				startPoint.position.x + endPoint.position.x, 
+				startPoint.position.y + endPoint.position.y) * 0.5f;
             m_Renderer.transform.position = centerPos;
 
             // angle

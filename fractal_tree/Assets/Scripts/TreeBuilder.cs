@@ -55,10 +55,23 @@ namespace FractalTree
 
         void Update()
         {
+			if (Input.GetMouseButtonUp (0)) {
+				foreach (var branch in m_Branches) {
+					branch.endPoint.ApplyForce(10 * Vector2.down * 1f / (10 + Vector2.Distance(Input.mousePosition, branch.startPoint.position)));
+				}
+			}
+			
             foreach(var branch in m_Branches)
             {
-                branch.DoUpdate();
+            	branch.DoUpdate();
             }
+
+
+			foreach(var branch in m_Branches)
+			{
+				branch.startPoint.DoUpdate();
+				branch.endPoint.DoUpdate();
+			}
         }
 
     }

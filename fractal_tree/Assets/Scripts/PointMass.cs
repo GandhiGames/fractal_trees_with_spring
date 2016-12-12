@@ -9,10 +9,12 @@ public class PointMass
 
     private Vector2 m_Acceleration;
     private float m_Damping = 0.98f;
+    private Vector2 m_TargetPos;
 
     public PointMass(Vector2 position, float invMass)
     {
         this.position = position;
+        m_TargetPos = position;
         inverseMass = invMass;
     }
 
@@ -28,16 +30,22 @@ public class PointMass
 
     public void DoUpdate()
     {
-        velocity += m_Acceleration;
-        position += velocity;
-        m_Acceleration = Vector2.zero;
+        m_Acceleration += (m_TargetPos - position) * .5f * inverseMass;
 
-        if (velocity.sqrMagnitude < 0.001f * 0.001f)
+       if (m_Acceleration != Vector2.zero)
         {
-            velocity = Vector2.zero;
-        }
+            velocity += m_Acceleration;
+            position += velocity;
+            m_Acceleration = Vector2.zero;
 
-        velocity *= m_Damping;
-        m_Damping = 0.98f;
+            if (velocity.sqrMagnitude < 0.001f * 0.001f)
+            {
+                velocity = Vector2.zero;
+
+            }
+
+            velocity *= m_Damping;
+            m_Damping = 0.98f;
+        }
     }
 }

@@ -51,13 +51,25 @@ namespace FractalTree
                     }
                 }
             }
+
+           
         }
 
         void Update()
         {
-			if (Input.GetMouseButtonUp (0)) {
+       
+			if (Input.GetMouseButton(0)) {
 				foreach (var branch in m_Branches) {
-					branch.endPoint.ApplyForce(10 * Vector2.down * 1f / (10 + Vector2.Distance(Input.mousePosition, branch.startPoint.position)));
+                    Vector2 pos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
+
+                    float distance = Vector2.Distance(pos, branch.endPoint.position);
+
+                    if (distance < 10f)
+                    {
+                        Vector2 dir = (branch.endPoint.position - pos).normalized;
+                        branch.endPoint.ApplyForce((dir * .1f) /
+                            (distance * 4f));
+                    }
 				}
 			}
 			

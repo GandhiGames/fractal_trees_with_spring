@@ -12,8 +12,15 @@ namespace FractalTree
 		public PointMass endPoint { get { return m_Spring.end; } }
 
         public float thickness;
-        
-		public Color color;
+        public Color color
+        {
+            set
+            {
+                m_Color = value;
+                m_ColorUpdateRequired = true;
+            }
+        }
+
         public Branch owner;
         
 		public bool hasBranched { get; set; }
@@ -22,6 +29,8 @@ namespace FractalTree
         private Vector2 m_PreviousStart;
         private Vector2 m_PreviousEnd;
         private Spring m_Spring;
+        private Color m_Color;
+        private bool m_ColorUpdateRequired = false;
 
         void Awake()
         {
@@ -29,23 +38,31 @@ namespace FractalTree
             m_Spring = GetComponent<Spring>();
         }
 
-        public void Setup(Branch owner, Vector2 end, float thickness, Color color)
+        public void Setup(Branch owner, Vector2 end, 
+            float thickness, Color color)
         {
             this.owner = owner;
-			Setup(owner.endPoint.position, end, thickness, color);
+           
+            Setup(owner.endPoint.position, end, thickness, color);
         }
 
-        public void Setup(Vector2 start, Vector2 end, float thickness, Color color)
+        public void Setup(Vector2 start, Vector2 end, 
+            float thickness, Color color)
         {
             this.thickness = thickness;
-            this.color = color;
+            this.m_Color = color;
 
-           // m_PointMass = new PointMass[2];
-           // m_PointMass[0] = new PointMass(start, 1f);
-           // m_PointMass[1] = new PointMass(end, 1f);
+            // m_PointMass = new PointMass[2];
+            // m_PointMass[0] = new PointMass(start, 1f);
+            // m_PointMass[1] = new PointMass(end, 1f);
 
-			m_Spring.Setup(new PointMass(start, 1f), 
-				new PointMass(end, 1f), 0.002f, 0.02f);
+
+            float stiffness = 0.1f;
+            float damping = 0.96f;
+            float invMass = 0.1f;
+
+			m_Spring.Setup(new PointMass(start, 0f), 
+				new PointMass(end, invMass), stiffness, damping);
 
             UpdateSprite();
             UpdateColor();
@@ -59,7 +76,7 @@ namespace FractalTree
             var dirRot = dir.Rotate(angle);
 			var newEnd = endPoint.position + dirRot;
 
-            newBranch.Setup(this, newEnd, this.thickness, this.color);
+            newBranch.Setup(this, newEnd, this.thickness, this.m_Color);
 
             return newBranch;
         }
@@ -71,7 +88,9 @@ namespace FractalTree
 				startPoint.position = owner.endPoint.position;
             }
 
-            m_Spring.DoUpdate();
+         
+
+             m_Spring.DoUpdate();
 
             // position not updated this step.
 			if (m_PreviousStart != startPoint.position || m_PreviousEnd != endPoint.position) 
@@ -79,7 +98,11 @@ namespace FractalTree
                 UpdateSprite();
             }
 
-            UpdateColor();
+            if (m_ColorUpdateRequired)
+            {
+                UpdateColor();
+                m_ColorUpdateRequired = false;
+            }
 
         
         }
@@ -111,7 +134,7 @@ namespace FractalTree
 
         private void UpdateColor()
         {
-            m_Renderer.color = color;
+            m_Renderer.color = m_Color;
         }
 
         void Update()

@@ -23,7 +23,6 @@ public class Spring : MonoBehaviour
         var x = start.position - end.position;
 
         float length = x.magnitude;
-  
 
         x = (x / length) * (length - targetLength);
         var dv = end.velocity - start.velocity;

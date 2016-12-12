@@ -25,9 +25,9 @@ namespace FractalTree
         
 		public bool hasBranched { get; set; }
 
+        private static readonly float SPRITE_SIZE = 100f / 100f; // 10 = pixels of line sprite, 5f = pixels per units of line sprite.
+
         private SpriteRenderer m_Renderer;
-        private Vector2 m_PreviousStart;
-        private Vector2 m_PreviousEnd;
         private Spring m_Spring;
         private Color m_Color;
         private bool m_ColorUpdateRequired = false;
@@ -52,17 +52,14 @@ namespace FractalTree
             this.thickness = thickness;
             this.m_Color = color;
 
-            // m_PointMass = new PointMass[2];
-            // m_PointMass[0] = new PointMass(start, 1f);
-            // m_PointMass[1] = new PointMass(end, 1f);
+            const float stiffness = 0.1f;
+            const float damping = 0.96f;
+            const float stationary = 0f;
+            const float moveable = 0.1f;
+            const float bounceBackForce = 0.5f;
 
-
-            float stiffness = 0.1f;
-            float damping = 0.96f;
-            float invMass = 0.1f;
-
-			m_Spring.Setup(new PointMass(start, 0f), 
-				new PointMass(end, invMass), stiffness, damping);
+			m_Spring.Setup(new PointMass(start, stationary, bounceBackForce), 
+				new PointMass(end, moveable, bounceBackForce), stiffness, damping);
 
             UpdateSprite();
             UpdateColor();
@@ -81,20 +78,21 @@ namespace FractalTree
             return newBranch;
         }
 
-        public void DoUpdate()
+        void Update()
         {
+        
             if (owner != null)
             {
 				startPoint.position = owner.endPoint.position;
+                
             }
 
-         
+            startPoint.DoUpdate();
+            endPoint.DoUpdate();
 
-             m_Spring.DoUpdate();
-
-            // position not updated this step.
-			if (m_PreviousStart != startPoint.position || m_PreviousEnd != endPoint.position) 
+            if(startPoint.forceApplied || endPoint.forceApplied)
             {
+                m_Spring.DoUpdate();
                 UpdateSprite();
             }
 
@@ -109,17 +107,14 @@ namespace FractalTree
 
         private void UpdateSprite()
         {
-			m_PreviousStart = startPoint.position;
-			m_PreviousEnd = endPoint.position;
-
 			var heading = endPoint.position - startPoint.position;
             var distance = heading.magnitude;
             var direction = heading / distance;
 
-            //Debug.Log("Start: " + start);
-            Vector3 centerPos = new Vector3(
+            var centerPos = new Vector2(
 				startPoint.position.x + endPoint.position.x, 
 				startPoint.position.y + endPoint.position.y) * 0.5f;
+
             m_Renderer.transform.position = centerPos;
 
             // angle
@@ -127,8 +122,7 @@ namespace FractalTree
             m_Renderer.transform.rotation = Quaternion.AngleAxis(angle, Vector3.forward);
 
             //length
-            var objectWidthSize = 10f / 5f; // 10 = pixels of line sprite, 5f = pixels per units of line sprite.
-            m_Renderer.transform.localScale = new Vector3(distance / objectWidthSize + 0.0041f, thickness, m_Renderer.transform.localScale.z);
+            m_Renderer.transform.localScale = new Vector3(distance / SPRITE_SIZE + 0.0041f, thickness, m_Renderer.transform.localScale.z);
  
         }
 
@@ -137,9 +131,5 @@ namespace FractalTree
             m_Renderer.color = m_Color;
         }
 
-        void Update()
-        {
-            //end += new Vector2(Random.Range(-.01f, .01f), Random.Range(-.01f, .01f));
-        }
     }
 }

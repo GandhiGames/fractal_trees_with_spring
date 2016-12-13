@@ -12,15 +12,14 @@ namespace FractalTree
         private GameObject m_BranchPrefab;
         private Transform m_Owner;
         private float[] m_Angles;
-        private bool m_IsStatic;
         private float m_Thickness;
 
-        public DefaultTree(int growth, float initialLength, 
+        public DefaultTree(int growth, float initialLength,
             float lengthDegredation, float angle, float thickness,
             GameObject branchPrefab, Transform owner)
         {
-    
-            Branch.LengthDegradation = lengthDegredation;
+            StationaryBranch.LengthDegradation = lengthDegredation;
+            MovingBranchImpl.LengthDegradation = lengthDegredation;
 
             m_GrowthCount = growth;
             m_InitialLength = initialLength;
@@ -34,14 +33,14 @@ namespace FractalTree
             m_Angles[1] = -m_Angle;
         }
 
-        public List<Branch> Generate()
+        public List<T> Generate<T>() where T : Branch
         {
-            var branches = new List<Branch>();
+            var branches = new List<T>();
 
-            var branch = ((GameObject)MonoBehaviour.Instantiate(m_BranchPrefab)).GetComponent<Branch>();
+            var branch = ((GameObject)MonoBehaviour.Instantiate(m_BranchPrefab)).GetComponent<T>();
 
             Vector2 start = m_Owner.transform.position;
-            Vector2 end = (Vector2) m_Owner.transform.position + (Vector2.up * m_InitialLength);
+            Vector2 end = (Vector2)m_Owner.transform.position + (Vector2.up * m_InitialLength);
             branch.Setup(start, end, m_Thickness, Color.white);
             branches.Add(branch);
 
@@ -55,7 +54,7 @@ namespace FractalTree
                     {
                         foreach (var ang in m_Angles)
                         {
-                            var newBranch = branches[j].DoBranching(ang);
+                            var newBranch = branches[j].DoBranching<T>(ang);
                             newBranch.transform.SetParent(m_Owner);
                             branches.Add(newBranch);
                         }

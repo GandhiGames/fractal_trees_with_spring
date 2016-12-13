@@ -4,14 +4,8 @@ using UnityEngine;
 
 namespace FractalTree
 {
-    public interface Tree
-    {
-        List<Branch> Generate();
-    }
-
     public class TreeBuilder : MonoBehaviour
     {
-        public bool isStatic = false;
 
         public enum TreeType
         {
@@ -29,8 +23,11 @@ namespace FractalTree
         public float thickness = 0.4f;
 
         [Header("L Tree")]
+        public bool lTreeAutoWidth = true;
+        public bool lTreeMassBasedOnWidth = true;
+        public float lTreeWidth = 0.03f;
         public int steps = 4;
-        public string axiom = "F";
+        public string axiom = "FX";
         public LRule[] rules = new LRule[]{
             // F = forward
             // + = rotate right
@@ -38,94 +35,37 @@ namespace FractalTree
             // [ = save state
             // ] = restore state
 
-            new LRule('F', "FF+[+F-F-F]-[-F+F+F]")
+            new LRule('F', "C0FF-[C1-F+F]+[C2+F-F]"),
+            new LRule('X', "C0FF+[C1+F]+[C3-F]")
         };
         public float lTreeBranchLength = 0.2f;
         public float lTreeAngle = 25f;
+        public Color[] lTreeColours;
 
-        private List<Branch> m_Branches = new List<Branch>();
-
-        void Start()
+        protected Tree CreateTree()
         {
-            // m_Branches.AddRange().Generate());
-
             Tree tree = null;
 
             switch (treeType)
             {
+   
+
                 case TreeType.Default:
-                   tree = new DefaultTree(growthCount, initialLength,
-                                lengthDegradation, angle, thickness,
-                                branchPrefab, transform);
+                    tree = new DefaultTree(growthCount, initialLength,
+                                 lengthDegradation, angle, thickness,
+                                 branchPrefab, transform);
                     break;
                 case TreeType.LTree:
                     tree = new LTree(branchPrefab, steps,
-                                axiom, rules, lTreeBranchLength, lTreeAngle, transform, isStatic);
+                                axiom, rules, lTreeBranchLength,
+                                lTreeAngle, transform, lTreeColours, lTreeWidth, 
+                                lTreeAutoWidth, lTreeMassBasedOnWidth);
                     break;
             }
 
-           
-            m_Branches.AddRange(tree.Generate());
+            return tree;
         }
-
-
-        public void ApplyDirectedForce(Vector2 force, Vector2 position, float radius)
-        {
-            if(isStatic)
-            {
-                return;
-            }
-
-            foreach (var branch in m_Branches)
-            {
-                float distance = Vector2.Distance(position, branch.endPoint.position);
-
-                if (distance < radius)
-                {
-                    branch.endPoint.ApplyForce(force / (distance * 4f));
-                }
-            }
-        }
-
-        public void ApplyPushForce(float force, Vector2 position, float radius)
-        {
-            if (isStatic)
-            {
-                return;
-            }
-
-            foreach (var branch in m_Branches)
-            {
-                float distance = Vector2.Distance(position, branch.endPoint.position);
-
-                if (distance < radius)
-                {
-                    Vector2 dir = (branch.endPoint.position - position).normalized;
-                    branch.endPoint.ApplyForce((force * dir) / (distance * 4f));
-                    branch.endPoint.IncreaseDamping(0.5f);
-                }
-            }
-        }
-
-        public void ApplyPullForce(float force, Vector2 position, float radius)
-        {
-            if (isStatic)
-            {
-                return;
-            }
-
-            foreach (var branch in m_Branches)
-            {
-                float distance = Vector2.Distance(position, branch.endPoint.position);
-
-                if (distance < radius)
-                {
-                    branch.endPoint.ApplyForce(force * (position - branch.endPoint.position) / (distance * 4f));
-                    branch.endPoint.IncreaseDamping(0.6f);
-                }
-            }
-        }
-
     }
-}
 
+    
+}

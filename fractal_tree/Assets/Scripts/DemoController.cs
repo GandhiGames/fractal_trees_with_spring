@@ -7,7 +7,7 @@ namespace FractalTree
 {
     public class DemoController : MonoBehaviour
     {
-        public TreeBuilder tree;
+        public MovingTreeBuilder tree;
 
         public enum ForceType
         {
@@ -44,7 +44,7 @@ namespace FractalTree
         private void ApplyPushForce()
         {
             Vector2 pos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
-            tree.ApplyPushForce(0.4f, pos, 5f);
+            tree.ApplyPushForce(1f, pos, 20f);
         }
 
         private void ApplyPullForce()

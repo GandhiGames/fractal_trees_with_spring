@@ -4,97 +4,112 @@ using UnityEngine;
 
 namespace FractalTree
 {
-    public class StationaryBranch : MonoBehaviour, Branch
-    {
-        public static float LengthDegradation = 0.67f;
+	public class StationaryBranch : MonoBehaviour, Branch
+	{
+		public static float LengthDegradation = 0.67f;
 
-        public Vector2 startPos { get; private set; }
-        public Vector2 endPos { get; private set; }
-        public bool hasBranched { get; set; }
-        public Color color
-        {
-            set
-            {
-                UpdateColor(value);
-            }
-        }
+		public Vector2 colonizationDir { get; set; }
 
-        private static readonly float SPRITE_SIZE = 100f / 100f; // pixels of line sprite / pixels per units.
-        private float m_Thickness;
-        private SpriteRenderer m_Renderer;
+		public int colonizationLeafCount { get; set; }
 
-        void Awake()
-        {
-            m_Renderer = GetComponent<SpriteRenderer>();
-        }
+		public Vector2 startPos { get; private set; }
 
-        public void Setup(Branch owner, Vector2 end,
-           float thickness, Color color)
-        {
-            Setup(owner.endPos, end, thickness, color, false);
-        }
+		public Vector2 endPos { get; private set; }
 
-        public void Setup(Branch owner, Vector2 end,
-                float thickness, Color color, bool autoMass)
-        {
-            Setup(owner.endPos, end, thickness, color, autoMass);
-        }
+		public bool hasBranched { get; set; }
 
-        public void Setup(Vector2 start, Vector2 end,
-            float thickness, Color color)
-        {
-            Setup(start, end, thickness, color, false);
-        }
+		public Color color {
+			set {
+				UpdateColor (value);
+			}
+		}
 
-        public void Setup(Vector2 start, Vector2 end,
-            float thickness, Color color, bool autoMass)
-        {
-            this.m_Thickness = thickness;
-            startPos = start;
-            endPos = end;
+		private static readonly float SPRITE_SIZE = 100f / 100f;
+		// pixels of line sprite / pixels per units.
+		private float m_Thickness;
+		private SpriteRenderer m_Renderer;
 
-            UpdateSprite();
-            UpdateColor(color);
-        }
+		void Awake ()
+		{
+			m_Renderer = GetComponent<SpriteRenderer> ();
+		}
 
-        public T DoBranching<T>(float angle) where T : Branch
-        {
-            var newBranch = ((GameObject)Instantiate(gameObject)).GetComponent<T>();
+		public void Setup (Branch owner, Vector2 end,
+		                        float thickness, Color color)
+		{
+			Setup (owner.endPos, end, thickness, color, false);
+		}
 
-            var dir = (endPos - startPos) * LengthDegradation;
-            var dirRot = dir.Rotate(angle);
-            var newEnd = endPos + dirRot;
+		public void Setup (Branch owner, Vector2 end,
+		                        float thickness, Color color, bool autoMass)
+		{
+			Setup (owner.endPos, end, thickness, color, autoMass);
+		}
 
-            newBranch.Setup(this, newEnd, this.m_Thickness, m_Renderer.color);
+		public void Setup (Vector2 start, Vector2 end,
+		                        float thickness, Color color)
+		{
+			Setup (start, end, thickness, color, false);
+		}
 
-            return newBranch;
-        }
+		public void Setup (Vector2 start, Vector2 end,
+		                        float thickness, Color color, bool autoMass)
+		{
+			this.m_Thickness = thickness;
+			startPos = start;
+			endPos = end;
+
+			colonizationDir = end - start;
+			colonizationLeafCount = 0;
+
+			UpdateSprite ();
+			UpdateColor (color);
+		}
+
+		public T DoBranching<T> (float angle) where T : Branch
+		{
+			var newBranch = ((GameObject)Instantiate (gameObject)).GetComponent<T> ();
+
+			var dir = (endPos - startPos) * LengthDegradation;
+			var dirRot = dir.Rotate (angle);
+			var newEnd = endPos + dirRot;
+
+			newBranch.Setup (this, newEnd, this.m_Thickness, m_Renderer.color);
+
+			return newBranch;
+		}
 
 
-        private void UpdateSprite()
-        {
-            var heading = endPos - startPos;
-            var distance = heading.magnitude;
-            var direction = heading / distance;
+		private void UpdateSprite ()
+		{
+			var heading = endPos - startPos;
+			var distance = heading.magnitude;
+			var direction = heading / distance;
 
-            var centerPos = new Vector2(
-                startPos.x + endPos.x,
-                startPos.y + endPos.y) * 0.5f;
+			var centerPos = new Vector2 (
+				                         startPos.x + endPos.x,
+				                         startPos.y + endPos.y) * 0.5f;
 
-            m_Renderer.transform.position = centerPos;
+			m_Renderer.transform.position = centerPos;
 
-            // angle
-            float angle = Mathf.Atan2(direction.y, direction.x) * Mathf.Rad2Deg;
-            m_Renderer.transform.rotation = Quaternion.AngleAxis(angle, Vector3.forward);
+			// angle
+			float angle = Mathf.Atan2 (direction.y, direction.x) * Mathf.Rad2Deg;
+			m_Renderer.transform.rotation = Quaternion.AngleAxis (angle, Vector3.forward);
 
-            //length
-            m_Renderer.transform.localScale = new Vector3(distance / SPRITE_SIZE + 0.0041f, m_Thickness, m_Renderer.transform.localScale.z);
+			//length
+			m_Renderer.transform.localScale = new Vector3 (distance / SPRITE_SIZE + 0.0041f, m_Thickness, m_Renderer.transform.localScale.z);
 
-        }
+		}
 
-        private void UpdateColor(Color color)
-        {
-            m_Renderer.color = color;
-        }
-    }
+		public void DoReset()
+		{
+			colonizationDir = endPos - startPos;
+			colonizationLeafCount = 0;
+		}
+
+		private void UpdateColor (Color color)
+		{
+			m_Renderer.color = color;
+		}
+	}
 }

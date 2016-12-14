@@ -19,3 +19,5 @@
 /Users/robertwells/Documents/fractal_trees_with_spring/fractal_tree/Temp/bin/Debug/Unity.CecilTools.dll
 /Users/robertwells/Documents/fractal_trees_with_spring/fractal_tree/Temp/bin/Debug/Mono.Cecil.Pdb.dll
 /Users/robertwells/Documents/fractal_trees_with_spring/fractal_tree/Temp/bin/Debug/Mono.Cecil.Mdb.dll
+/Users/robertwells/Documents/fractal_trees_with_spring/fractal_tree/Temp/bin/Debug/UnityEngine.Advertisements.dll
+/Users/robertwells/Documents/fractal_trees_with_spring/fractal_tree/Temp/bin/Debug/UnityEngine.Purchasing.dll

@@ -30,9 +30,9 @@ namespace FractalTree
         {
             foreach (var branch in m_Branches)
             {
-                float distance = Vector2.Distance(position, branch.endPoint.position);
+				float distance = (branch.endPoint.position - position).sqrMagnitude;
 
-                if (distance < radius)
+				if (distance < radius * radius)
                 {
                     branch.endPoint.ApplyForce(force / (distance * 4f));
                 }
@@ -41,15 +41,16 @@ namespace FractalTree
 
         public void ApplyPushForce(float force, Vector2 position, float radius)
         {
+			
             foreach (var branch in m_Branches)
             {
-                float distance = Vector2.Distance(position, branch.endPoint.position);
+				Vector2 heading = branch.endPoint.position - position;
+				float distanceSqr = heading.sqrMagnitude;
 
-                if (distance < radius)
+				if (distanceSqr < radius * radius)
                 {
-                    Vector2 dir = (branch.endPoint.position - position).normalized;
-                    branch.endPoint.ApplyForce((force * dir) / (distance * 4f));
-                    branch.endPoint.IncreaseDamping(0.5f);
+					branch.endPoint.ApplyForce((force * heading) / (distanceSqr * distanceSqr));
+                    branch.endPoint.IncreaseDamping(0.6f);
                 }
             }
         }

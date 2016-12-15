@@ -1,0 +1,14 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.12">
+  <compounddef id="dir_d16969d06c8d775cd7c7921f8b687385" kind="dir">
+    <compoundname>Branch</compoundname>
+    <innerfile refid="_branch_8cs">Branch.cs</innerfile>
+    <innerfile refid="_moving_branch_impl_8cs">MovingBranchImpl.cs</innerfile>
+    <innerfile refid="_stationary_branch_8cs">StationaryBranch.cs</innerfile>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="/Users/robertwells/Documents/fractal_trees_with_spring/fractal_tree/Assets/Scripts/Fractal Trees/Branch/"/>
+  </compounddef>
+</doxygen>

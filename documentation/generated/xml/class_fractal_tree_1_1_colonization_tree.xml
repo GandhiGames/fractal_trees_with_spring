@@ -1,0 +1,383 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.12">
+  <compounddef id="class_fractal_tree_1_1_colonization_tree" kind="class" language="C#" prot="public">
+    <compoundname>FractalTree::ColonizationTree</compoundname>
+    <basecompoundref refid="interface_fractal_tree_1_1_tree" prot="public" virt="non-virtual">FractalTree.Tree</basecompoundref>
+      <sectiondef kind="private-static-attrib">
+      <memberdef kind="variable" id="class_fractal_tree_1_1_colonization_tree_1a332a9324b760117c602abee4de37ab36" prot="private" static="yes" mutable="no">
+        <type>readonly int</type>
+        <definition>readonly int FractalTree.ColonizationTree.TRUNK_MAX_ATTEMPTS</definition>
+        <argsstring></argsstring>
+        <name>TRUNK_MAX_ATTEMPTS</name>
+        <initializer>= 200</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/robertwells/Documents/fractal_trees_with_spring/fractal_tree/Assets/Scripts/Fractal Trees/Trees/ColonizationTree.cs" line="12" column="1" bodyfile="/Users/robertwells/Documents/fractal_trees_with_spring/fractal_tree/Assets/Scripts/Fractal Trees/Trees/ColonizationTree.cs" bodystart="12" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_fractal_tree_1_1_colonization_tree_1ab5fece3f498ed945f1a06fc1caeade53" prot="private" static="yes" mutable="no">
+        <type>readonly int</type>
+        <definition>readonly int FractalTree.ColonizationTree.GROWTH_MAX_ATTEMPTS</definition>
+        <argsstring></argsstring>
+        <name>GROWTH_MAX_ATTEMPTS</name>
+        <initializer>= 200</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/robertwells/Documents/fractal_trees_with_spring/fractal_tree/Assets/Scripts/Fractal Trees/Trees/ColonizationTree.cs" line="13" column="1" bodyfile="/Users/robertwells/Documents/fractal_trees_with_spring/fractal_tree/Assets/Scripts/Fractal Trees/Trees/ColonizationTree.cs" bodystart="13" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="class_fractal_tree_1_1_colonization_tree_1a9ceb82cf8c36b3098852a899320c052a" prot="private" static="no" mutable="no">
+        <type>List&lt; <ref refid="class_fractal_tree_1_1_colonization_leaf" kindref="compound">ColonizationLeaf</ref> &gt;</type>
+        <definition>List&lt;ColonizationLeaf&gt; FractalTree.ColonizationTree.m_Leaves</definition>
+        <argsstring></argsstring>
+        <name>m_Leaves</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/robertwells/Documents/fractal_trees_with_spring/fractal_tree/Assets/Scripts/Fractal Trees/Trees/ColonizationTree.cs" line="15" column="1" bodyfile="/Users/robertwells/Documents/fractal_trees_with_spring/fractal_tree/Assets/Scripts/Fractal Trees/Trees/ColonizationTree.cs" bodystart="15" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_fractal_tree_1_1_colonization_tree_1aaaf564d7b2ff0265fe568c9ef727992a" prot="private" static="no" mutable="no">
+        <type>Transform</type>
+        <definition>Transform FractalTree.ColonizationTree.m_Owner</definition>
+        <argsstring></argsstring>
+        <name>m_Owner</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/robertwells/Documents/fractal_trees_with_spring/fractal_tree/Assets/Scripts/Fractal Trees/Trees/ColonizationTree.cs" line="16" column="1" bodyfile="/Users/robertwells/Documents/fractal_trees_with_spring/fractal_tree/Assets/Scripts/Fractal Trees/Trees/ColonizationTree.cs" bodystart="16" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_fractal_tree_1_1_colonization_tree_1a2e026c870a750171ed10425ced46f512" prot="private" static="no" mutable="no">
+        <type>float</type>
+        <definition>float FractalTree.ColonizationTree.m_InitialLength</definition>
+        <argsstring></argsstring>
+        <name>m_InitialLength</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/robertwells/Documents/fractal_trees_with_spring/fractal_tree/Assets/Scripts/Fractal Trees/Trees/ColonizationTree.cs" line="17" column="1" bodyfile="/Users/robertwells/Documents/fractal_trees_with_spring/fractal_tree/Assets/Scripts/Fractal Trees/Trees/ColonizationTree.cs" bodystart="17" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_fractal_tree_1_1_colonization_tree_1a84a64e47b15b488f7ada1b85bbd314cd" prot="private" static="no" mutable="no">
+        <type>GameObject</type>
+        <definition>GameObject FractalTree.ColonizationTree.m_BranchPrefab</definition>
+        <argsstring></argsstring>
+        <name>m_BranchPrefab</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/robertwells/Documents/fractal_trees_with_spring/fractal_tree/Assets/Scripts/Fractal Trees/Trees/ColonizationTree.cs" line="18" column="1" bodyfile="/Users/robertwells/Documents/fractal_trees_with_spring/fractal_tree/Assets/Scripts/Fractal Trees/Trees/ColonizationTree.cs" bodystart="18" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_fractal_tree_1_1_colonization_tree_1afe55bd223ffba56be0ee64ba13c334e3" prot="private" static="no" mutable="no">
+        <type>float</type>
+        <definition>float FractalTree.ColonizationTree.m_Width</definition>
+        <argsstring></argsstring>
+        <name>m_Width</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/robertwells/Documents/fractal_trees_with_spring/fractal_tree/Assets/Scripts/Fractal Trees/Trees/ColonizationTree.cs" line="19" column="1" bodyfile="/Users/robertwells/Documents/fractal_trees_with_spring/fractal_tree/Assets/Scripts/Fractal Trees/Trees/ColonizationTree.cs" bodystart="19" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_fractal_tree_1_1_colonization_tree_1af3f443d04cabda478413970ba534b46b" prot="private" static="no" mutable="no">
+        <type>float</type>
+        <definition>float FractalTree.ColonizationTree.m_MinDistance</definition>
+        <argsstring></argsstring>
+        <name>m_MinDistance</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/robertwells/Documents/fractal_trees_with_spring/fractal_tree/Assets/Scripts/Fractal Trees/Trees/ColonizationTree.cs" line="20" column="1" bodyfile="/Users/robertwells/Documents/fractal_trees_with_spring/fractal_tree/Assets/Scripts/Fractal Trees/Trees/ColonizationTree.cs" bodystart="20" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_fractal_tree_1_1_colonization_tree_1ab491e671135ab1d1685ad89f3a703b5b" prot="private" static="no" mutable="no">
+        <type>float</type>
+        <definition>float FractalTree.ColonizationTree.m_MaxDistance</definition>
+        <argsstring></argsstring>
+        <name>m_MaxDistance</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/robertwells/Documents/fractal_trees_with_spring/fractal_tree/Assets/Scripts/Fractal Trees/Trees/ColonizationTree.cs" line="21" column="1" bodyfile="/Users/robertwells/Documents/fractal_trees_with_spring/fractal_tree/Assets/Scripts/Fractal Trees/Trees/ColonizationTree.cs" bodystart="21" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="class_fractal_tree_1_1_colonization_tree_1acba99f382cef3e5184f0558dd5a089ea" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>FractalTree.ColonizationTree.ColonizationTree</definition>
+        <argsstring>(List&lt; ColonizationLeaf &gt; leaves, Transform owner, float initialLength, GameObject branchPrefab, float width, float minDistance, float maxDistance)</argsstring>
+        <name>ColonizationTree</name>
+        <param>
+          <type>List&lt; <ref refid="class_fractal_tree_1_1_colonization_leaf" kindref="compound">ColonizationLeaf</ref> &gt;</type>
+          <declname>leaves</declname>
+        </param>
+        <param>
+          <type>Transform</type>
+          <declname>owner</declname>
+        </param>
+        <param>
+          <type>float</type>
+          <declname>initialLength</declname>
+        </param>
+        <param>
+          <type>GameObject</type>
+          <declname>branchPrefab</declname>
+        </param>
+        <param>
+          <type>float</type>
+          <declname>width</declname>
+        </param>
+        <param>
+          <type>float</type>
+          <declname>minDistance</declname>
+        </param>
+        <param>
+          <type>float</type>
+          <declname>maxDistance</declname>
+        </param>
+        <briefdescription>
+<para>Initializes a new instance of the <ref refid="class_fractal_tree_1_1_colonization_tree" kindref="compound">FractalTree.ColonizationTree</ref> class. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>leaves</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Leaves.</para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>owner</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Owner.</para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>initialLength</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Initial length.</para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>branchPrefab</parametername>
+</parameternamelist>
+<parameterdescription>
+<para><ref refid="interface_fractal_tree_1_1_branch" kindref="compound">Branch</ref> prefab.</para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>width</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Width.</para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>minDistance</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Minimum distance.</para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>maxDistance</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Max distance.</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/robertwells/Documents/fractal_trees_with_spring/fractal_tree/Assets/Scripts/Fractal Trees/Trees/ColonizationTree.cs" line="33" column="1" bodyfile="/Users/robertwells/Documents/fractal_trees_with_spring/fractal_tree/Assets/Scripts/Fractal Trees/Trees/ColonizationTree.cs" bodystart="33" bodyend="45"/>
+      </memberdef>
+      <memberdef kind="function" id="class_fractal_tree_1_1_colonization_tree_1ac16d379a8d3c2f2a56ef5e3f1c66df36" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>List&lt; T &gt;</type>
+        <definition>List&lt;T&gt; FractalTree.ColonizationTree.Generate&lt; T &gt;</definition>
+        <argsstring>()</argsstring>
+        <name>Generate&lt; T &gt;</name>
+        <reimplements refid="interface_fractal_tree_1_1_tree_1a63c5353759447db5034d7ee1c83fbd78">Generate&lt; T &gt;</reimplements>
+        <briefdescription>
+<para>Generates a tree using space colonization. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="templateparam"><parameteritem>
+<parameternamelist>
+<parametername>T</parametername>
+</parameternamelist>
+<parameterdescription>
+<para><ref refid="interface_fractal_tree_1_1_branch" kindref="compound">Branch</ref> type.</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/robertwells/Documents/fractal_trees_with_spring/fractal_tree/Assets/Scripts/Fractal Trees/Trees/ColonizationTree.cs" line="51" column="1" bodyfile="/Users/robertwells/Documents/fractal_trees_with_spring/fractal_tree/Assets/Scripts/Fractal Trees/Trees/ColonizationTree.cs" bodystart="51" bodyend="71"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-func">
+      <memberdef kind="function" id="class_fractal_tree_1_1_colonization_tree_1a99aa1b51bfceac8cf8573672863177f2" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>T</type>
+        <definition>T FractalTree.ColonizationTree.CreateRoot&lt; T &gt;</definition>
+        <argsstring>()</argsstring>
+        <name>CreateRoot&lt; T &gt;</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/robertwells/Documents/fractal_trees_with_spring/fractal_tree/Assets/Scripts/Fractal Trees/Trees/ColonizationTree.cs" line="73" column="1" bodyfile="/Users/robertwells/Documents/fractal_trees_with_spring/fractal_tree/Assets/Scripts/Fractal Trees/Trees/ColonizationTree.cs" bodystart="73" bodyend="79"/>
+      </memberdef>
+      <memberdef kind="function" id="class_fractal_tree_1_1_colonization_tree_1ad7785ce8ee2b3fb26fae17b7e37b69bc" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>T</type>
+        <definition>T FractalTree.ColonizationTree.CreateBranch&lt; T &gt;</definition>
+        <argsstring>(T previous, Vector2 end)</argsstring>
+        <name>CreateBranch&lt; T &gt;</name>
+        <param>
+          <type>T</type>
+          <declname>previous</declname>
+        </param>
+        <param>
+          <type>Vector2</type>
+          <declname>end</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/robertwells/Documents/fractal_trees_with_spring/fractal_tree/Assets/Scripts/Fractal Trees/Trees/ColonizationTree.cs" line="81" column="1" bodyfile="/Users/robertwells/Documents/fractal_trees_with_spring/fractal_tree/Assets/Scripts/Fractal Trees/Trees/ColonizationTree.cs" bodystart="81" bodyend="87"/>
+      </memberdef>
+      <memberdef kind="function" id="class_fractal_tree_1_1_colonization_tree_1a8862099e61e37c03bd44e5441e0eae30" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>T</type>
+        <definition>T FractalTree.ColonizationTree.CreateBranch&lt; T &gt;</definition>
+        <argsstring>(Vector2 start, Vector2 end)</argsstring>
+        <name>CreateBranch&lt; T &gt;</name>
+        <param>
+          <type>Vector2</type>
+          <declname>start</declname>
+        </param>
+        <param>
+          <type>Vector2</type>
+          <declname>end</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/robertwells/Documents/fractal_trees_with_spring/fractal_tree/Assets/Scripts/Fractal Trees/Trees/ColonizationTree.cs" line="89" column="1" bodyfile="/Users/robertwells/Documents/fractal_trees_with_spring/fractal_tree/Assets/Scripts/Fractal Trees/Trees/ColonizationTree.cs" bodystart="89" bodyend="95"/>
+      </memberdef>
+      <memberdef kind="function" id="class_fractal_tree_1_1_colonization_tree_1a28c970329d848a6491748b3728981e64" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>List&lt; T &gt;</type>
+        <definition>List&lt;T&gt; FractalTree.ColonizationTree.CreateTrunk&lt; T &gt;</definition>
+        <argsstring>(T root)</argsstring>
+        <name>CreateTrunk&lt; T &gt;</name>
+        <param>
+          <type>T</type>
+          <declname>root</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/robertwells/Documents/fractal_trees_with_spring/fractal_tree/Assets/Scripts/Fractal Trees/Trees/ColonizationTree.cs" line="97" column="1" bodyfile="/Users/robertwells/Documents/fractal_trees_with_spring/fractal_tree/Assets/Scripts/Fractal Trees/Trees/ColonizationTree.cs" bodystart="97" bodyend="126"/>
+      </memberdef>
+      <memberdef kind="function" id="class_fractal_tree_1_1_colonization_tree_1a99d6e6a3d720adce503071875ed6b2f9" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool FractalTree.ColonizationTree.Grow&lt; T &gt;</definition>
+        <argsstring>(ref List&lt; T &gt; branches)</argsstring>
+        <name>Grow&lt; T &gt;</name>
+        <param>
+          <type>ref List&lt; T &gt;</type>
+          <declname>branches</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/robertwells/Documents/fractal_trees_with_spring/fractal_tree/Assets/Scripts/Fractal Trees/Trees/ColonizationTree.cs" line="128" column="1" bodyfile="/Users/robertwells/Documents/fractal_trees_with_spring/fractal_tree/Assets/Scripts/Fractal Trees/Trees/ColonizationTree.cs" bodystart="128" bodyend="193"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>Spawns a fractal tree using space colonization: <ulink url="http://algorithmicbotany.org/papers/colonization.egwnp2007.pdf">http://algorithmicbotany.org/papers/colonization.egwnp2007.pdf</ulink> </para>    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="13">
+        <label>FractalTree.ColonizationTree</label>
+        <link refid="class_fractal_tree_1_1_colonization_tree"/>
+        <childnode refid="14" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="14">
+        <label>Tree</label>
+        <link refid="interface_fractal_tree_1_1_tree"/>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="15">
+        <label>FractalTree.ColonizationTree</label>
+        <link refid="class_fractal_tree_1_1_colonization_tree"/>
+        <childnode refid="16" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="16">
+        <label>Tree</label>
+        <link refid="interface_fractal_tree_1_1_tree"/>
+      </node>
+    </collaborationgraph>
+    <location file="/Users/robertwells/Documents/fractal_trees_with_spring/fractal_tree/Assets/Scripts/Fractal Trees/Trees/ColonizationTree.cs" line="11" column="1" bodyfile="/Users/robertwells/Documents/fractal_trees_with_spring/fractal_tree/Assets/Scripts/Fractal Trees/Trees/ColonizationTree.cs" bodystart="10" bodyend="194"/>
+    <listofallmembers>
+      <member refid="class_fractal_tree_1_1_colonization_tree_1acba99f382cef3e5184f0558dd5a089ea" prot="public" virt="non-virtual"><scope>FractalTree::ColonizationTree</scope><name>ColonizationTree</name></member>
+      <member refid="class_fractal_tree_1_1_colonization_tree_1ad7785ce8ee2b3fb26fae17b7e37b69bc" prot="private" virt="non-virtual"><scope>FractalTree::ColonizationTree</scope><name>CreateBranch&lt; T &gt;</name></member>
+      <member refid="class_fractal_tree_1_1_colonization_tree_1a8862099e61e37c03bd44e5441e0eae30" prot="private" virt="non-virtual"><scope>FractalTree::ColonizationTree</scope><name>CreateBranch&lt; T &gt;</name></member>
+      <member refid="class_fractal_tree_1_1_colonization_tree_1a99aa1b51bfceac8cf8573672863177f2" prot="private" virt="non-virtual"><scope>FractalTree::ColonizationTree</scope><name>CreateRoot&lt; T &gt;</name></member>
+      <member refid="class_fractal_tree_1_1_colonization_tree_1a28c970329d848a6491748b3728981e64" prot="private" virt="non-virtual"><scope>FractalTree::ColonizationTree</scope><name>CreateTrunk&lt; T &gt;</name></member>
+      <member refid="class_fractal_tree_1_1_colonization_tree_1ac16d379a8d3c2f2a56ef5e3f1c66df36" prot="public" virt="non-virtual"><scope>FractalTree::ColonizationTree</scope><name>Generate&lt; T &gt;</name></member>
+      <member refid="class_fractal_tree_1_1_colonization_tree_1a99d6e6a3d720adce503071875ed6b2f9" prot="private" virt="non-virtual"><scope>FractalTree::ColonizationTree</scope><name>Grow&lt; T &gt;</name></member>
+      <member refid="class_fractal_tree_1_1_colonization_tree_1ab5fece3f498ed945f1a06fc1caeade53" prot="private" virt="non-virtual"><scope>FractalTree::ColonizationTree</scope><name>GROWTH_MAX_ATTEMPTS</name></member>
+      <member refid="class_fractal_tree_1_1_colonization_tree_1a84a64e47b15b488f7ada1b85bbd314cd" prot="private" virt="non-virtual"><scope>FractalTree::ColonizationTree</scope><name>m_BranchPrefab</name></member>
+      <member refid="class_fractal_tree_1_1_colonization_tree_1a2e026c870a750171ed10425ced46f512" prot="private" virt="non-virtual"><scope>FractalTree::ColonizationTree</scope><name>m_InitialLength</name></member>
+      <member refid="class_fractal_tree_1_1_colonization_tree_1a9ceb82cf8c36b3098852a899320c052a" prot="private" virt="non-virtual"><scope>FractalTree::ColonizationTree</scope><name>m_Leaves</name></member>
+      <member refid="class_fractal_tree_1_1_colonization_tree_1ab491e671135ab1d1685ad89f3a703b5b" prot="private" virt="non-virtual"><scope>FractalTree::ColonizationTree</scope><name>m_MaxDistance</name></member>
+      <member refid="class_fractal_tree_1_1_colonization_tree_1af3f443d04cabda478413970ba534b46b" prot="private" virt="non-virtual"><scope>FractalTree::ColonizationTree</scope><name>m_MinDistance</name></member>
+      <member refid="class_fractal_tree_1_1_colonization_tree_1aaaf564d7b2ff0265fe568c9ef727992a" prot="private" virt="non-virtual"><scope>FractalTree::ColonizationTree</scope><name>m_Owner</name></member>
+      <member refid="class_fractal_tree_1_1_colonization_tree_1afe55bd223ffba56be0ee64ba13c334e3" prot="private" virt="non-virtual"><scope>FractalTree::ColonizationTree</scope><name>m_Width</name></member>
+      <member refid="class_fractal_tree_1_1_colonization_tree_1a332a9324b760117c602abee4de37ab36" prot="private" virt="non-virtual"><scope>FractalTree::ColonizationTree</scope><name>TRUNK_MAX_ATTEMPTS</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

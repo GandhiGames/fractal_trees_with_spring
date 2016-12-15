@@ -1,0 +1,59 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.12">
+  <compounddef id="interface_fractal_tree_1_1_tree" kind="interface" language="C#" prot="public">
+    <compoundname>FractalTree::Tree</compoundname>
+    <derivedcompoundref refid="class_fractal_tree_1_1_colonization_tree" prot="public" virt="non-virtual">FractalTree.ColonizationTree</derivedcompoundref>
+    <derivedcompoundref refid="class_fractal_tree_1_1_default_tree" prot="public" virt="non-virtual">FractalTree.DefaultTree</derivedcompoundref>
+    <derivedcompoundref refid="class_fractal_tree_1_1_l_tree" prot="public" virt="non-virtual">FractalTree.LTree</derivedcompoundref>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="interface_fractal_tree_1_1_tree_1a63c5353759447db5034d7ee1c83fbd78" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>List&lt; T &gt;</type>
+        <definition>List&lt;T&gt; FractalTree.Tree.Generate&lt; T &gt;</definition>
+        <argsstring>()</argsstring>
+        <name>Generate&lt; T &gt;</name>
+        <reimplementedby refid="class_fractal_tree_1_1_colonization_tree_1ac16d379a8d3c2f2a56ef5e3f1c66df36">Generate&lt; T &gt;</reimplementedby>
+        <reimplementedby refid="class_fractal_tree_1_1_default_tree_1a99f8ba1f24ba5693f0981be567b236a0">Generate&lt; T &gt;</reimplementedby>
+        <reimplementedby refid="class_fractal_tree_1_1_l_tree_1a36b2a48dbb01982a649f8949823464fc">Generate&lt; T &gt;</reimplementedby>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/robertwells/Documents/fractal_trees_with_spring/fractal_tree/Assets/Scripts/Fractal Trees/Tree Builders/MovingTreeBuilder.cs" line="12" column="1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="75">
+        <label>FractalTree.ColonizationTree</label>
+        <link refid="class_fractal_tree_1_1_colonization_tree"/>
+        <childnode refid="74" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="77">
+        <label>FractalTree.LTree</label>
+        <link refid="class_fractal_tree_1_1_l_tree"/>
+        <childnode refid="74" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="74">
+        <label>FractalTree.Tree</label>
+        <link refid="interface_fractal_tree_1_1_tree"/>
+      </node>
+      <node id="76">
+        <label>FractalTree.DefaultTree</label>
+        <link refid="class_fractal_tree_1_1_default_tree"/>
+        <childnode refid="74" relation="public-inheritance">
+        </childnode>
+      </node>
+    </inheritancegraph>
+    <location file="/Users/robertwells/Documents/fractal_trees_with_spring/fractal_tree/Assets/Scripts/Fractal Trees/Tree Builders/MovingTreeBuilder.cs" line="8" column="1" bodyfile="/Users/robertwells/Documents/fractal_trees_with_spring/fractal_tree/Assets/Scripts/Fractal Trees/Tree Builders/MovingTreeBuilder.cs" bodystart="7" bodyend="10"/>
+    <listofallmembers>
+      <member refid="interface_fractal_tree_1_1_tree_1a63c5353759447db5034d7ee1c83fbd78" prot="public" virt="non-virtual"><scope>FractalTree::Tree</scope><name>Generate&lt; T &gt;</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

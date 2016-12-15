@@ -1,0 +1,83 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.12">
+  <compounddef id="class_fractal_tree_1_1_colonization_leaf_generator" kind="class" language="C#" prot="public">
+    <compoundname>FractalTree::ColonizationLeafGenerator</compoundname>
+    <basecompoundref prot="public" virt="non-virtual">MonoBehaviour</basecompoundref>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="class_fractal_tree_1_1_colonization_leaf_generator_1aa9755eb054a0654d8eb9a03e8d4db0dd" prot="public" static="no" mutable="no">
+        <type>Rect</type>
+        <definition>Rect FractalTree.ColonizationLeafGenerator.bounds</definition>
+        <argsstring></argsstring>
+        <name>bounds</name>
+        <briefdescription>
+<para>The bounds within which to spawn the leafs. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/robertwells/Documents/fractal_trees_with_spring/fractal_tree/Assets/Scripts/Fractal Trees/Trees/ColonizationLeafGenerator.cs" line="15" column="1" bodyfile="/Users/robertwells/Documents/fractal_trees_with_spring/fractal_tree/Assets/Scripts/Fractal Trees/Trees/ColonizationLeafGenerator.cs" bodystart="15" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_fractal_tree_1_1_colonization_leaf_generator_1a8c80eb30ad9f225f5e5d146f8b633e0c" prot="public" static="no" mutable="no">
+        <type>int</type>
+        <definition>int FractalTree.ColonizationLeafGenerator.numToCreate</definition>
+        <argsstring></argsstring>
+        <name>numToCreate</name>
+        <initializer>= 100</initializer>
+        <briefdescription>
+<para>The number of leaves to spawn. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/robertwells/Documents/fractal_trees_with_spring/fractal_tree/Assets/Scripts/Fractal Trees/Trees/ColonizationLeafGenerator.cs" line="20" column="1" bodyfile="/Users/robertwells/Documents/fractal_trees_with_spring/fractal_tree/Assets/Scripts/Fractal Trees/Trees/ColonizationLeafGenerator.cs" bodystart="20" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-func">
+      <memberdef kind="function" id="class_fractal_tree_1_1_colonization_leaf_generator_1ae680f2af139b1a9b4744fc23376590c1" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void FractalTree.ColonizationLeafGenerator.Awake</definition>
+        <argsstring>()</argsstring>
+        <name>Awake</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/robertwells/Documents/fractal_trees_with_spring/fractal_tree/Assets/Scripts/Fractal Trees/Trees/ColonizationLeafGenerator.cs" line="22" column="1" bodyfile="/Users/robertwells/Documents/fractal_trees_with_spring/fractal_tree/Assets/Scripts/Fractal Trees/Trees/ColonizationLeafGenerator.cs" bodystart="22" bodyend="33"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>Spawns a set number of leaves within a bounds. Used by space colonization. </para>    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="9">
+        <label>FractalTree.ColonizationLeafGenerator</label>
+        <link refid="class_fractal_tree_1_1_colonization_leaf_generator"/>
+        <childnode refid="10" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="10">
+        <label>MonoBehaviour</label>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="11">
+        <label>FractalTree.ColonizationLeafGenerator</label>
+        <link refid="class_fractal_tree_1_1_colonization_leaf_generator"/>
+        <childnode refid="12" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="12">
+        <label>MonoBehaviour</label>
+      </node>
+    </collaborationgraph>
+    <location file="/Users/robertwells/Documents/fractal_trees_with_spring/fractal_tree/Assets/Scripts/Fractal Trees/Trees/ColonizationLeafGenerator.cs" line="11" column="1" bodyfile="/Users/robertwells/Documents/fractal_trees_with_spring/fractal_tree/Assets/Scripts/Fractal Trees/Trees/ColonizationLeafGenerator.cs" bodystart="10" bodyend="35"/>
+    <listofallmembers>
+      <member refid="class_fractal_tree_1_1_colonization_leaf_generator_1ae680f2af139b1a9b4744fc23376590c1" prot="private" virt="non-virtual"><scope>FractalTree::ColonizationLeafGenerator</scope><name>Awake</name></member>
+      <member refid="class_fractal_tree_1_1_colonization_leaf_generator_1aa9755eb054a0654d8eb9a03e8d4db0dd" prot="public" virt="non-virtual"><scope>FractalTree::ColonizationLeafGenerator</scope><name>bounds</name></member>
+      <member refid="class_fractal_tree_1_1_colonization_leaf_generator_1a8c80eb30ad9f225f5e5d146f8b633e0c" prot="public" virt="non-virtual"><scope>FractalTree::ColonizationLeafGenerator</scope><name>numToCreate</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

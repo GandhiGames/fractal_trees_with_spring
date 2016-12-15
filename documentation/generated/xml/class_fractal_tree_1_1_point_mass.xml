@@ -1,0 +1,263 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.12">
+  <compounddef id="class_fractal_tree_1_1_point_mass" kind="class" language="C#" prot="public">
+    <compoundname>FractalTree::PointMass</compoundname>
+      <sectiondef kind="property">
+      <memberdef kind="property" id="class_fractal_tree_1_1_point_mass_1a388c55b55d073a8962d8c4e61ce4fd94" prot="public" static="no" readable="no" writable="no" gettable="yes" privategettable="no" protectedgettable="no" settable="yes" privatesettable="no" protectedsettable="no">
+        <type>Vector2</type>
+        <definition>Vector2 FractalTree.PointMass.position</definition>
+        <argsstring></argsstring>
+        <name>position</name>
+        <briefdescription>
+<para>THe current position of the branch point. </para>        </briefdescription>
+        <detaileddescription>
+<para>The position.</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/robertwells/Documents/fractal_trees_with_spring/fractal_tree/Assets/Scripts/Fractal Trees/Springs/PointMass.cs" line="15" column="1" bodyfile="/Users/robertwells/Documents/fractal_trees_with_spring/fractal_tree/Assets/Scripts/Fractal Trees/Springs/PointMass.cs" bodystart="15" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="property" id="class_fractal_tree_1_1_point_mass_1a1cbd0cc0eacfadb549cbc5fdb87ccbb1" prot="public" static="no" readable="no" writable="no" gettable="yes" privategettable="no" protectedgettable="no" settable="no" privatesettable="yes" protectedsettable="no">
+        <type>Vector2</type>
+        <definition>Vector2 FractalTree.PointMass.velocity</definition>
+        <argsstring></argsstring>
+        <name>velocity</name>
+        <briefdescription>
+<para>Gets the velocity. </para>        </briefdescription>
+        <detaileddescription>
+<para>The velocity.</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/robertwells/Documents/fractal_trees_with_spring/fractal_tree/Assets/Scripts/Fractal Trees/Springs/PointMass.cs" line="21" column="1" bodyfile="/Users/robertwells/Documents/fractal_trees_with_spring/fractal_tree/Assets/Scripts/Fractal Trees/Springs/PointMass.cs" bodystart="21" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="property" id="class_fractal_tree_1_1_point_mass_1a25ea2ddc370c2cf21b7f376bd8bb2cf6" prot="public" static="no" readable="no" writable="no" gettable="yes" privategettable="no" protectedgettable="no" settable="no" privatesettable="yes" protectedsettable="no">
+        <type>bool</type>
+        <definition>bool FractalTree.PointMass.forceApplied</definition>
+        <argsstring></argsstring>
+        <name>forceApplied</name>
+        <briefdescription>
+<para>Gets a value indicating whether this <ref refid="class_fractal_tree_1_1_point_mass" kindref="compound">FractalTree.PointMass</ref> has had a force applied. </para>        </briefdescription>
+        <detaileddescription>
+<para><computeroutput>true</computeroutput> if force applied; otherwise, <computeroutput>false</computeroutput>.</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/robertwells/Documents/fractal_trees_with_spring/fractal_tree/Assets/Scripts/Fractal Trees/Springs/PointMass.cs" line="27" column="1" bodyfile="/Users/robertwells/Documents/fractal_trees_with_spring/fractal_tree/Assets/Scripts/Fractal Trees/Springs/PointMass.cs" bodystart="27" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-static-attrib">
+      <memberdef kind="variable" id="class_fractal_tree_1_1_point_mass_1ac21ec0f6425b1f5b13756dd7355f79d6" prot="private" static="yes" mutable="no">
+        <type>readonly float</type>
+        <definition>readonly float FractalTree.PointMass.MINIMUM_MAG</definition>
+        <argsstring></argsstring>
+        <name>MINIMUM_MAG</name>
+        <initializer>= 0.001f</initializer>
+        <briefdescription>
+<para>The minimun magnitude required to move the point. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/robertwells/Documents/fractal_trees_with_spring/fractal_tree/Assets/Scripts/Fractal Trees/Springs/PointMass.cs" line="32" column="1" bodyfile="/Users/robertwells/Documents/fractal_trees_with_spring/fractal_tree/Assets/Scripts/Fractal Trees/Springs/PointMass.cs" bodystart="32" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="class_fractal_tree_1_1_point_mass_1acd54bef44e8d9c4729f7a7f329d4b40d" prot="private" static="no" mutable="no">
+        <type>float</type>
+        <definition>float FractalTree.PointMass.m_InverseMass</definition>
+        <argsstring></argsstring>
+        <name>m_InverseMass</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/robertwells/Documents/fractal_trees_with_spring/fractal_tree/Assets/Scripts/Fractal Trees/Springs/PointMass.cs" line="34" column="1" bodyfile="/Users/robertwells/Documents/fractal_trees_with_spring/fractal_tree/Assets/Scripts/Fractal Trees/Springs/PointMass.cs" bodystart="34" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_fractal_tree_1_1_point_mass_1a85561935f961116dbf8f7ecf292e0afd" prot="private" static="no" mutable="no">
+        <type>Vector2</type>
+        <definition>Vector2 FractalTree.PointMass.m_Acceleration</definition>
+        <argsstring></argsstring>
+        <name>m_Acceleration</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/robertwells/Documents/fractal_trees_with_spring/fractal_tree/Assets/Scripts/Fractal Trees/Springs/PointMass.cs" line="35" column="1" bodyfile="/Users/robertwells/Documents/fractal_trees_with_spring/fractal_tree/Assets/Scripts/Fractal Trees/Springs/PointMass.cs" bodystart="35" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_fractal_tree_1_1_point_mass_1aee59f66b7dd7574098890d1803642a87" prot="private" static="no" mutable="no">
+        <type>float</type>
+        <definition>float FractalTree.PointMass.m_Damping</definition>
+        <argsstring></argsstring>
+        <name>m_Damping</name>
+        <initializer>= 0.98f</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/robertwells/Documents/fractal_trees_with_spring/fractal_tree/Assets/Scripts/Fractal Trees/Springs/PointMass.cs" line="36" column="1" bodyfile="/Users/robertwells/Documents/fractal_trees_with_spring/fractal_tree/Assets/Scripts/Fractal Trees/Springs/PointMass.cs" bodystart="36" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_fractal_tree_1_1_point_mass_1a486771c300ab6114c00eeccc2effe602" prot="private" static="no" mutable="no">
+        <type>Vector2</type>
+        <definition>Vector2 FractalTree.PointMass.m_TargetPos</definition>
+        <argsstring></argsstring>
+        <name>m_TargetPos</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/robertwells/Documents/fractal_trees_with_spring/fractal_tree/Assets/Scripts/Fractal Trees/Springs/PointMass.cs" line="37" column="1" bodyfile="/Users/robertwells/Documents/fractal_trees_with_spring/fractal_tree/Assets/Scripts/Fractal Trees/Springs/PointMass.cs" bodystart="37" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_fractal_tree_1_1_point_mass_1ad4a1bdc2f4a14ba317af5941a0f80658" prot="private" static="no" mutable="no">
+        <type>float</type>
+        <definition>float FractalTree.PointMass.m_BounceBackForce</definition>
+        <argsstring></argsstring>
+        <name>m_BounceBackForce</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/robertwells/Documents/fractal_trees_with_spring/fractal_tree/Assets/Scripts/Fractal Trees/Springs/PointMass.cs" line="38" column="1" bodyfile="/Users/robertwells/Documents/fractal_trees_with_spring/fractal_tree/Assets/Scripts/Fractal Trees/Springs/PointMass.cs" bodystart="38" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="class_fractal_tree_1_1_point_mass_1aeae7254d48ee357290cc926783f76232" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>FractalTree.PointMass.PointMass</definition>
+        <argsstring>(Vector2 position, float invMass, float bounceBackForce)</argsstring>
+        <name>PointMass</name>
+        <param>
+          <type>Vector2</type>
+          <declname>position</declname>
+        </param>
+        <param>
+          <type>float</type>
+          <declname>invMass</declname>
+        </param>
+        <param>
+          <type>float</type>
+          <declname>bounceBackForce</declname>
+        </param>
+        <briefdescription>
+<para>Initializes a new instance of the <ref refid="class_fractal_tree_1_1_point_mass" kindref="compound">FractalTree.PointMass</ref> class. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>position</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Initial position.</para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>invMass</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Inverse mass, lower numbers result in more force required to move the point.</para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>bounceBackForce</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Bounce back force. The force applied when moving the spring back to its initial position. </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/robertwells/Documents/fractal_trees_with_spring/fractal_tree/Assets/Scripts/Fractal Trees/Springs/PointMass.cs" line="46" column="1" bodyfile="/Users/robertwells/Documents/fractal_trees_with_spring/fractal_tree/Assets/Scripts/Fractal Trees/Springs/PointMass.cs" bodystart="46" bodyend="53"/>
+      </memberdef>
+      <memberdef kind="function" id="class_fractal_tree_1_1_point_mass_1a6f5491d604a47a8dd4c2c26d349e618f" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void FractalTree.PointMass.ApplyForce</definition>
+        <argsstring>(Vector2 force)</argsstring>
+        <name>ApplyForce</name>
+        <param>
+          <type>Vector2</type>
+          <declname>force</declname>
+        </param>
+        <briefdescription>
+<para>Applies a force. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>force</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Force.</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/robertwells/Documents/fractal_trees_with_spring/fractal_tree/Assets/Scripts/Fractal Trees/Springs/PointMass.cs" line="59" column="1" bodyfile="/Users/robertwells/Documents/fractal_trees_with_spring/fractal_tree/Assets/Scripts/Fractal Trees/Springs/PointMass.cs" bodystart="59" bodyend="62"/>
+      </memberdef>
+      <memberdef kind="function" id="class_fractal_tree_1_1_point_mass_1aaade3e27a4d89806c8c1357b3c498898" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void FractalTree.PointMass.IncreaseDamping</definition>
+        <argsstring>(float factor)</argsstring>
+        <name>IncreaseDamping</name>
+        <param>
+          <type>float</type>
+          <declname>factor</declname>
+        </param>
+        <briefdescription>
+<para>Increases the damping factor. This dampens the velocity each step. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>factor</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Factor.</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/robertwells/Documents/fractal_trees_with_spring/fractal_tree/Assets/Scripts/Fractal Trees/Springs/PointMass.cs" line="68" column="1" bodyfile="/Users/robertwells/Documents/fractal_trees_with_spring/fractal_tree/Assets/Scripts/Fractal Trees/Springs/PointMass.cs" bodystart="68" bodyend="71"/>
+      </memberdef>
+      <memberdef kind="function" id="class_fractal_tree_1_1_point_mass_1a376cf6a1c55c15a5ff8c504af6cd1ed7" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void FractalTree.PointMass.DoUpdate</definition>
+        <argsstring>()</argsstring>
+        <name>DoUpdate</name>
+        <briefdescription>
+<para>Updates position based on current force and distance from initial position. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/robertwells/Documents/fractal_trees_with_spring/fractal_tree/Assets/Scripts/Fractal Trees/Springs/PointMass.cs" line="76" column="1" bodyfile="/Users/robertwells/Documents/fractal_trees_with_spring/fractal_tree/Assets/Scripts/Fractal Trees/Springs/PointMass.cs" bodystart="76" bodyend="93"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>Added to the start and end of movable branches. Used to add spring force to a branch. </para>    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="/Users/robertwells/Documents/fractal_trees_with_spring/fractal_tree/Assets/Scripts/Fractal Trees/Springs/PointMass.cs" line="10" column="1" bodyfile="/Users/robertwells/Documents/fractal_trees_with_spring/fractal_tree/Assets/Scripts/Fractal Trees/Springs/PointMass.cs" bodystart="9" bodyend="94"/>
+    <listofallmembers>
+      <member refid="class_fractal_tree_1_1_point_mass_1a6f5491d604a47a8dd4c2c26d349e618f" prot="public" virt="non-virtual"><scope>FractalTree::PointMass</scope><name>ApplyForce</name></member>
+      <member refid="class_fractal_tree_1_1_point_mass_1a376cf6a1c55c15a5ff8c504af6cd1ed7" prot="public" virt="non-virtual"><scope>FractalTree::PointMass</scope><name>DoUpdate</name></member>
+      <member refid="class_fractal_tree_1_1_point_mass_1a25ea2ddc370c2cf21b7f376bd8bb2cf6" prot="public" virt="non-virtual"><scope>FractalTree::PointMass</scope><name>forceApplied</name></member>
+      <member refid="class_fractal_tree_1_1_point_mass_1aaade3e27a4d89806c8c1357b3c498898" prot="public" virt="non-virtual"><scope>FractalTree::PointMass</scope><name>IncreaseDamping</name></member>
+      <member refid="class_fractal_tree_1_1_point_mass_1a85561935f961116dbf8f7ecf292e0afd" prot="private" virt="non-virtual"><scope>FractalTree::PointMass</scope><name>m_Acceleration</name></member>
+      <member refid="class_fractal_tree_1_1_point_mass_1ad4a1bdc2f4a14ba317af5941a0f80658" prot="private" virt="non-virtual"><scope>FractalTree::PointMass</scope><name>m_BounceBackForce</name></member>
+      <member refid="class_fractal_tree_1_1_point_mass_1aee59f66b7dd7574098890d1803642a87" prot="private" virt="non-virtual"><scope>FractalTree::PointMass</scope><name>m_Damping</name></member>
+      <member refid="class_fractal_tree_1_1_point_mass_1acd54bef44e8d9c4729f7a7f329d4b40d" prot="private" virt="non-virtual"><scope>FractalTree::PointMass</scope><name>m_InverseMass</name></member>
+      <member refid="class_fractal_tree_1_1_point_mass_1a486771c300ab6114c00eeccc2effe602" prot="private" virt="non-virtual"><scope>FractalTree::PointMass</scope><name>m_TargetPos</name></member>
+      <member refid="class_fractal_tree_1_1_point_mass_1ac21ec0f6425b1f5b13756dd7355f79d6" prot="private" virt="non-virtual"><scope>FractalTree::PointMass</scope><name>MINIMUM_MAG</name></member>
+      <member refid="class_fractal_tree_1_1_point_mass_1aeae7254d48ee357290cc926783f76232" prot="public" virt="non-virtual"><scope>FractalTree::PointMass</scope><name>PointMass</name></member>
+      <member refid="class_fractal_tree_1_1_point_mass_1a388c55b55d073a8962d8c4e61ce4fd94" prot="public" virt="non-virtual"><scope>FractalTree::PointMass</scope><name>position</name></member>
+      <member refid="class_fractal_tree_1_1_point_mass_1a1cbd0cc0eacfadb549cbc5fdb87ccbb1" prot="public" virt="non-virtual"><scope>FractalTree::PointMass</scope><name>velocity</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

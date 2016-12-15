@@ -1,0 +1,80 @@
+.TH "FractalTree" 3 "Thu Dec 15 2016" "Version 0.1" "Fractal Spring Tree Generator" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+FractalTree \- 
+.SH SYNOPSIS
+.br
+.PP
+.SS "Classes"
+
+.in +1c
+.ti -1c
+.RI "interface \fBBranch\fP"
+.br
+.RI "Contract for all fractal tree branches\&. Includes positional data and initialisation\&. "
+.ti -1c
+.RI "class \fBColonizationLeaf\fP"
+.br
+.RI "Attach to leaf objects for space colonization\&. The branches move towards the leaves\&. "
+.ti -1c
+.RI "class \fBColonizationLeafGenerator\fP"
+.br
+.RI "Spawns a set number of leaves within a bounds\&. Used by space colonization\&. "
+.ti -1c
+.RI "class \fBColonizationTree\fP"
+.br
+.RI "Spawns a fractal tree using space colonization: http://algorithmicbotany.org/papers/colonization.egwnp2007.pdf "
+.ti -1c
+.RI "class \fBDefaultTree\fP"
+.br
+.RI "Spawns a fractal tree\&. "
+.ti -1c
+.RI "class \fBExtensions\fP"
+.br
+.RI "Extension methods used by the Fractal \fBTree\fP generator\&. "
+.ti -1c
+.RI "class \fBLRule\fP"
+.br
+.ti -1c
+.RI "class \fBLTree\fP"
+.br
+.RI "Spawns a fractal true using the L-system: http://www.allenpike.com/modeling-plants-with-l-systems/ "
+.ti -1c
+.RI "interface \fBMovingBranch\fP"
+.br
+.RI "Extends branch with point data for moving branches\&. "
+.ti -1c
+.RI "class \fBMovingBranchImpl\fP"
+.br
+.RI "Extends a normal branch and adds spring functionality\&. Force can be applied to the start and end point of the branch\&. "
+.ti -1c
+.RI "class \fBMovingTreeBuilder\fP"
+.br
+.ti -1c
+.RI "class \fBPointMass\fP"
+.br
+.RI "Added to the start and end of movable branches\&. Used to add spring force to a branch\&. "
+.ti -1c
+.RI "class \fBSpring\fP"
+.br
+.RI "Connects two point masses and apllies a pull force to ensure points stay within a target length\&. "
+.ti -1c
+.RI "class \fBStationaryBranch\fP"
+.br
+.RI "A stationary branch\&. Forces cannot be applied to it\&. It is a line drawn onscreen by rotating and scaling a sprite between a start and end point\&. "
+.ti -1c
+.RI "class \fBStationaryTreeBuilder\fP"
+.br
+.RI "Builds a stationary tree\&. "
+.ti -1c
+.RI "interface \fBTree\fP"
+.br
+.ti -1c
+.RI "class \fBTreeBuilder\fP"
+.br
+.RI "The base tree builder class\&. Provides paramaters for default, L, and colonization tree generation\&. "
+.in -1c
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for Fractal Spring Tree Generator from the source code\&.

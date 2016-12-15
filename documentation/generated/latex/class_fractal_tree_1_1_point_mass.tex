@@ -1,0 +1,135 @@
+\hypertarget{class_fractal_tree_1_1_point_mass}{}\section{Fractal\+Tree.\+Point\+Mass Class Reference}
+\label{class_fractal_tree_1_1_point_mass}\index{Fractal\+Tree.\+Point\+Mass@{Fractal\+Tree.\+Point\+Mass}}
+
+
+Added to the start and end of movable branches. Used to add spring force to a branch.  
+
+
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{class_fractal_tree_1_1_point_mass_aeae7254d48ee357290cc926783f76232}{Point\+Mass} (Vector2 \hyperlink{class_fractal_tree_1_1_point_mass_a388c55b55d073a8962d8c4e61ce4fd94}{position}, float inv\+Mass, float bounce\+Back\+Force)
+\begin{DoxyCompactList}\small\item\em Initializes a new instance of the \hyperlink{class_fractal_tree_1_1_point_mass}{Fractal\+Tree.\+Point\+Mass} class. \end{DoxyCompactList}\item 
+void \hyperlink{class_fractal_tree_1_1_point_mass_a6f5491d604a47a8dd4c2c26d349e618f}{Apply\+Force} (Vector2 force)
+\begin{DoxyCompactList}\small\item\em Applies a force. \end{DoxyCompactList}\item 
+void \hyperlink{class_fractal_tree_1_1_point_mass_aaade3e27a4d89806c8c1357b3c498898}{Increase\+Damping} (float factor)
+\begin{DoxyCompactList}\small\item\em Increases the damping factor. This dampens the velocity each step. \end{DoxyCompactList}\item 
+void \hyperlink{class_fractal_tree_1_1_point_mass_a376cf6a1c55c15a5ff8c504af6cd1ed7}{Do\+Update} ()
+\begin{DoxyCompactList}\small\item\em Updates position based on current force and distance from initial position. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Properties}
+\begin{DoxyCompactItemize}
+\item 
+Vector2 \hyperlink{class_fractal_tree_1_1_point_mass_a388c55b55d073a8962d8c4e61ce4fd94}{position}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em T\+He current position of the branch point. \end{DoxyCompactList}\item 
+Vector2 \hyperlink{class_fractal_tree_1_1_point_mass_a1cbd0cc0eacfadb549cbc5fdb87ccbb1}{velocity}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Gets the velocity. \end{DoxyCompactList}\item 
+bool \hyperlink{class_fractal_tree_1_1_point_mass_a25ea2ddc370c2cf21b7f376bd8bb2cf6}{force\+Applied}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Gets a value indicating whether this \hyperlink{class_fractal_tree_1_1_point_mass}{Fractal\+Tree.\+Point\+Mass} has had a force applied. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Added to the start and end of movable branches. Used to add spring force to a branch. 
+
+
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{class_fractal_tree_1_1_point_mass_aeae7254d48ee357290cc926783f76232}{}\label{class_fractal_tree_1_1_point_mass_aeae7254d48ee357290cc926783f76232} 
+\index{Fractal\+Tree\+::\+Point\+Mass@{Fractal\+Tree\+::\+Point\+Mass}!Point\+Mass@{Point\+Mass}}
+\index{Point\+Mass@{Point\+Mass}!Fractal\+Tree\+::\+Point\+Mass@{Fractal\+Tree\+::\+Point\+Mass}}
+\subsubsection{\texorpdfstring{Point\+Mass()}{PointMass()}}
+{\footnotesize\ttfamily Fractal\+Tree.\+Point\+Mass.\+Point\+Mass (\begin{DoxyParamCaption}\item[{Vector2}]{position,  }\item[{float}]{inv\+Mass,  }\item[{float}]{bounce\+Back\+Force }\end{DoxyParamCaption})}
+
+
+
+Initializes a new instance of the \hyperlink{class_fractal_tree_1_1_point_mass}{Fractal\+Tree.\+Point\+Mass} class. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em position} & Initial position.\\
+\hline
+{\em inv\+Mass} & Inverse mass, lower numbers result in more force required to move the point.\\
+\hline
+{\em bounce\+Back\+Force} & Bounce back force. The force applied when moving the spring back to its initial position. \\
+\hline
+\end{DoxyParams}
+
+
+\subsection{Member Function Documentation}
+\hypertarget{class_fractal_tree_1_1_point_mass_a6f5491d604a47a8dd4c2c26d349e618f}{}\label{class_fractal_tree_1_1_point_mass_a6f5491d604a47a8dd4c2c26d349e618f} 
+\index{Fractal\+Tree\+::\+Point\+Mass@{Fractal\+Tree\+::\+Point\+Mass}!Apply\+Force@{Apply\+Force}}
+\index{Apply\+Force@{Apply\+Force}!Fractal\+Tree\+::\+Point\+Mass@{Fractal\+Tree\+::\+Point\+Mass}}
+\subsubsection{\texorpdfstring{Apply\+Force()}{ApplyForce()}}
+{\footnotesize\ttfamily void Fractal\+Tree.\+Point\+Mass.\+Apply\+Force (\begin{DoxyParamCaption}\item[{Vector2}]{force }\end{DoxyParamCaption})}
+
+
+
+Applies a force. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em force} & Force.\\
+\hline
+\end{DoxyParams}
+\hypertarget{class_fractal_tree_1_1_point_mass_a376cf6a1c55c15a5ff8c504af6cd1ed7}{}\label{class_fractal_tree_1_1_point_mass_a376cf6a1c55c15a5ff8c504af6cd1ed7} 
+\index{Fractal\+Tree\+::\+Point\+Mass@{Fractal\+Tree\+::\+Point\+Mass}!Do\+Update@{Do\+Update}}
+\index{Do\+Update@{Do\+Update}!Fractal\+Tree\+::\+Point\+Mass@{Fractal\+Tree\+::\+Point\+Mass}}
+\subsubsection{\texorpdfstring{Do\+Update()}{DoUpdate()}}
+{\footnotesize\ttfamily void Fractal\+Tree.\+Point\+Mass.\+Do\+Update (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Updates position based on current force and distance from initial position. 
+
+\hypertarget{class_fractal_tree_1_1_point_mass_aaade3e27a4d89806c8c1357b3c498898}{}\label{class_fractal_tree_1_1_point_mass_aaade3e27a4d89806c8c1357b3c498898} 
+\index{Fractal\+Tree\+::\+Point\+Mass@{Fractal\+Tree\+::\+Point\+Mass}!Increase\+Damping@{Increase\+Damping}}
+\index{Increase\+Damping@{Increase\+Damping}!Fractal\+Tree\+::\+Point\+Mass@{Fractal\+Tree\+::\+Point\+Mass}}
+\subsubsection{\texorpdfstring{Increase\+Damping()}{IncreaseDamping()}}
+{\footnotesize\ttfamily void Fractal\+Tree.\+Point\+Mass.\+Increase\+Damping (\begin{DoxyParamCaption}\item[{float}]{factor }\end{DoxyParamCaption})}
+
+
+
+Increases the damping factor. This dampens the velocity each step. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em factor} & Factor.\\
+\hline
+\end{DoxyParams}
+
+
+\subsection{Property Documentation}
+\hypertarget{class_fractal_tree_1_1_point_mass_a25ea2ddc370c2cf21b7f376bd8bb2cf6}{}\label{class_fractal_tree_1_1_point_mass_a25ea2ddc370c2cf21b7f376bd8bb2cf6} 
+\index{Fractal\+Tree\+::\+Point\+Mass@{Fractal\+Tree\+::\+Point\+Mass}!force\+Applied@{force\+Applied}}
+\index{force\+Applied@{force\+Applied}!Fractal\+Tree\+::\+Point\+Mass@{Fractal\+Tree\+::\+Point\+Mass}}
+\subsubsection{\texorpdfstring{force\+Applied}{forceApplied}}
+{\footnotesize\ttfamily bool Fractal\+Tree.\+Point\+Mass.\+force\+Applied\hspace{0.3cm}{\ttfamily [get]}}
+
+
+
+Gets a value indicating whether this \hyperlink{class_fractal_tree_1_1_point_mass}{Fractal\+Tree.\+Point\+Mass} has had a force applied. 
+
+{\ttfamily true} if force applied; otherwise, {\ttfamily false}.\hypertarget{class_fractal_tree_1_1_point_mass_a388c55b55d073a8962d8c4e61ce4fd94}{}\label{class_fractal_tree_1_1_point_mass_a388c55b55d073a8962d8c4e61ce4fd94} 
+\index{Fractal\+Tree\+::\+Point\+Mass@{Fractal\+Tree\+::\+Point\+Mass}!position@{position}}
+\index{position@{position}!Fractal\+Tree\+::\+Point\+Mass@{Fractal\+Tree\+::\+Point\+Mass}}
+\subsubsection{\texorpdfstring{position}{position}}
+{\footnotesize\ttfamily Vector2 Fractal\+Tree.\+Point\+Mass.\+position\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+
+
+T\+He current position of the branch point. 
+
+The position.\hypertarget{class_fractal_tree_1_1_point_mass_a1cbd0cc0eacfadb549cbc5fdb87ccbb1}{}\label{class_fractal_tree_1_1_point_mass_a1cbd0cc0eacfadb549cbc5fdb87ccbb1} 
+\index{Fractal\+Tree\+::\+Point\+Mass@{Fractal\+Tree\+::\+Point\+Mass}!velocity@{velocity}}
+\index{velocity@{velocity}!Fractal\+Tree\+::\+Point\+Mass@{Fractal\+Tree\+::\+Point\+Mass}}
+\subsubsection{\texorpdfstring{velocity}{velocity}}
+{\footnotesize\ttfamily Vector2 Fractal\+Tree.\+Point\+Mass.\+velocity\hspace{0.3cm}{\ttfamily [get]}}
+
+
+
+Gets the velocity. 
+
+The velocity.
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+Point\+Mass.\+cs\end{DoxyCompactItemize}

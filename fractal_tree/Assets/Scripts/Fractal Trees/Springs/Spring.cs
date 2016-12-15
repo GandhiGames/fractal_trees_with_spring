@@ -1,36 +1,58 @@
 ﻿using UnityEngine;
 
-public class Spring : MonoBehaviour
+namespace FractalTree
 {
-    public PointMass start;
-    public PointMass end;
-    public float targetLength;
-    public float stiffNess;
-    public float damping;
+	/// <summary>
+	/// Connects two point masses and apllies a pull force to ensure points stay within a target length.
+	/// </summary>
+	public class Spring : MonoBehaviour
+	{
+		/// <summary>
+		/// The start point mass.
+		/// </summary>
+		public PointMass start;
 
-    public void Setup(PointMass start, PointMass end, 
-        float stiffness, float damping)
-    {
-        this.start = start;
-        this.end = end;
-        this.stiffNess = stiffness;
-        this.damping = damping;
-        targetLength = Vector2.Distance(start.position, end.position) * 0.95f;
-    }
+		/// <summary>
+		/// The end point mass.
+		/// </summary>
+		public PointMass end;
 
-    public void DoUpdate()
-    {
-        var x = start.position - end.position;
+		private float m_TargetLength;
+		private float m_StiffNess;
+		private float m_Damping;
 
-        float length = x.magnitude;
+		/// <summary>
+		/// Setup the specified start, end, stiffness and damping. 
+		/// </summary>
+		/// <param name="start">Start.</param>
+		/// <param name="end">End.</param>
+		/// <param name="stiffness">Stiffness.</param>
+		/// <param name="damping">Damping.</param>
+		public void Setup (PointMass start, PointMass end, 
+		                    float stiffness, float damping)
+		{
+			this.start = start;
+			this.end = end;
+			this.m_StiffNess = stiffness;
+			this.m_Damping = damping;
+			m_TargetLength = Vector2.Distance (start.position, end.position) * 0.95f;
+		}
 
-        x = (x / length) * (length - targetLength);
-        var dv = end.velocity - start.velocity;
-        var force = stiffNess * x - dv * damping;
+		/// <summary>
+		/// Applies force to start and point based on distance between points.
+		/// </summary>
+		public void DoUpdate ()
+		{
+			var x = start.position - end.position;
 
-        start.ApplyForce(-force);
-        end.ApplyForce(force);
-    }
+			float length = x.magnitude;
 
-    
+			x = (x / length) * (length - m_TargetLength);
+			var dv = end.velocity - start.velocity;
+			var force = m_StiffNess * x - dv * m_Damping;
+
+			start.ApplyForce (-force);
+			end.ApplyForce (force);
+		}
+	}
 }

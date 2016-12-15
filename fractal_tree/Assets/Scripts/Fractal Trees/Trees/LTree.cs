@@ -4,6 +4,9 @@ using UnityEngine;
 
 namespace FractalTree
 {
+	/// <summary>
+	/// Spawns a fractal true using the L-system: http://www.allenpike.com/modeling-plants-with-l-systems/
+	/// </summary>
     public class LTree : Tree
     {
         private int m_Steps;
@@ -19,6 +22,20 @@ namespace FractalTree
         private bool m_AutoWidth;
         private bool m_AutoMass;
 
+		/// <summary>
+		/// Initializes a new instance of the <see cref="FractalTree.LTree"/> class.
+		/// </summary>
+		/// <param name="branchPrefab">Branch prefab.</param>
+		/// <param name="steps">Steps.</param>
+		/// <param name="axiom">Axiom.</param>
+		/// <param name="rules">Rules.</param>
+		/// <param name="initialLength">Initial length.</param>
+		/// <param name="angle">Angle.</param>
+		/// <param name="owner">Owner.</param>
+		/// <param name="colors">Colors.</param>
+		/// <param name="width">Width.</param>
+		/// <param name="autoWidth">If set to <c>true</c> auto width.</param>
+		/// <param name="autoMass">If set to <c>true</c> auto mass.</param>
         public LTree(GameObject branchPrefab, 
             int steps,
             string axiom,
@@ -52,6 +69,10 @@ namespace FractalTree
             }
         }
 
+		/// <summary>
+		/// Generates the tree.
+		/// </summary>
+		/// <typeparam name="T">The 1st type parameter.</typeparam>
         public List<T> Generate<T>() where T : Branch
         {
             for (int i = 0; i < m_Steps; i++)

@@ -4,24 +4,33 @@ using UnityEngine;
 
 namespace FractalTree
 {
+	/// <summary>
+	/// Builds a stationary tree.
+	/// </summary>
     public class StationaryTreeBuilder : TreeBuilder
-    {
-      
+    {       
+		private List<Branch> m_Branches = new List<Branch>();
 
-        private List<Branch> m_Branches = new List<Branch>();
+		/// <summary>
+		/// A list of all branches associated with the tree.
+		/// </summary>
+		/// <value>The branches.</value>
+		public List<Branch> branches { get { return m_Branches; } }
 
         void Start()
         {
-            // m_Branches.AddRange().Generate());
-
-            Tree tree = CreateTree();
-
-
-
-            if (tree != null)
-            {
-                m_Branches.AddRange(tree.Generate<Branch>());
-            }
+			if (buildOnStart) {
+				Build ();
+			}
         }
+
+		/// <summary>
+		/// Build this instance.
+		/// </summary>
+		public override void Build ()
+		{
+			m_Branches = DoBuild<Branch> ();
+		}
+			
     }
 }

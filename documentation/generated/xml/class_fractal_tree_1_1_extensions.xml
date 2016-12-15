@@ -1,0 +1,52 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.12">
+  <compounddef id="class_fractal_tree_1_1_extensions" kind="class" language="C#" prot="public">
+    <compoundname>FractalTree::Extensions</compoundname>
+      <sectiondef kind="public-static-func">
+      <memberdef kind="function" id="class_fractal_tree_1_1_extensions_1a0d32067f5e9a293e03d31aa04d127f37" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>Vector2</type>
+        <definition>static Vector2 FractalTree.Extensions.Rotate</definition>
+        <argsstring>(this Vector2 v, float degrees)</argsstring>
+        <name>Rotate</name>
+        <param>
+          <type>this Vector2</type>
+          <declname>v</declname>
+        </param>
+        <param>
+          <type>float</type>
+          <declname>degrees</declname>
+        </param>
+        <briefdescription>
+<para>Rotate the specified vector by degrees. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>v</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>V.</para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>degrees</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Degrees.</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/robertwells/Documents/fractal_trees_with_spring/fractal_tree/Assets/Scripts/Fractal Trees/Extensions.cs" line="17" column="1" bodyfile="/Users/robertwells/Documents/fractal_trees_with_spring/fractal_tree/Assets/Scripts/Fractal Trees/Extensions.cs" bodystart="17" bodyend="27"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>Extension methods used by the Fractal <ref refid="interface_fractal_tree_1_1_tree" kindref="compound">Tree</ref> generator. </para>    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="/Users/robertwells/Documents/fractal_trees_with_spring/fractal_tree/Assets/Scripts/Fractal Trees/Extensions.cs" line="11" column="1" bodyfile="/Users/robertwells/Documents/fractal_trees_with_spring/fractal_tree/Assets/Scripts/Fractal Trees/Extensions.cs" bodystart="10" bodyend="28"/>
+    <listofallmembers>
+      <member refid="class_fractal_tree_1_1_extensions_1a0d32067f5e9a293e03d31aa04d127f37" prot="public" virt="non-virtual"><scope>FractalTree::Extensions</scope><name>Rotate</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

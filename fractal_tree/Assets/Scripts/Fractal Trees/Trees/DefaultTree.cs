@@ -4,6 +4,9 @@ using UnityEngine;
 
 namespace FractalTree
 {
+	/// <summary>
+	/// Spawns a fractal tree.
+	/// </summary>
     public class DefaultTree : Tree
     {
         private int m_GrowthCount;
@@ -14,6 +17,16 @@ namespace FractalTree
         private float[] m_Angles;
         private float m_Thickness;
 
+		/// <summary>
+		/// Initializes a new instance of the <see cref="FractalTree.DefaultTree"/> class.
+		/// </summary>
+		/// <param name="growth">Growth.</param>
+		/// <param name="initialLength">Initial length.</param>
+		/// <param name="lengthDegredation">Length degredation.</param>
+		/// <param name="angle">Angle.</param>
+		/// <param name="thickness">Thickness.</param>
+		/// <param name="branchPrefab">Branch prefab.</param>
+		/// <param name="owner">Owner.</param>
         public DefaultTree(int growth, float initialLength,
             float lengthDegredation, float angle, float thickness,
             GameObject branchPrefab, Transform owner)
@@ -33,6 +46,10 @@ namespace FractalTree
             m_Angles[1] = -m_Angle;
         }
 
+		/// <summary>
+		/// Generates a fractal tree.
+		/// </summary>
+		/// <typeparam name="T">The 1st type parameter.</typeparam>
         public List<T> Generate<T>() where T : Branch
         {
             var branches = new List<T>();

@@ -1,0 +1,271 @@
+.TH "FractalTree.TreeBuilder" 3 "Thu Dec 15 2016" "Version 0.1" "Fractal Spring Tree Generator" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+FractalTree.TreeBuilder \- The base tree builder class\&. Provides paramaters for default, L, and colonization tree generation\&.  
+
+.SH SYNOPSIS
+.br
+.PP
+.PP
+Inherits MonoBehaviour\&.
+.PP
+Inherited by \fBFractalTree\&.MovingTreeBuilder\fP, and \fBFractalTree\&.StationaryTreeBuilder\fP\&.
+.SS "Public Types"
+
+.in +1c
+.ti -1c
+.RI "enum \fBTreeType\fP { \fBDefault\fP, \fBLTree\fP, \fBColonization\fP }
+.RI "\fBTree\fP type\&. ""
+.br
+.in -1c
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "abstract void \fBBuild\fP ()"
+.br
+.in -1c
+.SS "Public Attributes"
+
+.in +1c
+.ti -1c
+.RI "bool \fBbuildOnStart\fP = true"
+.br
+.RI "If true, builds tree on start\&. "
+.ti -1c
+.RI "\fBTreeType\fP \fBtreeType\fP = TreeType\&.Default"
+.br
+.RI "The tree type to generate\&. "
+.ti -1c
+.RI "GameObject \fBbranchPrefab\fP"
+.br
+.RI "The branch prefab\&. If tree to generate is moving then prefab should have \fBMovingBranch\fP script attached\&. "
+.ti -1c
+.RI "int \fBdefaultGrowthCount\fP = 8"
+.br
+.RI "The number of tree generations\&. "
+.ti -1c
+.RI "float \fBdefaultInitialLength\fP = 5f"
+.br
+.RI "The default length of the initial branches for the default tree generation\&. "
+.ti -1c
+.RI "float \fBdefaultLengthDegradation\fP = 0\&.67f"
+.br
+.RI "The length degradation for the default tree\&. Branches are reduced in size by this factor\&. "
+.ti -1c
+.RI "float \fBdefaultAngle\fP = 45f"
+.br
+.RI "The angle for default tree branching\&. "
+.ti -1c
+.RI "float \fBdefaultWidth\fP = 0\&.04f"
+.br
+.RI "The width of the branches for the default tree generator\&. "
+.ti -1c
+.RI "bool \fBlTreeAutoWidth\fP = true"
+.br
+.RI "When true, the width of the branches will be set automatically based on the colours\&. "
+.ti -1c
+.RI "bool \fBlTreeMassBasedOnWidth\fP = true"
+.br
+.RI "When true, the mass of the branches will be set automatically based on colours\&. Used only when generating a moving tree\&. "
+.ti -1c
+.RI "float \fBlTreeWidth\fP = 0\&.03f"
+.br
+.RI "The max branch width for L trees\&. "
+.ti -1c
+.RI "int \fBlTreeGrowthCount\fP = 5"
+.br
+.RI "The number of L tree generations\&. "
+.ti -1c
+.RI "string \fBlTreeAxiom\fP = 'FX'"
+.br
+.RI "The l tree axiom\&. The initial seed used to generate a L tree\&. "
+.ti -1c
+.RI "\fBLRule\fP [] \fBlTreeRules\fP"
+.br
+.RI "The rules applied to the axoim\&. "
+.ti -1c
+.RI "float \fBlTreeBranchLength\fP = 0\&.17f"
+.br
+.RI "The length of the l tree branch\&. "
+.ti -1c
+.RI "float \fBlTreeAngle\fP = 25f"
+.br
+.RI "The angles used to branch an L tree\&. "
+.ti -1c
+.RI "Color [] \fBlTreeColours\fP"
+.br
+.RI "The L tree colours\&. "
+.ti -1c
+.RI "Transform \fBcolonizationLeafParent\fP"
+.br
+.RI "The parent of the game object that holds the colonization leaves\&. "
+.ti -1c
+.RI "float \fBcolonizationInitialLength\fP = 1f"
+.br
+.RI "The initial length for a colonization tree trunk\&. "
+.ti -1c
+.RI "float \fBcolonizationWidth\fP = 0\&.04f"
+.br
+.RI "The width of the colonization tree branches\&. "
+.ti -1c
+.RI "float \fBcolonizationMinDistance\fP = 1f"
+.br
+.RI "The minimum distance between the branch and a colonization leaf for it to be registered\&. "
+.ti -1c
+.RI "float \fBcolonizationMaxDistance\fP = 10f"
+.br
+.RI "The maximum distance between the branch and a colonization leaf for it to be registered\&. "
+.in -1c
+.SS "Protected Member Functions"
+
+.in +1c
+.ti -1c
+.RI "List< T > \fBDoBuild< T >\fP ()"
+.br
+.RI "Build this instance of the tree\&. "
+.ti -1c
+.RI "\fBTree\fP \fBCreateTree\fP ()"
+.br
+.RI "Creates a tree based on treeType\&. "
+.in -1c
+.SH "Detailed Description"
+.PP 
+The base tree builder class\&. Provides paramaters for default, L, and colonization tree generation\&. 
+
+
+.SH "Member Enumeration Documentation"
+.PP 
+.SS "enum \fBFractalTree\&.TreeBuilder\&.TreeType\fP\fC [strong]\fP"
+
+.PP
+\fBTree\fP type\&. 
+.SH "Member Function Documentation"
+.PP 
+.SS "\fBTree\fP FractalTree\&.TreeBuilder\&.CreateTree ()\fC [protected]\fP"
+
+.PP
+Creates a tree based on treeType\&. 
+.PP
+\fBReturns:\fP
+.RS 4
+The tree\&.
+.RE
+.PP
+
+.SS "List<T> FractalTree\&.TreeBuilder\&.DoBuild< T > ()\fC [protected]\fP"
+
+.PP
+Build this instance of the tree\&. 
+.PP
+\fBType Constraints\fP
+.TP
+\fIT\fP : \fIBranch\fP
+.SH "Member Data Documentation"
+.PP 
+.SS "GameObject FractalTree\&.TreeBuilder\&.branchPrefab"
+
+.PP
+The branch prefab\&. If tree to generate is moving then prefab should have \fBMovingBranch\fP script attached\&. 
+.SS "bool FractalTree\&.TreeBuilder\&.buildOnStart = true"
+
+.PP
+If true, builds tree on start\&. 
+.SS "float FractalTree\&.TreeBuilder\&.colonizationInitialLength = 1f"
+
+.PP
+The initial length for a colonization tree trunk\&. 
+.SS "Transform FractalTree\&.TreeBuilder\&.colonizationLeafParent"
+
+.PP
+The parent of the game object that holds the colonization leaves\&. 
+.SS "float FractalTree\&.TreeBuilder\&.colonizationMaxDistance = 10f"
+
+.PP
+The maximum distance between the branch and a colonization leaf for it to be registered\&. 
+.SS "float FractalTree\&.TreeBuilder\&.colonizationMinDistance = 1f"
+
+.PP
+The minimum distance between the branch and a colonization leaf for it to be registered\&. 
+.SS "float FractalTree\&.TreeBuilder\&.colonizationWidth = 0\&.04f"
+
+.PP
+The width of the colonization tree branches\&. 
+.SS "float FractalTree\&.TreeBuilder\&.defaultAngle = 45f"
+
+.PP
+The angle for default tree branching\&. 
+.SS "int FractalTree\&.TreeBuilder\&.defaultGrowthCount = 8"
+
+.PP
+The number of tree generations\&. 
+.SS "float FractalTree\&.TreeBuilder\&.defaultInitialLength = 5f"
+
+.PP
+The default length of the initial branches for the default tree generation\&. 
+.SS "float FractalTree\&.TreeBuilder\&.defaultLengthDegradation = 0\&.67f"
+
+.PP
+The length degradation for the default tree\&. Branches are reduced in size by this factor\&. 
+.SS "float FractalTree\&.TreeBuilder\&.defaultWidth = 0\&.04f"
+
+.PP
+The width of the branches for the default tree generator\&. 
+.SS "float FractalTree\&.TreeBuilder\&.lTreeAngle = 25f"
+
+.PP
+The angles used to branch an L tree\&. 
+.SS "bool FractalTree\&.TreeBuilder\&.lTreeAutoWidth = true"
+
+.PP
+When true, the width of the branches will be set automatically based on the colours\&. 
+.SS "string FractalTree\&.TreeBuilder\&.lTreeAxiom = 'FX'"
+
+.PP
+The l tree axiom\&. The initial seed used to generate a L tree\&. 
+.SS "float FractalTree\&.TreeBuilder\&.lTreeBranchLength = 0\&.17f"
+
+.PP
+The length of the l tree branch\&. 
+.SS "Color [] FractalTree\&.TreeBuilder\&.lTreeColours"
+
+.PP
+The L tree colours\&. 
+.SS "int FractalTree\&.TreeBuilder\&.lTreeGrowthCount = 5"
+
+.PP
+The number of L tree generations\&. 
+.SS "bool FractalTree\&.TreeBuilder\&.lTreeMassBasedOnWidth = true"
+
+.PP
+When true, the mass of the branches will be set automatically based on colours\&. Used only when generating a moving tree\&. 
+.SS "\fBLRule\fP [] FractalTree\&.TreeBuilder\&.lTreeRules"
+\fBInitial value:\fP
+.PP
+.nf
+= new LRule[] {
+            
+            
+            
+            
+            
+
+            new LRule ('F', "C0FF-[C1-F+F]+[C2+F-F]"),
+            new LRule ('X', "C0FF+[C1+F]+[C3-F]")
+        }
+.fi
+.PP
+The rules applied to the axoim\&. 
+.SS "float FractalTree\&.TreeBuilder\&.lTreeWidth = 0\&.03f"
+
+.PP
+The max branch width for L trees\&. 
+.SS "\fBTreeType\fP FractalTree\&.TreeBuilder\&.treeType = TreeType\&.Default"
+
+.PP
+The tree type to generate\&. 
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for Fractal Spring Tree Generator from the source code\&.

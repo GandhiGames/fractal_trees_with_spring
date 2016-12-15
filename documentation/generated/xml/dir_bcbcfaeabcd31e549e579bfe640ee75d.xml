@@ -1,0 +1,12 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.12">
+  <compounddef id="dir_bcbcfaeabcd31e549e579bfe640ee75d" kind="dir">
+    <compoundname>Documents</compoundname>
+    <innerdir refid="dir_8a6da9995003480da685a3b1af7e17f5">fractal_trees_with_spring</innerdir>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="/Users/robertwells/Documents/"/>
+  </compounddef>
+</doxygen>

@@ -4,12 +4,21 @@ using UnityEngine;
 
 namespace FractalTree
 {
+	/// <summary>
+	/// Spawns a set number of leaves within a bounds. Used by space colonization.
+	/// </summary>
 	public class ColonizationLeafGenerator : MonoBehaviour
 	{
+		/// <summary>
+		/// The bounds within which to spawn the leafs.
+		/// </summary>
 		public Rect bounds;
+
+		/// <summary>
+		/// The number of leaves to spawn.
+		/// </summary>
 		public int numToCreate = 100;
 
-		// Use this for initialization
 		void Awake ()
 		{
 			for (int i = 0; i < numToCreate; i++) {

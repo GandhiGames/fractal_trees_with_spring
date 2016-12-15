@@ -1,0 +1,54 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.12">
+  <compounddef id="_spring_8cs" kind="file" language="C#">
+    <compoundname>Spring.cs</compoundname>
+    <innerclass refid="class_fractal_tree_1_1_spring" prot="public">FractalTree::Spring</innerclass>
+    <innernamespace refid="namespace_fractal_tree">FractalTree</innernamespace>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="keyword">using</highlight><highlight class="normal"><sp/><ref refid="namespace_unity_engine" kindref="compound">UnityEngine</ref>;</highlight></codeline>
+<codeline lineno="2"><highlight class="normal"></highlight></codeline>
+<codeline lineno="3"><highlight class="normal"></highlight><highlight class="keyword">namespace<sp/></highlight><highlight class="normal"><ref refid="namespace_fractal_tree" kindref="compound">FractalTree</ref></highlight></codeline>
+<codeline lineno="4"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="8" refid="class_fractal_tree_1_1_spring" refkind="compound"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="class_fractal_tree_1_1_spring" kindref="compound">Spring</ref><sp/>:<sp/>MonoBehaviour</highlight></codeline>
+<codeline lineno="9"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="13"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal"><sp/><ref refid="class_fractal_tree_1_1_point_mass" kindref="compound">PointMass</ref><sp/><ref refid="class_fractal_tree_1_1_spring_1a4008f4f4f6404df50062047b0afa2ec8" kindref="member">start</ref>;</highlight></codeline>
+<codeline lineno="14"><highlight class="normal"></highlight></codeline>
+<codeline lineno="18"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal"><sp/><ref refid="class_fractal_tree_1_1_point_mass" kindref="compound">PointMass</ref><sp/><ref refid="class_fractal_tree_1_1_spring_1a22f6b5200ab129728b9fbb06b5faca1f" kindref="member">end</ref>;</highlight></codeline>
+<codeline lineno="19"><highlight class="normal"></highlight></codeline>
+<codeline lineno="20"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">private</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>m_TargetLength;</highlight></codeline>
+<codeline lineno="21"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">private</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>m_StiffNess;</highlight></codeline>
+<codeline lineno="22"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">private</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>m_Damping;</highlight></codeline>
+<codeline lineno="23"><highlight class="normal"></highlight></codeline>
+<codeline lineno="31"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_fractal_tree_1_1_spring_1a49e3b32769c76e626650280f6016996d" kindref="member">Setup</ref><sp/>(<ref refid="class_fractal_tree_1_1_point_mass" kindref="compound">PointMass</ref><sp/>start,<sp/><ref refid="class_fractal_tree_1_1_point_mass" kindref="compound">PointMass</ref><sp/>end,<sp/></highlight></codeline>
+<codeline lineno="32"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>stiffness,<sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>damping)</highlight></codeline>
+<codeline lineno="33"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="34"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>this.start<sp/>=<sp/><ref refid="class_fractal_tree_1_1_spring_1a4008f4f4f6404df50062047b0afa2ec8" kindref="member">start</ref>;</highlight></codeline>
+<codeline lineno="35"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>this.end<sp/>=<sp/><ref refid="class_fractal_tree_1_1_spring_1a22f6b5200ab129728b9fbb06b5faca1f" kindref="member">end</ref>;</highlight></codeline>
+<codeline lineno="36"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>this.m_StiffNess<sp/>=<sp/>stiffness;</highlight></codeline>
+<codeline lineno="37"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>this.m_Damping<sp/>=<sp/>damping;</highlight></codeline>
+<codeline lineno="38"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>m_TargetLength<sp/>=<sp/>Vector2.Distance<sp/>(start.<ref refid="class_fractal_tree_1_1_point_mass_1a388c55b55d073a8962d8c4e61ce4fd94" kindref="member">position</ref>,<sp/>end.<ref refid="class_fractal_tree_1_1_point_mass_1a388c55b55d073a8962d8c4e61ce4fd94" kindref="member">position</ref>)<sp/>*<sp/>0.95f;</highlight></codeline>
+<codeline lineno="39"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="40"><highlight class="normal"></highlight></codeline>
+<codeline lineno="44"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_fractal_tree_1_1_spring_1a38d6d4709c69509ef73c1725a53e470a" kindref="member">DoUpdate</ref><sp/>()</highlight></codeline>
+<codeline lineno="45"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="46"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>var<sp/>x<sp/>=<sp/>start.<ref refid="class_fractal_tree_1_1_point_mass_1a388c55b55d073a8962d8c4e61ce4fd94" kindref="member">position</ref><sp/>-<sp/>end.<ref refid="class_fractal_tree_1_1_point_mass_1a388c55b55d073a8962d8c4e61ce4fd94" kindref="member">position</ref>;</highlight></codeline>
+<codeline lineno="47"><highlight class="normal"></highlight></codeline>
+<codeline lineno="48"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>length<sp/>=<sp/>x.magnitude;</highlight></codeline>
+<codeline lineno="49"><highlight class="normal"></highlight></codeline>
+<codeline lineno="50"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>x<sp/>=<sp/>(x<sp/>/<sp/>length)<sp/>*<sp/>(length<sp/>-<sp/>m_TargetLength);</highlight></codeline>
+<codeline lineno="51"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>var<sp/>dv<sp/>=<sp/>end.<ref refid="class_fractal_tree_1_1_point_mass_1a1cbd0cc0eacfadb549cbc5fdb87ccbb1" kindref="member">velocity</ref><sp/>-<sp/>start.<ref refid="class_fractal_tree_1_1_point_mass_1a1cbd0cc0eacfadb549cbc5fdb87ccbb1" kindref="member">velocity</ref>;</highlight></codeline>
+<codeline lineno="52"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>var<sp/>force<sp/>=<sp/>m_StiffNess<sp/>*<sp/>x<sp/>-<sp/>dv<sp/>*<sp/>m_Damping;</highlight></codeline>
+<codeline lineno="53"><highlight class="normal"></highlight></codeline>
+<codeline lineno="54"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>start.<ref refid="class_fractal_tree_1_1_point_mass_1a6f5491d604a47a8dd4c2c26d349e618f" kindref="member">ApplyForce</ref><sp/>(-force);</highlight></codeline>
+<codeline lineno="55"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>end.<ref refid="class_fractal_tree_1_1_point_mass_1a6f5491d604a47a8dd4c2c26d349e618f" kindref="member">ApplyForce</ref><sp/>(force);</highlight></codeline>
+<codeline lineno="56"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="57"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="58"><highlight class="normal">}</highlight></codeline>
+    </programlisting>
+    <location file="/Users/robertwells/Documents/fractal_trees_with_spring/fractal_tree/Assets/Scripts/Fractal Trees/Springs/Spring.cs"/>
+  </compounddef>
+</doxygen>

@@ -12,20 +12,35 @@ namespace FractalTree
     public class MovingTreeBuilder : TreeBuilder
     {
 
-        private List<MovingBranch> m_Branches = new List<MovingBranch>();
+		private List<MovingBranch> m_Branches = new List<MovingBranch>();
+
+		/// <summary>
+		/// A list of all branches associated with the tree.
+		/// </summary>
+		/// <value>The branches.</value>
+		public List<MovingBranch> branches { get { return m_Branches; } }
 
         void Start()
         {
-
-            Tree tree = CreateTree();
-
-            if (tree != null)
-            {
-                m_Branches.AddRange(tree.Generate<MovingBranch>());
-            }
+			if (buildOnStart) {
+				Build ();
+			}
         }
 
+		/// <summary>
+		/// Build this instance.
+		/// </summary>
+		public override void Build ()
+		{
+			m_Branches = DoBuild<MovingBranch> ();
+		}
 
+		/// <summary>
+		/// Applies a directed force to all branches within range.
+		/// </summary>
+		/// <param name="force">Force.</param>
+		/// <param name="position">Position.</param>
+		/// <param name="radius">Radius.</param>
         public void ApplyDirectedForce(Vector2 force, Vector2 position, float radius)
         {
             foreach (var branch in m_Branches)
@@ -39,6 +54,12 @@ namespace FractalTree
             }
         }
 
+		/// <summary>
+		/// Applies a push force to all branches within range.
+		/// </summary>
+		/// <param name="force">Force.</param>
+		/// <param name="position">Position.</param>
+		/// <param name="radius">Radius.</param>
         public void ApplyPushForce(float force, Vector2 position, float radius)
         {
 			
@@ -55,6 +76,12 @@ namespace FractalTree
             }
         }
 
+		/// <summary>
+		/// Applies a pull force to all branches in range.
+		/// </summary>
+		/// <param name="force">Force.</param>
+		/// <param name="position">Position.</param>
+		/// <param name="radius">Radius.</param>
         public void ApplyPullForce(float force, Vector2 position, float radius)
         {
             foreach (var branch in m_Branches)

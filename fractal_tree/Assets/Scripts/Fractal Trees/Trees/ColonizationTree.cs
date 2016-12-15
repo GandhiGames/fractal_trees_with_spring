@@ -4,6 +4,9 @@ using UnityEngine;
 
 namespace FractalTree
 {
+	/// <summary>
+	/// Spawns a fractal tree using space colonization: http://algorithmicbotany.org/papers/colonization.egwnp2007.pdf
+	/// </summary>
 	public class ColonizationTree : Tree
 	{
 		private static readonly int TRUNK_MAX_ATTEMPTS = 200;
@@ -17,6 +20,16 @@ namespace FractalTree
 		private float m_MinDistance;
 		private float m_MaxDistance;
 
+		/// <summary>
+		/// Initializes a new instance of the <see cref="FractalTree.ColonizationTree"/> class.
+		/// </summary>
+		/// <param name="leaves">Leaves.</param>
+		/// <param name="owner">Owner.</param>
+		/// <param name="initialLength">Initial length.</param>
+		/// <param name="branchPrefab">Branch prefab.</param>
+		/// <param name="width">Width.</param>
+		/// <param name="minDistance">Minimum distance.</param>
+		/// <param name="maxDistance">Max distance.</param>
 		public ColonizationTree (List<ColonizationLeaf> leaves, 
 		                         Transform owner, float initialLength, 
 		                         GameObject branchPrefab, float width, float minDistance, float maxDistance)
@@ -31,6 +44,10 @@ namespace FractalTree
 
 		}
 
+		/// <summary>
+		/// Generates a tree using space colonization.
+		/// </summary>
+		/// <typeparam name="T">Branch type.</typeparam>
 		public List<T> Generate<T> () where T : Branch
 		{
 			var branches = new List<T> ();
@@ -168,7 +185,7 @@ namespace FractalTree
 
 				}
 
-				branch.DoReset ();
+				branch.DoColonizationReset ();
 			}
 
 			return growing;

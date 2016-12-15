@@ -1,0 +1,67 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.12">
+  <compounddef id="class_fractal_tree_1_1_l_rule" kind="class" language="C#" prot="public">
+    <compoundname>FractalTree::LRule</compoundname>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="class_fractal_tree_1_1_l_rule_1aa08500e91663051c5da038421de7a5d5" prot="public" static="no" mutable="no">
+        <type>char</type>
+        <definition>char FractalTree.LRule.from</definition>
+        <argsstring></argsstring>
+        <name>from</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/robertwells/Documents/fractal_trees_with_spring/fractal_tree/Assets/Scripts/Fractal Trees/Trees/LTree.cs" line="240" column="1" bodyfile="/Users/robertwells/Documents/fractal_trees_with_spring/fractal_tree/Assets/Scripts/Fractal Trees/Trees/LTree.cs" bodystart="240" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_fractal_tree_1_1_l_rule_1aaa28686eef06632f5c6b0d71ff7c615e" prot="public" static="no" mutable="no">
+        <type>string</type>
+        <definition>string FractalTree.LRule.to</definition>
+        <argsstring></argsstring>
+        <name>to</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/robertwells/Documents/fractal_trees_with_spring/fractal_tree/Assets/Scripts/Fractal Trees/Trees/LTree.cs" line="241" column="1" bodyfile="/Users/robertwells/Documents/fractal_trees_with_spring/fractal_tree/Assets/Scripts/Fractal Trees/Trees/LTree.cs" bodystart="241" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="class_fractal_tree_1_1_l_rule_1a35f380166641f36ee4290895cecc4583" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>FractalTree.LRule.LRule</definition>
+        <argsstring>(char from, string to)</argsstring>
+        <name>LRule</name>
+        <param>
+          <type>char</type>
+          <declname>from</declname>
+        </param>
+        <param>
+          <type>string</type>
+          <declname>to</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/robertwells/Documents/fractal_trees_with_spring/fractal_tree/Assets/Scripts/Fractal Trees/Trees/LTree.cs" line="243" column="1" bodyfile="/Users/robertwells/Documents/fractal_trees_with_spring/fractal_tree/Assets/Scripts/Fractal Trees/Trees/LTree.cs" bodystart="243" bodyend="247"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="/Users/robertwells/Documents/fractal_trees_with_spring/fractal_tree/Assets/Scripts/Fractal Trees/Trees/LTree.cs" line="239" column="1" bodyfile="/Users/robertwells/Documents/fractal_trees_with_spring/fractal_tree/Assets/Scripts/Fractal Trees/Trees/LTree.cs" bodystart="238" bodyend="248"/>
+    <listofallmembers>
+      <member refid="class_fractal_tree_1_1_l_rule_1aa08500e91663051c5da038421de7a5d5" prot="public" virt="non-virtual"><scope>FractalTree::LRule</scope><name>from</name></member>
+      <member refid="class_fractal_tree_1_1_l_rule_1a35f380166641f36ee4290895cecc4583" prot="public" virt="non-virtual"><scope>FractalTree::LRule</scope><name>LRule</name></member>
+      <member refid="class_fractal_tree_1_1_l_rule_1aaa28686eef06632f5c6b0d71ff7c615e" prot="public" virt="non-virtual"><scope>FractalTree::LRule</scope><name>to</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

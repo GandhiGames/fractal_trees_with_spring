@@ -1,0 +1,400 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.12">
+  <compounddef id="class_fractal_tree_1_1_l_tree" kind="class" language="C#" prot="public">
+    <compoundname>FractalTree::LTree</compoundname>
+    <basecompoundref refid="interface_fractal_tree_1_1_tree" prot="public" virt="non-virtual">FractalTree.Tree</basecompoundref>
+    <innerclass refid="class_fractal_tree_1_1_l_tree_1_1_l_movement_state" prot="private">FractalTree::LTree::LMovementState</innerclass>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="class_fractal_tree_1_1_l_tree_1ac4e99a67cda925c298b96f8e4af0e156" prot="private" static="no" mutable="no">
+        <type>int</type>
+        <definition>int FractalTree.LTree.m_Steps</definition>
+        <argsstring></argsstring>
+        <name>m_Steps</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/robertwells/Documents/fractal_trees_with_spring/fractal_tree/Assets/Scripts/Fractal Trees/Trees/LTree.cs" line="12" column="1" bodyfile="/Users/robertwells/Documents/fractal_trees_with_spring/fractal_tree/Assets/Scripts/Fractal Trees/Trees/LTree.cs" bodystart="12" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_fractal_tree_1_1_l_tree_1aec631aa4c7c4d6bef4d410198b20127a" prot="private" static="no" mutable="no">
+        <type><ref refid="class_fractal_tree_1_1_l_rule" kindref="compound">LRule</ref> []</type>
+        <definition>LRule [] FractalTree.LTree.m_Rules</definition>
+        <argsstring></argsstring>
+        <name>m_Rules</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/robertwells/Documents/fractal_trees_with_spring/fractal_tree/Assets/Scripts/Fractal Trees/Trees/LTree.cs" line="13" column="1" bodyfile="/Users/robertwells/Documents/fractal_trees_with_spring/fractal_tree/Assets/Scripts/Fractal Trees/Trees/LTree.cs" bodystart="13" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_fractal_tree_1_1_l_tree_1ab5ac237380dde0e4e3f8515f0b4ee0c9" prot="private" static="no" mutable="no">
+        <type>string</type>
+        <definition>string FractalTree.LTree.m_Seed</definition>
+        <argsstring></argsstring>
+        <name>m_Seed</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/robertwells/Documents/fractal_trees_with_spring/fractal_tree/Assets/Scripts/Fractal Trees/Trees/LTree.cs" line="14" column="1" bodyfile="/Users/robertwells/Documents/fractal_trees_with_spring/fractal_tree/Assets/Scripts/Fractal Trees/Trees/LTree.cs" bodystart="14" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_fractal_tree_1_1_l_tree_1ad89d1f8b9a0a1c3b5668bc8737e18564" prot="private" static="no" mutable="no">
+        <type>string</type>
+        <definition>string FractalTree.LTree.m_Sentence</definition>
+        <argsstring></argsstring>
+        <name>m_Sentence</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/robertwells/Documents/fractal_trees_with_spring/fractal_tree/Assets/Scripts/Fractal Trees/Trees/LTree.cs" line="15" column="1" bodyfile="/Users/robertwells/Documents/fractal_trees_with_spring/fractal_tree/Assets/Scripts/Fractal Trees/Trees/LTree.cs" bodystart="15" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_fractal_tree_1_1_l_tree_1a3766574058b1a0e3ab78fd7a81b5dac2" prot="private" static="no" mutable="no">
+        <type>GameObject</type>
+        <definition>GameObject FractalTree.LTree.m_BranchPrefab</definition>
+        <argsstring></argsstring>
+        <name>m_BranchPrefab</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/robertwells/Documents/fractal_trees_with_spring/fractal_tree/Assets/Scripts/Fractal Trees/Trees/LTree.cs" line="16" column="1" bodyfile="/Users/robertwells/Documents/fractal_trees_with_spring/fractal_tree/Assets/Scripts/Fractal Trees/Trees/LTree.cs" bodystart="16" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_fractal_tree_1_1_l_tree_1a8e135c3ae33df6b2ecbc6336412243c9" prot="private" static="no" mutable="no">
+        <type>float</type>
+        <definition>float FractalTree.LTree.m_Length</definition>
+        <argsstring></argsstring>
+        <name>m_Length</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/robertwells/Documents/fractal_trees_with_spring/fractal_tree/Assets/Scripts/Fractal Trees/Trees/LTree.cs" line="17" column="1" bodyfile="/Users/robertwells/Documents/fractal_trees_with_spring/fractal_tree/Assets/Scripts/Fractal Trees/Trees/LTree.cs" bodystart="17" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_fractal_tree_1_1_l_tree_1ae587bb9c93fae4a7f90667d586ce8796" prot="private" static="no" mutable="no">
+        <type>float</type>
+        <definition>float FractalTree.LTree.m_Angle</definition>
+        <argsstring></argsstring>
+        <name>m_Angle</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/robertwells/Documents/fractal_trees_with_spring/fractal_tree/Assets/Scripts/Fractal Trees/Trees/LTree.cs" line="18" column="1" bodyfile="/Users/robertwells/Documents/fractal_trees_with_spring/fractal_tree/Assets/Scripts/Fractal Trees/Trees/LTree.cs" bodystart="18" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_fractal_tree_1_1_l_tree_1ab6dee4012fbf15c8772114c1b04f305b" prot="private" static="no" mutable="no">
+        <type>Transform</type>
+        <definition>Transform FractalTree.LTree.m_Owner</definition>
+        <argsstring></argsstring>
+        <name>m_Owner</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/robertwells/Documents/fractal_trees_with_spring/fractal_tree/Assets/Scripts/Fractal Trees/Trees/LTree.cs" line="19" column="1" bodyfile="/Users/robertwells/Documents/fractal_trees_with_spring/fractal_tree/Assets/Scripts/Fractal Trees/Trees/LTree.cs" bodystart="19" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_fractal_tree_1_1_l_tree_1aada16d340bea3c7ef6205e9d60e1eb74" prot="private" static="no" mutable="no">
+        <type>Color []</type>
+        <definition>Color [] FractalTree.LTree.m_Colors</definition>
+        <argsstring></argsstring>
+        <name>m_Colors</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/robertwells/Documents/fractal_trees_with_spring/fractal_tree/Assets/Scripts/Fractal Trees/Trees/LTree.cs" line="20" column="1" bodyfile="/Users/robertwells/Documents/fractal_trees_with_spring/fractal_tree/Assets/Scripts/Fractal Trees/Trees/LTree.cs" bodystart="20" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_fractal_tree_1_1_l_tree_1a31b37c63e669f87792f16dc8528cc37d" prot="private" static="no" mutable="no">
+        <type>float []</type>
+        <definition>float [] FractalTree.LTree.m_Widths</definition>
+        <argsstring></argsstring>
+        <name>m_Widths</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/robertwells/Documents/fractal_trees_with_spring/fractal_tree/Assets/Scripts/Fractal Trees/Trees/LTree.cs" line="21" column="1" bodyfile="/Users/robertwells/Documents/fractal_trees_with_spring/fractal_tree/Assets/Scripts/Fractal Trees/Trees/LTree.cs" bodystart="21" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_fractal_tree_1_1_l_tree_1a21f6e59ff5ccc19ea612be721e174fb8" prot="private" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool FractalTree.LTree.m_AutoWidth</definition>
+        <argsstring></argsstring>
+        <name>m_AutoWidth</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/robertwells/Documents/fractal_trees_with_spring/fractal_tree/Assets/Scripts/Fractal Trees/Trees/LTree.cs" line="22" column="1" bodyfile="/Users/robertwells/Documents/fractal_trees_with_spring/fractal_tree/Assets/Scripts/Fractal Trees/Trees/LTree.cs" bodystart="22" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_fractal_tree_1_1_l_tree_1adf8d90f67db44eedea8a5e80b3c865d2" prot="private" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool FractalTree.LTree.m_AutoMass</definition>
+        <argsstring></argsstring>
+        <name>m_AutoMass</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/robertwells/Documents/fractal_trees_with_spring/fractal_tree/Assets/Scripts/Fractal Trees/Trees/LTree.cs" line="23" column="1" bodyfile="/Users/robertwells/Documents/fractal_trees_with_spring/fractal_tree/Assets/Scripts/Fractal Trees/Trees/LTree.cs" bodystart="23" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="class_fractal_tree_1_1_l_tree_1aa8fd4aff64da19419567e96b74d7c229" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>FractalTree.LTree.LTree</definition>
+        <argsstring>(GameObject branchPrefab, int steps, string axiom, LRule[] rules, float initialLength, float angle, Transform owner, Color[] colors, float width, bool autoWidth, bool autoMass)</argsstring>
+        <name>LTree</name>
+        <param>
+          <type>GameObject</type>
+          <declname>branchPrefab</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>steps</declname>
+        </param>
+        <param>
+          <type>string</type>
+          <declname>axiom</declname>
+        </param>
+        <param>
+          <type><ref refid="class_fractal_tree_1_1_l_rule" kindref="compound">LRule</ref> []</type>
+          <declname>rules</declname>
+        </param>
+        <param>
+          <type>float</type>
+          <declname>initialLength</declname>
+        </param>
+        <param>
+          <type>float</type>
+          <declname>angle</declname>
+        </param>
+        <param>
+          <type>Transform</type>
+          <declname>owner</declname>
+        </param>
+        <param>
+          <type>Color []</type>
+          <declname>colors</declname>
+        </param>
+        <param>
+          <type>float</type>
+          <declname>width</declname>
+        </param>
+        <param>
+          <type>bool</type>
+          <declname>autoWidth</declname>
+        </param>
+        <param>
+          <type>bool</type>
+          <declname>autoMass</declname>
+        </param>
+        <briefdescription>
+<para>Initializes a new instance of the <ref refid="class_fractal_tree_1_1_l_tree" kindref="compound">FractalTree.LTree</ref> class. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>branchPrefab</parametername>
+</parameternamelist>
+<parameterdescription>
+<para><ref refid="interface_fractal_tree_1_1_branch" kindref="compound">Branch</ref> prefab.</para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>steps</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Steps.</para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>axiom</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Axiom.</para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>rules</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Rules.</para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>initialLength</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Initial length.</para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>angle</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Angle.</para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>owner</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Owner.</para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>colors</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Colors.</para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>width</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Width.</para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>autoWidth</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>If set to <computeroutput>true</computeroutput> auto width.</para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>autoMass</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>If set to <computeroutput>true</computeroutput> auto mass.</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/robertwells/Documents/fractal_trees_with_spring/fractal_tree/Assets/Scripts/Fractal Trees/Trees/LTree.cs" line="39" column="1" bodyfile="/Users/robertwells/Documents/fractal_trees_with_spring/fractal_tree/Assets/Scripts/Fractal Trees/Trees/LTree.cs" bodystart="39" bodyend="70"/>
+      </memberdef>
+      <memberdef kind="function" id="class_fractal_tree_1_1_l_tree_1a36b2a48dbb01982a649f8949823464fc" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>List&lt; T &gt;</type>
+        <definition>List&lt;T&gt; FractalTree.LTree.Generate&lt; T &gt;</definition>
+        <argsstring>()</argsstring>
+        <name>Generate&lt; T &gt;</name>
+        <reimplements refid="interface_fractal_tree_1_1_tree_1a63c5353759447db5034d7ee1c83fbd78">Generate&lt; T &gt;</reimplements>
+        <briefdescription>
+<para>Generates the tree. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="templateparam"><parameteritem>
+<parameternamelist>
+<parametername>T</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The 1st type parameter.</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/robertwells/Documents/fractal_trees_with_spring/fractal_tree/Assets/Scripts/Fractal Trees/Trees/LTree.cs" line="76" column="1" bodyfile="/Users/robertwells/Documents/fractal_trees_with_spring/fractal_tree/Assets/Scripts/Fractal Trees/Trees/LTree.cs" bodystart="76" bodyend="85"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-func">
+      <memberdef kind="function" id="class_fractal_tree_1_1_l_tree_1a10da91df06ac9c3820907c5c25ec073a" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void FractalTree.LTree.CalculateNextStep</definition>
+        <argsstring>()</argsstring>
+        <name>CalculateNextStep</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/robertwells/Documents/fractal_trees_with_spring/fractal_tree/Assets/Scripts/Fractal Trees/Trees/LTree.cs" line="87" column="1" bodyfile="/Users/robertwells/Documents/fractal_trees_with_spring/fractal_tree/Assets/Scripts/Fractal Trees/Trees/LTree.cs" bodystart="87" bodyend="114"/>
+      </memberdef>
+      <memberdef kind="function" id="class_fractal_tree_1_1_l_tree_1ae138887d42fe1e35514e52e9f680a8ae" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>List&lt; T &gt;</type>
+        <definition>List&lt;T&gt; FractalTree.LTree.CreateTree&lt; T &gt;</definition>
+        <argsstring>()</argsstring>
+        <name>CreateTree&lt; T &gt;</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/robertwells/Documents/fractal_trees_with_spring/fractal_tree/Assets/Scripts/Fractal Trees/Trees/LTree.cs" line="116" column="1" bodyfile="/Users/robertwells/Documents/fractal_trees_with_spring/fractal_tree/Assets/Scripts/Fractal Trees/Trees/LTree.cs" bodystart="116" bodyend="214"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>Spawns a fractal true using the L-system: <ulink url="http://www.allenpike.com/modeling-plants-with-l-systems/">http://www.allenpike.com/modeling-plants-with-l-systems/</ulink> </para>    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="27">
+        <label>FractalTree.LTree</label>
+        <link refid="class_fractal_tree_1_1_l_tree"/>
+        <childnode refid="28" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="28">
+        <label>Tree</label>
+        <link refid="interface_fractal_tree_1_1_tree"/>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="29">
+        <label>FractalTree.LTree</label>
+        <link refid="class_fractal_tree_1_1_l_tree"/>
+        <childnode refid="30" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="30">
+        <label>Tree</label>
+        <link refid="interface_fractal_tree_1_1_tree"/>
+      </node>
+    </collaborationgraph>
+    <location file="/Users/robertwells/Documents/fractal_trees_with_spring/fractal_tree/Assets/Scripts/Fractal Trees/Trees/LTree.cs" line="11" column="1" bodyfile="/Users/robertwells/Documents/fractal_trees_with_spring/fractal_tree/Assets/Scripts/Fractal Trees/Trees/LTree.cs" bodystart="10" bodyend="235"/>
+    <listofallmembers>
+      <member refid="class_fractal_tree_1_1_l_tree_1a10da91df06ac9c3820907c5c25ec073a" prot="private" virt="non-virtual"><scope>FractalTree::LTree</scope><name>CalculateNextStep</name></member>
+      <member refid="class_fractal_tree_1_1_l_tree_1ae138887d42fe1e35514e52e9f680a8ae" prot="private" virt="non-virtual"><scope>FractalTree::LTree</scope><name>CreateTree&lt; T &gt;</name></member>
+      <member refid="class_fractal_tree_1_1_l_tree_1a36b2a48dbb01982a649f8949823464fc" prot="public" virt="non-virtual"><scope>FractalTree::LTree</scope><name>Generate&lt; T &gt;</name></member>
+      <member refid="class_fractal_tree_1_1_l_tree_1aa8fd4aff64da19419567e96b74d7c229" prot="public" virt="non-virtual"><scope>FractalTree::LTree</scope><name>LTree</name></member>
+      <member refid="class_fractal_tree_1_1_l_tree_1ae587bb9c93fae4a7f90667d586ce8796" prot="private" virt="non-virtual"><scope>FractalTree::LTree</scope><name>m_Angle</name></member>
+      <member refid="class_fractal_tree_1_1_l_tree_1adf8d90f67db44eedea8a5e80b3c865d2" prot="private" virt="non-virtual"><scope>FractalTree::LTree</scope><name>m_AutoMass</name></member>
+      <member refid="class_fractal_tree_1_1_l_tree_1a21f6e59ff5ccc19ea612be721e174fb8" prot="private" virt="non-virtual"><scope>FractalTree::LTree</scope><name>m_AutoWidth</name></member>
+      <member refid="class_fractal_tree_1_1_l_tree_1a3766574058b1a0e3ab78fd7a81b5dac2" prot="private" virt="non-virtual"><scope>FractalTree::LTree</scope><name>m_BranchPrefab</name></member>
+      <member refid="class_fractal_tree_1_1_l_tree_1aada16d340bea3c7ef6205e9d60e1eb74" prot="private" virt="non-virtual"><scope>FractalTree::LTree</scope><name>m_Colors</name></member>
+      <member refid="class_fractal_tree_1_1_l_tree_1a8e135c3ae33df6b2ecbc6336412243c9" prot="private" virt="non-virtual"><scope>FractalTree::LTree</scope><name>m_Length</name></member>
+      <member refid="class_fractal_tree_1_1_l_tree_1ab6dee4012fbf15c8772114c1b04f305b" prot="private" virt="non-virtual"><scope>FractalTree::LTree</scope><name>m_Owner</name></member>
+      <member refid="class_fractal_tree_1_1_l_tree_1aec631aa4c7c4d6bef4d410198b20127a" prot="private" virt="non-virtual"><scope>FractalTree::LTree</scope><name>m_Rules</name></member>
+      <member refid="class_fractal_tree_1_1_l_tree_1ab5ac237380dde0e4e3f8515f0b4ee0c9" prot="private" virt="non-virtual"><scope>FractalTree::LTree</scope><name>m_Seed</name></member>
+      <member refid="class_fractal_tree_1_1_l_tree_1ad89d1f8b9a0a1c3b5668bc8737e18564" prot="private" virt="non-virtual"><scope>FractalTree::LTree</scope><name>m_Sentence</name></member>
+      <member refid="class_fractal_tree_1_1_l_tree_1ac4e99a67cda925c298b96f8e4af0e156" prot="private" virt="non-virtual"><scope>FractalTree::LTree</scope><name>m_Steps</name></member>
+      <member refid="class_fractal_tree_1_1_l_tree_1a31b37c63e669f87792f16dc8528cc37d" prot="private" virt="non-virtual"><scope>FractalTree::LTree</scope><name>m_Widths</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

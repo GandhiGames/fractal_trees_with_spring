@@ -1,0 +1,126 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.12">
+  <compounddef id="class_fractal_tree_1_1_l_tree_1_1_l_movement_state" kind="class" language="C#" prot="private">
+    <compoundname>FractalTree::LTree::LMovementState</compoundname>
+    <templateparamlist>
+      <param>
+        <type>T</type>
+      </param>
+    </templateparamlist>
+      <sectiondef kind="property">
+      <memberdef kind="property" id="class_fractal_tree_1_1_l_tree_1_1_l_movement_state_1a0309bd0028400e062843b2b05116a015" prot="public" static="no" readable="no" writable="no" gettable="yes" privategettable="no" protectedgettable="no" settable="no" privatesettable="yes" protectedsettable="no">
+        <type>Vector2</type>
+        <definition>Vector2 FractalTree.LTree.LMovementState&lt; T &gt;.position</definition>
+        <argsstring></argsstring>
+        <name>position</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/robertwells/Documents/fractal_trees_with_spring/fractal_tree/Assets/Scripts/Fractal Trees/Trees/LTree.cs" line="218" column="1" bodyfile="/Users/robertwells/Documents/fractal_trees_with_spring/fractal_tree/Assets/Scripts/Fractal Trees/Trees/LTree.cs" bodystart="218" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="property" id="class_fractal_tree_1_1_l_tree_1_1_l_movement_state_1aa5e055622e0f11a448b27738fcd6bdc5" prot="public" static="no" readable="no" writable="no" gettable="yes" privategettable="no" protectedgettable="no" settable="no" privatesettable="yes" protectedsettable="no">
+        <type>float</type>
+        <definition>float FractalTree.LTree.LMovementState&lt; T &gt;.rotation</definition>
+        <argsstring></argsstring>
+        <name>rotation</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/robertwells/Documents/fractal_trees_with_spring/fractal_tree/Assets/Scripts/Fractal Trees/Trees/LTree.cs" line="219" column="1" bodyfile="/Users/robertwells/Documents/fractal_trees_with_spring/fractal_tree/Assets/Scripts/Fractal Trees/Trees/LTree.cs" bodystart="219" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="property" id="class_fractal_tree_1_1_l_tree_1_1_l_movement_state_1ad583bdecaeecb91f8c85ce0796773355" prot="public" static="no" readable="no" writable="no" gettable="yes" privategettable="no" protectedgettable="no" settable="no" privatesettable="yes" protectedsettable="no">
+        <type>T</type>
+        <definition>T FractalTree.LTree.LMovementState&lt; T &gt;.previousBranch</definition>
+        <argsstring></argsstring>
+        <name>previousBranch</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/robertwells/Documents/fractal_trees_with_spring/fractal_tree/Assets/Scripts/Fractal Trees/Trees/LTree.cs" line="220" column="1" bodyfile="/Users/robertwells/Documents/fractal_trees_with_spring/fractal_tree/Assets/Scripts/Fractal Trees/Trees/LTree.cs" bodystart="220" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="property" id="class_fractal_tree_1_1_l_tree_1_1_l_movement_state_1a9c50be9d3c52f1462fe8e3aa75c98ac5" prot="public" static="no" readable="no" writable="no" gettable="yes" privategettable="no" protectedgettable="no" settable="no" privatesettable="yes" protectedsettable="no">
+        <type>Color</type>
+        <definition>Color FractalTree.LTree.LMovementState&lt; T &gt;.color</definition>
+        <argsstring></argsstring>
+        <name>color</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/robertwells/Documents/fractal_trees_with_spring/fractal_tree/Assets/Scripts/Fractal Trees/Trees/LTree.cs" line="221" column="1" bodyfile="/Users/robertwells/Documents/fractal_trees_with_spring/fractal_tree/Assets/Scripts/Fractal Trees/Trees/LTree.cs" bodystart="221" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="property" id="class_fractal_tree_1_1_l_tree_1_1_l_movement_state_1a6351e1c53cb42d965c302d61a227c64c" prot="public" static="no" readable="no" writable="no" gettable="yes" privategettable="no" protectedgettable="no" settable="no" privatesettable="yes" protectedsettable="no">
+        <type>float</type>
+        <definition>float FractalTree.LTree.LMovementState&lt; T &gt;.thickness</definition>
+        <argsstring></argsstring>
+        <name>thickness</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/robertwells/Documents/fractal_trees_with_spring/fractal_tree/Assets/Scripts/Fractal Trees/Trees/LTree.cs" line="222" column="1" bodyfile="/Users/robertwells/Documents/fractal_trees_with_spring/fractal_tree/Assets/Scripts/Fractal Trees/Trees/LTree.cs" bodystart="222" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="class_fractal_tree_1_1_l_tree_1_1_l_movement_state_1abe7bbae6f551ad5a3d5c07df4db54bed" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>FractalTree.LTree.LMovementState&lt; T &gt;.LMovementState</definition>
+        <argsstring>(Vector2 position, float rotation, T previousBranch, Color color, float thickness)</argsstring>
+        <name>LMovementState</name>
+        <param>
+          <type>Vector2</type>
+          <declname>position</declname>
+        </param>
+        <param>
+          <type>float</type>
+          <declname>rotation</declname>
+        </param>
+        <param>
+          <type>T</type>
+          <declname>previousBranch</declname>
+        </param>
+        <param>
+          <type>Color</type>
+          <declname>color</declname>
+        </param>
+        <param>
+          <type>float</type>
+          <declname>thickness</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/robertwells/Documents/fractal_trees_with_spring/fractal_tree/Assets/Scripts/Fractal Trees/Trees/LTree.cs" line="224" column="1" bodyfile="/Users/robertwells/Documents/fractal_trees_with_spring/fractal_tree/Assets/Scripts/Fractal Trees/Trees/LTree.cs" bodystart="224" bodyend="233"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="/Users/robertwells/Documents/fractal_trees_with_spring/fractal_tree/Assets/Scripts/Fractal Trees/Trees/LTree.cs" line="217" column="1" bodyfile="/Users/robertwells/Documents/fractal_trees_with_spring/fractal_tree/Assets/Scripts/Fractal Trees/Trees/LTree.cs" bodystart="216" bodyend="234"/>
+    <listofallmembers>
+      <member refid="class_fractal_tree_1_1_l_tree_1_1_l_movement_state_1a9c50be9d3c52f1462fe8e3aa75c98ac5" prot="public" virt="non-virtual"><scope>FractalTree::LTree::LMovementState</scope><name>color</name></member>
+      <member refid="class_fractal_tree_1_1_l_tree_1_1_l_movement_state_1abe7bbae6f551ad5a3d5c07df4db54bed" prot="public" virt="non-virtual"><scope>FractalTree::LTree::LMovementState</scope><name>LMovementState</name></member>
+      <member refid="class_fractal_tree_1_1_l_tree_1_1_l_movement_state_1a0309bd0028400e062843b2b05116a015" prot="public" virt="non-virtual"><scope>FractalTree::LTree::LMovementState</scope><name>position</name></member>
+      <member refid="class_fractal_tree_1_1_l_tree_1_1_l_movement_state_1ad583bdecaeecb91f8c85ce0796773355" prot="public" virt="non-virtual"><scope>FractalTree::LTree::LMovementState</scope><name>previousBranch</name></member>
+      <member refid="class_fractal_tree_1_1_l_tree_1_1_l_movement_state_1aa5e055622e0f11a448b27738fcd6bdc5" prot="public" virt="non-virtual"><scope>FractalTree::LTree::LMovementState</scope><name>rotation</name></member>
+      <member refid="class_fractal_tree_1_1_l_tree_1_1_l_movement_state_1a6351e1c53cb42d965c302d61a227c64c" prot="public" virt="non-virtual"><scope>FractalTree::LTree::LMovementState</scope><name>thickness</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

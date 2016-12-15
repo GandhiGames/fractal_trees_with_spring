@@ -7,6 +7,7 @@ namespace FractalTree
 	public class ColonizationTree : Tree
 	{
 		private static readonly int TRUNK_MAX_ATTEMPTS = 200;
+		private static readonly int GROWTH_MAX_ATTEMPTS = 200;
 		
 		private List<ColonizationLeaf> m_Leaves;
 		private Transform m_Owner;
@@ -35,13 +36,19 @@ namespace FractalTree
 			var branches = new List<T> ();
 
 			var root = CreateRoot<T> ();
-
 			branches.Add (root);
 
 			branches.AddRange (CreateTrunk (root));
 		
-			for (int i = 0; i < 20; i++)
-				branches = Grow (branches);
+			int growthAttempts = 0;
+
+			while (growthAttempts++ <= GROWTH_MAX_ATTEMPTS) {
+				bool stillGrowing = Grow (ref branches);
+
+				if (!stillGrowing) {
+					break;
+				}
+			}
 
 			return branches;
 		}
@@ -101,16 +108,15 @@ namespace FractalTree
 			return branches;
 		}
 
-		private List<T> Grow<T> (List<T> branches) where T : Branch
+		private bool Grow<T> (ref List<T> branches) where T : Branch
 		{
+			bool growing = false;
+
+			if (m_Leaves.Count == 0) {
+				return growing;
+			}
 	
 			foreach (var leaf in m_Leaves) {
-
-				/*
-				if (leaf.hasBeenReached) {
-					continue;
-				}
-				*/
 
 				T closest = default(T);
 				float closestDist = float.MaxValue;
@@ -121,7 +127,6 @@ namespace FractalTree
 					if (dist < m_MinDistance) { // too close
 						leaf.hasBeenReached = true;
 						closest = default(T);
-						closestDist = float.MaxValue;
 						break;
 					}
 
@@ -135,9 +140,7 @@ namespace FractalTree
 
 					var dir = (leaf.position - closest.endPos).normalized;
 
-					Debug.Log ("oldDir : " + closest.colonizationDir);
 					closest.colonizationDir += dir;
-					Debug.Log ("newDir : " + closest.colonizationDir);
 
 					closest.colonizationLeafCount++;
 				}
@@ -146,7 +149,6 @@ namespace FractalTree
 
 			for (int i = m_Leaves.Count - 1; i >= 0; i--) {
 				if (m_Leaves [i].hasBeenReached) {
-					Debug.Log ("Removing leaf: " + m_Leaves [i].gameObject.name);
 					GameObject.Destroy (m_Leaves [i].gameObject);
 					m_Leaves.RemoveAt (i);
 				}
@@ -157,19 +159,20 @@ namespace FractalTree
 				var branch = branches [i];
 
 				if (branch.colonizationLeafCount > 0) {
-					branch.colonizationDir /= branch.colonizationLeafCount;
+					branch.colonizationDir /= (branch.colonizationLeafCount + 1);
 
-					Debug.Log ("Creating branch in dir: " + (branch.endPos + branch.colonizationDir));
 					branches.Add (CreateBranch (branch, 
 						branch.endPos + branch.colonizationDir));
+
+					growing = true;
 
 				}
 
 				branch.DoReset ();
 			}
 
+			return growing;
 
-			return branches;
 		}
 	}
 }

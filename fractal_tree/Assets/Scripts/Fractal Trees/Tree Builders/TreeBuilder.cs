@@ -44,7 +44,7 @@ namespace FractalTree
 		public float lTreeAngle = 25f;
 		public Color[] lTreeColours;
 
-		[Header("Colonization")]
+		[Header ("Colonization")]
 		public Transform colonizationLeafParent;
 		public float colonizationInitialLength = 1f;
 		public float colonizationWidth = 0.4f;
@@ -71,8 +71,8 @@ namespace FractalTree
 				break;
 			case TreeType.Colonization:
 				tree = new ColonizationTree (
-					new List<ColonizationLeaf>(
-						colonizationLeafParent.GetComponentsInChildren<ColonizationLeaf>()
+					new List<ColonizationLeaf> (
+						colonizationLeafParent.GetComponentsInChildren<ColonizationLeaf> ()
 					), 
 					transform, colonizationInitialLength, branchPrefab, 
 					colonizationWidth, colonizationMinDistance, colonizationMaxDistance);

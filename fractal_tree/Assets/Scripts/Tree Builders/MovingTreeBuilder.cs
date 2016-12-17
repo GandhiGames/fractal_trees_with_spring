@@ -9,6 +9,10 @@ namespace FractalTree
     public class MovingTreeBuilder : TreeBuilder
     {
 
+		private float maxForce = 1f;
+
+		private float forceDistanceMulti = 4f;
+
 		private List<MovingBranch> m_Branches = new List<MovingBranch>();
 
 		/// <summary>
@@ -49,11 +53,11 @@ namespace FractalTree
         {
             foreach (var branch in m_Branches)
             {
-				float distance = (branch.endPoint.position - position).sqrMagnitude;
+				float distance = Vector2.Distance(position, branch.endPoint.position);
 
-				if (distance < radius * radius)
+				if (distance < radius)
                 {
-                    branch.endPoint.ApplyForce(force / (distance * 4f));
+					branch.endPoint.ApplyForce(force);
                 }
             }
         }
@@ -69,12 +73,13 @@ namespace FractalTree
 			
             foreach (var branch in m_Branches)
             {
-				Vector2 heading = branch.endPoint.position - position;
-				float distanceSqr = heading.sqrMagnitude;
+				float distance = Vector2.Distance(position, branch.endPoint.position);
 
-				if (distanceSqr < radius * radius)
+				if (distance < radius)
                 {
-					branch.endPoint.ApplyForce((force * heading) / (distanceSqr * distanceSqr));
+					Vector2 heading = branch.endPoint.position - position;
+
+					branch.endPoint.ApplyForce((force * heading) / (distance * forceDistanceMulti));
                     branch.endPoint.IncreaseDamping(0.6f);
                 }
             }
@@ -94,7 +99,9 @@ namespace FractalTree
 
                 if (distance < radius)
                 {
-                    branch.endPoint.ApplyForce(force * (position - branch.endPoint.position) / (distance * 4f));
+					Vector2 heading = position - branch.endPoint.position;
+
+					branch.endPoint.ApplyForce((force * heading) / (distance * forceDistanceMulti));
                     branch.endPoint.IncreaseDamping(0.6f);
                 }
             }

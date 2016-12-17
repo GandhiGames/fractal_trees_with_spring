@@ -135,27 +135,26 @@ namespace FractalTree
 
                 if(currentChar.Equals('F'))
                 {
-                    var branch = ((GameObject)MonoBehaviour.Instantiate(m_BranchPrefab))
-                        .GetComponent<T>();
+					var branch = ((GameObject)MonoBehaviour.Instantiate(m_BranchPrefab))
+						.GetComponent<T>();
 
-                    Vector2 next = current
-                        + (Vector2.up * m_Length).Rotate(rotation);
+					Vector2 next = current
+						+ (Vector2.up * m_Length).Rotate(rotation);
 
-                    if(previousBranch == null)
-                    {
-                        previousBranch = branch;
-                        branch.Setup(current, next, width, color, m_AutoMass);
-                    }
-                    else
-                    {
-                        branch.Setup(previousBranch, next, width, color, m_AutoMass);
-                    }
+					if(previousBranch == null)
+					{
+						previousBranch = branch;
+						branch.Setup(current, next, width, color, m_AutoMass);
+					}
+					else
+					{
+						branch.Setup(previousBranch, next, width, color, m_AutoMass);
+					}
 
-                    previousBranch = branch;
+					previousBranch = branch;
 
-                    branch.transform.SetParent(m_Owner);
-                    branchesCreated.Add(branch);
-
+					branch.transform.SetParent(m_Owner);
+					branchesCreated.Add(branch);
                     current = next;
                 }
                 else if (currentChar.Equals('+'))
@@ -212,7 +211,7 @@ namespace FractalTree
 
             return branchesCreated;
         }
-
+			
         private class LMovementState<T> where T : Branch
         {
             public Vector2 position { get; private set; }
@@ -232,6 +231,7 @@ namespace FractalTree
                 this.thickness = thickness;
             }
         }
+			
     }
 
     [System.Serializable]

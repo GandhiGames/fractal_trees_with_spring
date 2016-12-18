@@ -28,7 +28,7 @@ namespace FractalTree
 
 			switch (m_TreeBuilder.treeType) {
 
-			case TreeBuilder.TreeType.Default:
+			case TreeBuilder.TreeType.Branching:
 				ShowDefaultTreeOptions ();
 				break;
 			case TreeBuilder.TreeType.LTree:
@@ -51,7 +51,7 @@ namespace FractalTree
 			m_TreeBuilder.defaultBranchColour = EditorGUILayout.ColorField ("Branch Color", m_TreeBuilder.defaultBranchColour);
 			m_TreeBuilder.defaultGrowthCount = EditorGUILayout.IntField("Generations", m_TreeBuilder.defaultGrowthCount);
 			m_TreeBuilder.defaultInitialLength = EditorGUILayout.FloatField ("Initial Length", m_TreeBuilder.defaultInitialLength);
-			m_TreeBuilder.defaultLengthDegradation = EditorGUILayout.FloatField ("Length Degredation", m_TreeBuilder.defaultLengthDegradation);
+			m_TreeBuilder.defaultLengthReductionOnNewGeneration = EditorGUILayout.FloatField ("Length Multiplier On New Generation", m_TreeBuilder.defaultLengthReductionOnNewGeneration);
 			m_TreeBuilder.defaultAngle = EditorGUILayout.FloatField ("Angle", m_TreeBuilder.defaultAngle);
 			m_TreeBuilder.defaultWidth = EditorGUILayout.FloatField ("Branch Width", m_TreeBuilder.defaultWidth);
 		}
@@ -69,7 +69,7 @@ namespace FractalTree
 			SerializedProperty rules = serializedObject.FindProperty ("lTreeRules");
 			EditorGUILayout.PropertyField(rules, true);
 
-			m_TreeBuilder.lTreeBranchLength = EditorGUILayout.FloatField ("Branch Initial Length", m_TreeBuilder.lTreeBranchLength);
+			m_TreeBuilder.lTreeBranchLength = EditorGUILayout.FloatField ("Branch Length", m_TreeBuilder.lTreeBranchLength);
 			m_TreeBuilder.lTreeAngle = EditorGUILayout.FloatField ("Angle", m_TreeBuilder.lTreeAngle);
 
 			SerializedProperty treeColors = serializedObject.FindProperty ("lTreeColours");
@@ -88,7 +88,7 @@ namespace FractalTree
 				"Leaf Parent", m_TreeBuilder.colonizationLeafParent, typeof(Transform), true);
 			m_TreeBuilder.colonizationBranchColor = EditorGUILayout.ColorField ("Branch Color", m_TreeBuilder.colonizationBranchColor);
 			m_TreeBuilder.colonizationInitialLength = EditorGUILayout.FloatField ("Branch Initial Length", m_TreeBuilder.colonizationInitialLength);
-			m_TreeBuilder.colonizationWidth = EditorGUILayout.FloatField ("Branch Initial Width", m_TreeBuilder.colonizationWidth);
+			m_TreeBuilder.colonizationWidth = EditorGUILayout.FloatField ("Branch Width", m_TreeBuilder.colonizationWidth);
 			m_TreeBuilder.colonizationMinDistance = EditorGUILayout.FloatField ("Min Distance To Leaf", m_TreeBuilder.colonizationMinDistance);
 			m_TreeBuilder.colonizationMaxDistance = EditorGUILayout.FloatField ("Max Distance To Leaf", m_TreeBuilder.colonizationMaxDistance);
 

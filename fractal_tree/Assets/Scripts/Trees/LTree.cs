@@ -40,7 +40,7 @@ namespace FractalTree
 		                   int steps,
 		                   string axiom,
 		                   LRule[] rules,
-		                   float initialLength,
+		                   float branchLength,
 		                   float angle, Transform owner, Color[] colors, 
 		                   float width,
 		                   bool autoWidth,
@@ -51,7 +51,7 @@ namespace FractalTree
 			m_Seed = axiom;
 			m_Rules = rules;
 			m_Sentence = m_Seed;
-			m_Length = initialLength;
+			m_Length = branchLength;
 			m_Angle = angle;
 
 			m_Owner = owner;

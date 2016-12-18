@@ -32,10 +32,10 @@ namespace FractalTree.Demo
 			AppendLine("Moving: " + (!treeCreator.showingStationary ? "yes" : "no"));
 
 			switch (m_Current.treeType) {
-			case TreeBuilder.TreeType.Default:
+			case TreeBuilder.TreeType.Branching:
 				AppendLine ("Generation: " + m_Current.defaultGrowthCount);
 				AppendLine ("Initial Length: " + m_Current.defaultInitialLength);
-				AppendLine ("Length Degredation: " + m_Current.defaultLengthDegradation);
+				AppendLine ("Length Degredation: " + m_Current.defaultLengthReductionOnNewGeneration);
 				AppendLine ("Angle: " + m_Current.defaultAngle);
 				AppendLine ("Width: " + m_Current.defaultWidth);
 				break;

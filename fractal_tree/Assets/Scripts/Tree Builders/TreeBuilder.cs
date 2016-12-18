@@ -25,7 +25,7 @@ namespace FractalTree
 		/// </summary>
 		public enum TreeType
 		{
-			Default,
+			Branching,
 			LTree,
 			Colonization
 		}
@@ -33,7 +33,7 @@ namespace FractalTree
 		/// <summary>
 		/// The tree type to generate.
 		/// </summary>
-		public TreeType treeType = TreeType.Default;
+		public TreeType treeType = TreeType.Branching;
 
 		/// <summary>
 		/// The branch prefab. If tree to generate is moving then prefab should have MovingBranch script attached.
@@ -60,7 +60,7 @@ namespace FractalTree
 		/// <summary>
 		/// The length degradation for the default tree. Branches are reduced in size by this factor.
 		/// </summary>
-		public float defaultLengthDegradation = 0.67f;
+		public float defaultLengthReductionOnNewGeneration = 0.67f;
 
 		/// <summary>
 		/// The angle for default tree branching.
@@ -186,9 +186,9 @@ namespace FractalTree
 			switch (treeType) {
    
 
-			case TreeType.Default:
+			case TreeType.Branching:
 				tree = new DefaultTree (defaultGrowthCount, defaultInitialLength,
-					defaultLengthDegradation, defaultAngle, defaultWidth,
+					defaultLengthReductionOnNewGeneration, defaultAngle, defaultWidth,
 					branchPrefab, defaultBranchColour, transform);
 				break;
 			case TreeType.LTree:

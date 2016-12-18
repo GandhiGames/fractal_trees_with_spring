@@ -8,9 +8,6 @@ namespace FractalTree
 
     public class MovingTreeBuilder : TreeBuilder
     {
-
-		private float maxForce = 1f;
-
 		private float forceDistanceMulti = 4f;
 
 		private List<MovingBranch> m_Branches = new List<MovingBranch>();

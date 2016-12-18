@@ -31,20 +31,20 @@ namespace FractalTree.Demo
 			}
 		}
 
-		private int m_TreeIndex = 4;
+		private int m_TreeIndex = 0;
 	
 
 		void Start()
 		{
 			foreach (var demo in treeBuilders) {
 
-				if (demo.stationaryTree.treeType == TreeBuilder.TreeType.Colonization) {
+				if (leafGenerator != null && demo.stationaryTree.treeType == TreeBuilder.TreeType.Colonization) {
 					leafGenerator.Generate ();
 				}
 
 				demo.BuildStationary ();
 
-				if (demo.movingTree != null && demo.movingTree.treeType == TreeBuilder.TreeType.Colonization) {
+				if (leafGenerator != null && demo.movingTree != null && demo.movingTree.treeType == TreeBuilder.TreeType.Colonization) {
 					leafGenerator.Generate ();
 				}
 

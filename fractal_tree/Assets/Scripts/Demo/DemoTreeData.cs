@@ -37,15 +37,15 @@ namespace FractalTree.Demo
 				AppendLine ("Initial Length: " + m_Current.defaultInitialLength);
 				AppendLine ("Length Degredation: " + m_Current.defaultLengthDegradation);
 				AppendLine ("Angle: " + m_Current.defaultAngle);
-				AppendLine ("Branch Width: " + m_Current.defaultWidth);
+				AppendLine ("Width: " + m_Current.defaultWidth);
 				break;
 			case TreeBuilder.TreeType.LTree:
 				AppendLine ("Auto Width: " + (m_Current.lTreeAutoWidth ? "yes" : "no"));
 				if (!treeCreator.showingStationary) {
 					AppendLine ("Mass Based on Width: " + (m_Current.lTreeAutoWidth ? "yes" : "no"));
 				}
-				AppendLine ("Branch Initial Width: " + m_Current.lTreeWidth);
-				AppendLine ("Branch Initial Length: " + m_Current.lTreeBranchLength);
+				AppendLine ("Initial Width: " + m_Current.lTreeWidth);
+				AppendLine ("Initial Length: " + m_Current.lTreeBranchLength);
 				AppendLine ("Generations: " + m_Current.lTreeGrowthCount);
 				AppendLine ("Angle: " + m_Current.lTreeAngle);
 				AppendLine ("Axiom: " + m_Current.lTreeAxiom);
@@ -56,7 +56,7 @@ namespace FractalTree.Demo
 				break;
 			case TreeBuilder.TreeType.Colonization:
 				AppendLine ("Initial Length: " + m_Current.colonizationInitialLength);
-				AppendLine ("Branch Width: " + m_Current.colonizationWidth);
+				AppendLine ("Width: " + m_Current.colonizationWidth);
 				AppendLine ("Min Distance to Leafs: " + m_Current.colonizationMinDistance);
 				AppendLine ("Max Distance to Leafs: " + m_Current.colonizationMaxDistance);
 				break;

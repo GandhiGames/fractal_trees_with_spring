@@ -5,7 +5,7 @@ using UnityEditor;
 
 namespace FractalTree
 {
-	[CustomEditor(typeof(MovingTreeBuilder))]
+	[CustomEditor(typeof(MovingTreeBuilder)), CanEditMultipleObjects]
 	public class MovingTreeBuilderEditor : TreeBuilderEditor
 	{
 		public override void OnInspectorGUI()

@@ -21,6 +21,8 @@ namespace FractalTree.Demo
 		/// </summary>
 		public bool showingStationary = true;
 
+		public int startIndex = 0;
+
 		/// <summary>
 		/// Gets the active tree or null if there is none.
 		/// </summary>
@@ -36,6 +38,8 @@ namespace FractalTree.Demo
 
 		void Start()
 		{
+			m_TreeIndex = startIndex;
+			
 			foreach (var demo in treeBuilders) {
 
 				if (leafGenerator != null && demo.stationaryTree.treeType == TreeBuilder.TreeType.Colonization) {

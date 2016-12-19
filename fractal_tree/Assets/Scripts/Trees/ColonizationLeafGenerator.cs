@@ -9,19 +9,21 @@ namespace FractalTree
 	/// </summary>
 	public class ColonizationLeafGenerator : MonoBehaviour
 	{
-		/// <summary>
-		/// The bounds within which to spawn the leafs.
-		/// </summary>
-		public Rect bounds;
+		public float radius = 6f;
 
 		/// <summary>
 		/// The number of leaves to spawn.
 		/// </summary>
 		public int numToCreate = 100;
 
+
+		public bool buildOnStart = false;
+
 		void Awake ()
 		{
-			Generate ();
+			if (buildOnStart) {
+				Generate ();
+			}
 		}
 
 		public void Generate()
@@ -30,9 +32,7 @@ namespace FractalTree
 
 			for (int i = 0; i < numToCreate; i++) {
 				GameObject leaf = new GameObject ("Leaf " + (i + 1));
-				leaf.transform.position = new Vector2 (
-					Random.Range (bounds.xMin, bounds.xMax),
-					Random.Range (bounds.yMin, bounds.yMax));
+				leaf.transform.position = (Vector2)transform.position + (Random.insideUnitCircle * radius); 
 				leaf.AddComponent<ColonizationLeaf> ();
 				leaf.transform.SetParent (transform);
 

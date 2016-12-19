@@ -153,7 +153,7 @@ namespace FractalTree
 					branchesCreated.Add (branch);
 					current = next;
 				} else if (currentChar.Equals ('G')) {
-					 current += (Vector2.up * m_Length).Rotate (rotation);
+					current += (Vector2.up * m_Length).Rotate (rotation);
 				} else if (currentChar.Equals ('+')) {
 					rotation -= m_Angle;
 				} else if (currentChar.Equals ('-')) {
@@ -187,6 +187,10 @@ namespace FractalTree
                        
 						}
 					}
+				} else if (currentChar.Equals ('!')) {
+					m_Angle *= -1f;
+				} else if (currentChar.Equals ('|')) {
+					rotation = 180f;
 				}
 
 			}

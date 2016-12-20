@@ -40,19 +40,19 @@ namespace FractalTree.Demo
 		{
 			m_TreeIndex = startIndex;
 			
-			foreach (var demo in treeBuilders) {
+			for(int i = 0 ; i < treeBuilders.Length; i++)
+			{
+				var demo = treeBuilders [i];
 
-				if (leafGenerator != null && demo.stationaryTree.treeType == TreeBuilder.TreeType.Colonization) {
-					leafGenerator.Generate ();
+				if (demo.preload) {
+					BuildTree (demo);
+					demo.built = true;
 				}
+			}
 
-				demo.BuildStationary ();
-
-				if (leafGenerator != null && demo.movingTree != null && demo.movingTree.treeType == TreeBuilder.TreeType.Colonization) {
-					leafGenerator.Generate ();
-				}
-
-				demo.BuildMoving ();
+			if (!treeBuilders [m_TreeIndex].built) {
+				BuildTree (treeBuilders [m_TreeIndex]);
+				treeBuilders [m_TreeIndex].built = true;
 			}
 
 			treeBuilders [m_TreeIndex].Show (showingStationary);
@@ -64,6 +64,11 @@ namespace FractalTree.Demo
 
 
 			m_TreeIndex = (m_TreeIndex + 1) % treeBuilders.Length;
+
+			if (!treeBuilders [m_TreeIndex].built) {
+				BuildTree (treeBuilders [m_TreeIndex]);
+				treeBuilders [m_TreeIndex].built = true;
+			}
 
 			if (!showingStationary && treeBuilders [m_TreeIndex].movingTree == null) {
 				showingStationary = true;
@@ -83,14 +88,33 @@ namespace FractalTree.Demo
 
 			return false;
 		}
+
+		private void BuildTree(TreesToDemo demo)
+		{
+			if (leafGenerator != null && demo.stationaryTree.treeType == TreeBuilder.TreeType.Colonization) {
+				leafGenerator.Generate ();
+			}
+
+			demo.BuildStationary ();
+
+			if (leafGenerator != null && demo.movingTree != null && demo.movingTree.treeType == TreeBuilder.TreeType.Colonization) {
+				leafGenerator.Generate ();
+			}
+
+			demo.BuildMoving ();
+		}
 	}
 
 	/// <summary>
 	/// Trees to demo. Stationary and Moving tree builder pairs.
 	/// </summary>
 	[System.Serializable]
-	public struct TreesToDemo
+	public class TreesToDemo
 	{
+		public bool preload;
+
+		public bool built;
+		
 		/// <summary>
 		/// The stationary tree.
 		/// </summary>

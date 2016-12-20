@@ -39,3 +39,6 @@
 /Users/robertwells/Documents/fractal_trees_with_spring/fractal_tree/Temp/bin/Debug/UnityEditor.iOS.Extensions.Xcode.xml
 /Users/robertwells/Documents/fractal_trees_with_spring/fractal_tree/Temp/bin/Debug/UnityEngine.Advertisements.dll
 /Users/robertwells/Documents/fractal_trees_with_spring/fractal_tree/Temp/bin/Debug/UnityEngine.Purchasing.dll
+/Users/robertwells/Documents/fractal_trees_with_spring/fractal_tree/Temp/bin/Debug/AssetStoreToolsExtra.dll
+/Users/robertwells/Documents/fractal_trees_with_spring/fractal_tree/Temp/bin/Debug/AssetStoreTools.dll
+/Users/robertwells/Documents/fractal_trees_with_spring/fractal_tree/Temp/bin/Debug/UnityEditor.WindowsStandalone.Extensions.dll

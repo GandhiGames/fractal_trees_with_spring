@@ -99,6 +99,12 @@ namespace FractalTree
 				bool matched = false;
 
 				for (int j = 0; j < m_Rules.Length; j++) {
+					
+					if(m_Rules[j].from == '\0')
+					{
+						continue;
+					}
+
 					if (currentChar.Equals (m_Rules [j].from)) {
 						nextSentence += m_Rules [j].to;
 						matched = true;

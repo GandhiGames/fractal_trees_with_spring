@@ -82,7 +82,7 @@ namespace FractalTree.Demo
 			bool changedState = treeCreator.SwitchTreeState ();
 
 			if (!changedState) {
-				warningLabel.text = "Cannot convert to moving tree due to tree complexity";
+				warningLabel.text = "Cannot convert to moving tree due to shape complexity";
 			
 				StartCoroutine (HideWarningText (2f));
 			}

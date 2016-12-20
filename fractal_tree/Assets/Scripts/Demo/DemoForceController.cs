@@ -5,6 +5,9 @@ using UnityEngine;
 
 namespace FractalTree.Demo
 {
+	/// <summary>
+	/// Applies forces to the currently active tree in the demo scene.
+	/// </summary>
     public class DemoForceController : MonoBehaviour
     {
 		public DemoTreeCreator treeCreator;

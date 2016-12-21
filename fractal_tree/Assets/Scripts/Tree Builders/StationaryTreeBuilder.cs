@@ -32,12 +32,16 @@ namespace FractalTree
 			m_Branches = DoBuild<Branch> ();
 		}
 			
-
+		/// <summary>
+		/// Deletes all child branches and clears branch list.
+		/// </summary>
 		public override void Remove ()
 		{
 			for (int i = m_Branches.Count - 1; i >= 0; i--) {
 				Destroy (m_Branches [i].transform.gameObject);
 			}
+
+			m_Branches.Clear ();
 		}
     }
 }

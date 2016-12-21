@@ -2,9 +2,13 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEditor;
+using UnityEditor.SceneManagement;
 
 namespace FractalTree
 {
+	/// <summary>
+	/// Custom editor for tree builder class. Hides variables not in use based on TreeType.
+	/// </summary>
 	[CustomEditor (typeof(TreeBuilder))]
 	public abstract class TreeBuilderEditor : Editor
 	{
@@ -42,7 +46,8 @@ namespace FractalTree
 			}
 
 			if (GUI.changed) {
-				EditorUtility.SetDirty (m_TreeBuilder);   
+				
+				EditorSceneManager.MarkSceneDirty (EditorSceneManager.GetActiveScene ());
 			}
 		}
 

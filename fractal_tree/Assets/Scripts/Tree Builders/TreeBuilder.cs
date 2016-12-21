@@ -4,7 +4,9 @@ using UnityEngine;
 
 namespace FractalTree
 {
-
+	/// <summary>
+	/// All trees should have a method of generating themselves.
+	/// </summary>
 	public interface Tree
 	{
 		List<T> Generate<T>() where T : Branch;

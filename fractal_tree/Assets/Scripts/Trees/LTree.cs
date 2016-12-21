@@ -37,14 +37,14 @@ namespace FractalTree
 		/// <param name="autoWidth">If set to <c>true</c> auto width.</param>
 		/// <param name="autoMass">If set to <c>true</c> auto mass.</param>
 		public LTree (GameObject branchPrefab, 
-		                   int steps,
-		                   string axiom,
-		                   LRule[] rules,
-		                   float branchLength,
-		                   float angle, Transform owner, Color[] colors, 
-		                   float width,
-		                   bool autoWidth,
-		                   bool autoMass)
+		              int steps,
+		              string axiom,
+		              LRule[] rules,
+		              float branchLength,
+		              float angle, Transform owner, Color[] colors, 
+		              float width,
+		              bool autoWidth,
+		              bool autoMass)
 		{
 			m_BranchPrefab = branchPrefab;
 			m_Steps = steps;
@@ -100,8 +100,7 @@ namespace FractalTree
 
 				for (int j = 0; j < m_Rules.Length; j++) {
 					
-					if(m_Rules[j].from == '\0')
-					{
+					if (m_Rules [j].from == '\0') {
 						continue;
 					}
 
@@ -217,8 +216,8 @@ namespace FractalTree
 			public float thickness { get; private set; }
 
 			public LMovementState (Vector2 position, 
-			                               float rotation, T previousBranch, 
-			                               Color color, float thickness)
+			                       float rotation, T previousBranch, 
+			                       Color color, float thickness)
 			{
 				this.position = position;
 				this.rotation = rotation;

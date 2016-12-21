@@ -1,4 +1,4 @@
 sceneSetups:
-- path: Assets/Scenes/Space Colonization Demo.unity
+- path: Assets/Scenes/L System Generator Demo.unity
   isLoaded: 1
   isActive: 1

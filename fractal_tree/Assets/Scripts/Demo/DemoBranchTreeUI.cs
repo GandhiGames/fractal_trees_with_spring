@@ -5,6 +5,9 @@ using UnityEngine.UI;
 
 namespace FractalTree.Demo
 {
+	/// <summary>
+	/// For demo purposes. Listens for changes in UI and updates Branch variables.
+	/// </summary>
 	public class DemoBranchTreeUI : MonoBehaviour
 	{
 		public TreeBuilder treeBuilder;

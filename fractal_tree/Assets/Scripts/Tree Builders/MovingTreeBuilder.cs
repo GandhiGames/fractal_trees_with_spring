@@ -5,10 +5,15 @@ using UnityEngine;
 namespace FractalTree
 {
 
-
+	/// <summary>
+	/// Builds a moving tree and provides methods of applying forces to generated trees.
+	/// </summary>
     public class MovingTreeBuilder : TreeBuilder
     {
-		private float forceDistanceMulti = 4f;
+		/// <summary>
+		/// All forces applies to this tree are multiplied by this value. Use this to create trees that are more sensitive to forces than others.
+		/// </summary>
+		public float forceDistanceMulti = 4f;
 
 		private List<MovingBranch> m_Branches = new List<MovingBranch>();
 
@@ -33,11 +38,16 @@ namespace FractalTree
 			m_Branches = DoBuild<MovingBranch> ();
 		}
 
+		/// <summary>
+		/// Deletes all child branches and clears branch list.
+		/// </summary>
 		public override void Remove ()
 		{
 			for (int i = m_Branches.Count - 1; i >= 0; i--) {
 				Destroy (m_Branches [i].transform.gameObject);
 			}
+
+			m_Branches.Clear ();
 		}
 
 		/// <summary>

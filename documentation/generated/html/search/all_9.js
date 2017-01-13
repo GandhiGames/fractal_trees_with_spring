@@ -1,9 +1,9 @@
 var searchData=
 [
+  ['leafgenerator',['leafGenerator',['../class_fractal_tree_1_1_demo_1_1_demo_tree_creator.html#aa359c2bdf8c008848518f4c67cb5df53',1,'FractalTree::Demo::DemoTreeCreator']]],
   ['lengthdegradation',['LengthDegradation',['../class_fractal_tree_1_1_stationary_branch.html#a406e104be242fe61b1c1c1ea7d67f167',1,'FractalTree::StationaryBranch']]],
   ['lrule',['LRule',['../class_fractal_tree_1_1_l_rule.html',1,'FractalTree']]],
-  ['ltree',['LTree',['../class_fractal_tree_1_1_l_tree.html',1,'FractalTree']]],
-  ['ltree',['LTree',['../class_fractal_tree_1_1_l_tree.html#aa8fd4aff64da19419567e96b74d7c229',1,'FractalTree::LTree']]],
+  ['ltree',['LTree',['../class_fractal_tree_1_1_l_tree.html',1,'FractalTree.LTree'],['../class_fractal_tree_1_1_l_tree.html#aac93139ff0e0b365ca88c2ff38ae1595',1,'FractalTree.LTree.LTree()']]],
   ['ltreeangle',['lTreeAngle',['../class_fractal_tree_1_1_tree_builder.html#a10a0d2b7b57b98c4232ba414cdfa8436',1,'FractalTree::TreeBuilder']]],
   ['ltreeautowidth',['lTreeAutoWidth',['../class_fractal_tree_1_1_tree_builder.html#acc1a7487b339290c552ef136fec40b02',1,'FractalTree::TreeBuilder']]],
   ['ltreeaxiom',['lTreeAxiom',['../class_fractal_tree_1_1_tree_builder.html#a0ed6efbc756277236c9b209ebcba829a',1,'FractalTree::TreeBuilder']]],

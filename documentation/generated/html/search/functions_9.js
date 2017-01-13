@@ -1,5 +1,4 @@
 var searchData=
 [
-  ['updatecolor',['UpdateColor',['../class_fractal_tree_1_1_stationary_branch.html#ae80389d3859645e0023dd11533b06e83',1,'FractalTree::StationaryBranch']]],
-  ['updatesprite',['UpdateSprite',['../class_fractal_tree_1_1_stationary_branch.html#a79b077e778c1d8aa92f3f4ad9a516058',1,'FractalTree::StationaryBranch']]]
+  ['remove',['Remove',['../class_fractal_tree_1_1_moving_tree_builder.html#a4b1bc4aee0ed9d1515b7c33c997ace8c',1,'FractalTree.MovingTreeBuilder.Remove()'],['../class_fractal_tree_1_1_stationary_tree_builder.html#a6f7254b5a4ef6ebbdd88abadfc221b4c',1,'FractalTree.StationaryTreeBuilder.Remove()']]]
 ];

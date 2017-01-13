@@ -14,7 +14,7 @@ Inheritance diagram for Fractal\+Tree.\+Tree\+Builder\+:\begin{figure}[H]
 \subsection*{Public Types}
 \begin{DoxyCompactItemize}
 \item 
-enum \hyperlink{class_fractal_tree_1_1_tree_builder_a955d67cfa976440cc427e591be74f979}{Tree\+Type} \{ {\bfseries Default}, 
+enum \hyperlink{class_fractal_tree_1_1_tree_builder_a955d67cfa976440cc427e591be74f979}{Tree\+Type} \{ {\bfseries Branching}, 
 {\bfseries L\+Tree}, 
 {\bfseries Colonization}
  \}\begin{DoxyCompactList}\small\item\em \hyperlink{interface_fractal_tree_1_1_tree}{Tree} type. \end{DoxyCompactList}
@@ -22,23 +22,28 @@ enum \hyperlink{class_fractal_tree_1_1_tree_builder_a955d67cfa976440cc427e591be7
 \subsection*{Public Member Functions}
 \begin{DoxyCompactItemize}
 \item 
-\hypertarget{class_fractal_tree_1_1_tree_builder_a88adcd333ec7886c37d9810eab7fb8f0}{}\label{class_fractal_tree_1_1_tree_builder_a88adcd333ec7886c37d9810eab7fb8f0} 
+\mbox{\Hypertarget{class_fractal_tree_1_1_tree_builder_a88adcd333ec7886c37d9810eab7fb8f0}\label{class_fractal_tree_1_1_tree_builder_a88adcd333ec7886c37d9810eab7fb8f0}} 
 abstract void {\bfseries Build} ()
+\item 
+\mbox{\Hypertarget{class_fractal_tree_1_1_tree_builder_a78e204c24a9e5e49734ecaa87d395e53}\label{class_fractal_tree_1_1_tree_builder_a78e204c24a9e5e49734ecaa87d395e53}} 
+abstract void {\bfseries Remove} ()
 \end{DoxyCompactItemize}
 \subsection*{Public Attributes}
 \begin{DoxyCompactItemize}
 \item 
 bool \hyperlink{class_fractal_tree_1_1_tree_builder_a430c3374fd2e1302f232d08bca9558b2}{build\+On\+Start} = true
 \begin{DoxyCompactList}\small\item\em If true, builds tree on start. \end{DoxyCompactList}\item 
-\hyperlink{class_fractal_tree_1_1_tree_builder_a955d67cfa976440cc427e591be74f979}{Tree\+Type} \hyperlink{class_fractal_tree_1_1_tree_builder_aa2f66ebffbf59d18232884f85e95490d}{tree\+Type} = Tree\+Type.\+Default
+\hyperlink{class_fractal_tree_1_1_tree_builder_a955d67cfa976440cc427e591be74f979}{Tree\+Type} \hyperlink{class_fractal_tree_1_1_tree_builder_aa2f66ebffbf59d18232884f85e95490d}{tree\+Type} = Tree\+Type.\+Branching
 \begin{DoxyCompactList}\small\item\em The tree type to generate. \end{DoxyCompactList}\item 
 Game\+Object \hyperlink{class_fractal_tree_1_1_tree_builder_a3cc99e5fd404b3916dc29f5dc5223d8c}{branch\+Prefab}
 \begin{DoxyCompactList}\small\item\em The branch prefab. If tree to generate is moving then prefab should have \hyperlink{interface_fractal_tree_1_1_moving_branch}{Moving\+Branch} script attached. \end{DoxyCompactList}\item 
+Color \hyperlink{class_fractal_tree_1_1_tree_builder_a5277c397ded85184011c9ccda8f83563}{default\+Branch\+Colour} = Color.\+white
+\begin{DoxyCompactList}\small\item\em The branch colour for the default tree. \end{DoxyCompactList}\item 
 int \hyperlink{class_fractal_tree_1_1_tree_builder_a6f7229c6652a8d52f4227f5e7dce3123}{default\+Growth\+Count} = 8
 \begin{DoxyCompactList}\small\item\em The number of tree generations. \end{DoxyCompactList}\item 
 float \hyperlink{class_fractal_tree_1_1_tree_builder_a34195cdf1a552ee1027bfbf42682ea29}{default\+Initial\+Length} = 5f
 \begin{DoxyCompactList}\small\item\em The default length of the initial branches for the default tree generation. \end{DoxyCompactList}\item 
-float \hyperlink{class_fractal_tree_1_1_tree_builder_aab288ec80d45e50e41a31ca3313e44be}{default\+Length\+Degradation} = 0.\+67f
+float \hyperlink{class_fractal_tree_1_1_tree_builder_a002013c39a026974af2745840d7784bd}{default\+Length\+Reduction\+On\+New\+Generation} = 0.\+67f
 \begin{DoxyCompactList}\small\item\em The length degradation for the default tree. Branches are reduced in size by this factor. \end{DoxyCompactList}\item 
 float \hyperlink{class_fractal_tree_1_1_tree_builder_a71036891662e482caeb410dadd5bfe65}{default\+Angle} = 45f
 \begin{DoxyCompactList}\small\item\em The angle for default tree branching. \end{DoxyCompactList}\item 
@@ -64,6 +69,9 @@ Color \mbox{[}$\,$\mbox{]} \hyperlink{class_fractal_tree_1_1_tree_builder_adf9df
 \begin{DoxyCompactList}\small\item\em The L tree colours. \end{DoxyCompactList}\item 
 Transform \hyperlink{class_fractal_tree_1_1_tree_builder_a17c8e9ca6955ef3d2eadbf0fc54acfa3}{colonization\+Leaf\+Parent}
 \begin{DoxyCompactList}\small\item\em The parent of the game object that holds the colonization leaves. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_fractal_tree_1_1_tree_builder_ad49cb5210ad4c146bfb44a2c04f47f36}\label{class_fractal_tree_1_1_tree_builder_ad49cb5210ad4c146bfb44a2c04f47f36}} 
+Color {\bfseries colonization\+Branch\+Color} = Color.\+white
+\item 
 float \hyperlink{class_fractal_tree_1_1_tree_builder_a1cd91a1a14415505680fa2deae9468ca}{colonization\+Initial\+Length} = 1f
 \begin{DoxyCompactList}\small\item\em The initial length for a colonization tree trunk. \end{DoxyCompactList}\item 
 float \hyperlink{class_fractal_tree_1_1_tree_builder_a22b8c477430d16faa020d724c8573a57}{colonization\+Width} = 0.\+04f
@@ -87,7 +95,7 @@ The base tree builder class. Provides paramaters for default, L, and colonizatio
 
 
 \subsection{Member Enumeration Documentation}
-\hypertarget{class_fractal_tree_1_1_tree_builder_a955d67cfa976440cc427e591be74f979}{}\label{class_fractal_tree_1_1_tree_builder_a955d67cfa976440cc427e591be74f979} 
+\mbox{\Hypertarget{class_fractal_tree_1_1_tree_builder_a955d67cfa976440cc427e591be74f979}\label{class_fractal_tree_1_1_tree_builder_a955d67cfa976440cc427e591be74f979}} 
 \index{Fractal\+Tree\+::\+Tree\+Builder@{Fractal\+Tree\+::\+Tree\+Builder}!Tree\+Type@{Tree\+Type}}
 \index{Tree\+Type@{Tree\+Type}!Fractal\+Tree\+::\+Tree\+Builder@{Fractal\+Tree\+::\+Tree\+Builder}}
 \subsubsection{\texorpdfstring{Tree\+Type}{TreeType}}
@@ -100,7 +108,7 @@ The base tree builder class. Provides paramaters for default, L, and colonizatio
 
 
 \subsection{Member Function Documentation}
-\hypertarget{class_fractal_tree_1_1_tree_builder_a8bea11ef52d57a75292efd34e6f40779}{}\label{class_fractal_tree_1_1_tree_builder_a8bea11ef52d57a75292efd34e6f40779} 
+\mbox{\Hypertarget{class_fractal_tree_1_1_tree_builder_a8bea11ef52d57a75292efd34e6f40779}\label{class_fractal_tree_1_1_tree_builder_a8bea11ef52d57a75292efd34e6f40779}} 
 \index{Fractal\+Tree\+::\+Tree\+Builder@{Fractal\+Tree\+::\+Tree\+Builder}!Create\+Tree@{Create\+Tree}}
 \index{Create\+Tree@{Create\+Tree}!Fractal\+Tree\+::\+Tree\+Builder@{Fractal\+Tree\+::\+Tree\+Builder}}
 \subsubsection{\texorpdfstring{Create\+Tree()}{CreateTree()}}
@@ -113,7 +121,7 @@ Creates a tree based on tree\+Type.
 \begin{DoxyReturn}{Returns}
 The tree.
 \end{DoxyReturn}
-\hypertarget{class_fractal_tree_1_1_tree_builder_aa2d0ae2616577e6c0cdf7e68cdf4dffb}{}\label{class_fractal_tree_1_1_tree_builder_aa2d0ae2616577e6c0cdf7e68cdf4dffb} 
+\mbox{\Hypertarget{class_fractal_tree_1_1_tree_builder_aa2d0ae2616577e6c0cdf7e68cdf4dffb}\label{class_fractal_tree_1_1_tree_builder_aa2d0ae2616577e6c0cdf7e68cdf4dffb}} 
 \index{Fractal\+Tree\+::\+Tree\+Builder@{Fractal\+Tree\+::\+Tree\+Builder}!Do\+Build$<$ T $>$@{Do\+Build$<$ T $>$}}
 \index{Do\+Build$<$ T $>$@{Do\+Build$<$ T $>$}!Fractal\+Tree\+::\+Tree\+Builder@{Fractal\+Tree\+::\+Tree\+Builder}}
 \subsubsection{\texorpdfstring{Do\+Build$<$ T $>$()}{DoBuild< T >()}}
@@ -130,7 +138,7 @@ Build this instance of the tree.
 
 
 \subsection{Member Data Documentation}
-\hypertarget{class_fractal_tree_1_1_tree_builder_a3cc99e5fd404b3916dc29f5dc5223d8c}{}\label{class_fractal_tree_1_1_tree_builder_a3cc99e5fd404b3916dc29f5dc5223d8c} 
+\mbox{\Hypertarget{class_fractal_tree_1_1_tree_builder_a3cc99e5fd404b3916dc29f5dc5223d8c}\label{class_fractal_tree_1_1_tree_builder_a3cc99e5fd404b3916dc29f5dc5223d8c}} 
 \index{Fractal\+Tree\+::\+Tree\+Builder@{Fractal\+Tree\+::\+Tree\+Builder}!branch\+Prefab@{branch\+Prefab}}
 \index{branch\+Prefab@{branch\+Prefab}!Fractal\+Tree\+::\+Tree\+Builder@{Fractal\+Tree\+::\+Tree\+Builder}}
 \subsubsection{\texorpdfstring{branch\+Prefab}{branchPrefab}}
@@ -140,7 +148,7 @@ Build this instance of the tree.
 
 The branch prefab. If tree to generate is moving then prefab should have \hyperlink{interface_fractal_tree_1_1_moving_branch}{Moving\+Branch} script attached. 
 
-\hypertarget{class_fractal_tree_1_1_tree_builder_a430c3374fd2e1302f232d08bca9558b2}{}\label{class_fractal_tree_1_1_tree_builder_a430c3374fd2e1302f232d08bca9558b2} 
+\mbox{\Hypertarget{class_fractal_tree_1_1_tree_builder_a430c3374fd2e1302f232d08bca9558b2}\label{class_fractal_tree_1_1_tree_builder_a430c3374fd2e1302f232d08bca9558b2}} 
 \index{Fractal\+Tree\+::\+Tree\+Builder@{Fractal\+Tree\+::\+Tree\+Builder}!build\+On\+Start@{build\+On\+Start}}
 \index{build\+On\+Start@{build\+On\+Start}!Fractal\+Tree\+::\+Tree\+Builder@{Fractal\+Tree\+::\+Tree\+Builder}}
 \subsubsection{\texorpdfstring{build\+On\+Start}{buildOnStart}}
@@ -150,7 +158,7 @@ The branch prefab. If tree to generate is moving then prefab should have \hyperl
 
 If true, builds tree on start. 
 
-\hypertarget{class_fractal_tree_1_1_tree_builder_a1cd91a1a14415505680fa2deae9468ca}{}\label{class_fractal_tree_1_1_tree_builder_a1cd91a1a14415505680fa2deae9468ca} 
+\mbox{\Hypertarget{class_fractal_tree_1_1_tree_builder_a1cd91a1a14415505680fa2deae9468ca}\label{class_fractal_tree_1_1_tree_builder_a1cd91a1a14415505680fa2deae9468ca}} 
 \index{Fractal\+Tree\+::\+Tree\+Builder@{Fractal\+Tree\+::\+Tree\+Builder}!colonization\+Initial\+Length@{colonization\+Initial\+Length}}
 \index{colonization\+Initial\+Length@{colonization\+Initial\+Length}!Fractal\+Tree\+::\+Tree\+Builder@{Fractal\+Tree\+::\+Tree\+Builder}}
 \subsubsection{\texorpdfstring{colonization\+Initial\+Length}{colonizationInitialLength}}
@@ -160,7 +168,7 @@ If true, builds tree on start.
 
 The initial length for a colonization tree trunk. 
 
-\hypertarget{class_fractal_tree_1_1_tree_builder_a17c8e9ca6955ef3d2eadbf0fc54acfa3}{}\label{class_fractal_tree_1_1_tree_builder_a17c8e9ca6955ef3d2eadbf0fc54acfa3} 
+\mbox{\Hypertarget{class_fractal_tree_1_1_tree_builder_a17c8e9ca6955ef3d2eadbf0fc54acfa3}\label{class_fractal_tree_1_1_tree_builder_a17c8e9ca6955ef3d2eadbf0fc54acfa3}} 
 \index{Fractal\+Tree\+::\+Tree\+Builder@{Fractal\+Tree\+::\+Tree\+Builder}!colonization\+Leaf\+Parent@{colonization\+Leaf\+Parent}}
 \index{colonization\+Leaf\+Parent@{colonization\+Leaf\+Parent}!Fractal\+Tree\+::\+Tree\+Builder@{Fractal\+Tree\+::\+Tree\+Builder}}
 \subsubsection{\texorpdfstring{colonization\+Leaf\+Parent}{colonizationLeafParent}}
@@ -170,7 +178,7 @@ The initial length for a colonization tree trunk.
 
 The parent of the game object that holds the colonization leaves. 
 
-\hypertarget{class_fractal_tree_1_1_tree_builder_a21cbebdabadaf5d205a038d20db2f702}{}\label{class_fractal_tree_1_1_tree_builder_a21cbebdabadaf5d205a038d20db2f702} 
+\mbox{\Hypertarget{class_fractal_tree_1_1_tree_builder_a21cbebdabadaf5d205a038d20db2f702}\label{class_fractal_tree_1_1_tree_builder_a21cbebdabadaf5d205a038d20db2f702}} 
 \index{Fractal\+Tree\+::\+Tree\+Builder@{Fractal\+Tree\+::\+Tree\+Builder}!colonization\+Max\+Distance@{colonization\+Max\+Distance}}
 \index{colonization\+Max\+Distance@{colonization\+Max\+Distance}!Fractal\+Tree\+::\+Tree\+Builder@{Fractal\+Tree\+::\+Tree\+Builder}}
 \subsubsection{\texorpdfstring{colonization\+Max\+Distance}{colonizationMaxDistance}}
@@ -180,7 +188,7 @@ The parent of the game object that holds the colonization leaves.
 
 The maximum distance between the branch and a colonization leaf for it to be registered. 
 
-\hypertarget{class_fractal_tree_1_1_tree_builder_ac7abe13cc887bafe266773e33513d69a}{}\label{class_fractal_tree_1_1_tree_builder_ac7abe13cc887bafe266773e33513d69a} 
+\mbox{\Hypertarget{class_fractal_tree_1_1_tree_builder_ac7abe13cc887bafe266773e33513d69a}\label{class_fractal_tree_1_1_tree_builder_ac7abe13cc887bafe266773e33513d69a}} 
 \index{Fractal\+Tree\+::\+Tree\+Builder@{Fractal\+Tree\+::\+Tree\+Builder}!colonization\+Min\+Distance@{colonization\+Min\+Distance}}
 \index{colonization\+Min\+Distance@{colonization\+Min\+Distance}!Fractal\+Tree\+::\+Tree\+Builder@{Fractal\+Tree\+::\+Tree\+Builder}}
 \subsubsection{\texorpdfstring{colonization\+Min\+Distance}{colonizationMinDistance}}
@@ -190,7 +198,7 @@ The maximum distance between the branch and a colonization leaf for it to be reg
 
 The minimum distance between the branch and a colonization leaf for it to be registered. 
 
-\hypertarget{class_fractal_tree_1_1_tree_builder_a22b8c477430d16faa020d724c8573a57}{}\label{class_fractal_tree_1_1_tree_builder_a22b8c477430d16faa020d724c8573a57} 
+\mbox{\Hypertarget{class_fractal_tree_1_1_tree_builder_a22b8c477430d16faa020d724c8573a57}\label{class_fractal_tree_1_1_tree_builder_a22b8c477430d16faa020d724c8573a57}} 
 \index{Fractal\+Tree\+::\+Tree\+Builder@{Fractal\+Tree\+::\+Tree\+Builder}!colonization\+Width@{colonization\+Width}}
 \index{colonization\+Width@{colonization\+Width}!Fractal\+Tree\+::\+Tree\+Builder@{Fractal\+Tree\+::\+Tree\+Builder}}
 \subsubsection{\texorpdfstring{colonization\+Width}{colonizationWidth}}
@@ -200,7 +208,7 @@ The minimum distance between the branch and a colonization leaf for it to be reg
 
 The width of the colonization tree branches. 
 
-\hypertarget{class_fractal_tree_1_1_tree_builder_a71036891662e482caeb410dadd5bfe65}{}\label{class_fractal_tree_1_1_tree_builder_a71036891662e482caeb410dadd5bfe65} 
+\mbox{\Hypertarget{class_fractal_tree_1_1_tree_builder_a71036891662e482caeb410dadd5bfe65}\label{class_fractal_tree_1_1_tree_builder_a71036891662e482caeb410dadd5bfe65}} 
 \index{Fractal\+Tree\+::\+Tree\+Builder@{Fractal\+Tree\+::\+Tree\+Builder}!default\+Angle@{default\+Angle}}
 \index{default\+Angle@{default\+Angle}!Fractal\+Tree\+::\+Tree\+Builder@{Fractal\+Tree\+::\+Tree\+Builder}}
 \subsubsection{\texorpdfstring{default\+Angle}{defaultAngle}}
@@ -210,7 +218,17 @@ The width of the colonization tree branches.
 
 The angle for default tree branching. 
 
-\hypertarget{class_fractal_tree_1_1_tree_builder_a6f7229c6652a8d52f4227f5e7dce3123}{}\label{class_fractal_tree_1_1_tree_builder_a6f7229c6652a8d52f4227f5e7dce3123} 
+\mbox{\Hypertarget{class_fractal_tree_1_1_tree_builder_a5277c397ded85184011c9ccda8f83563}\label{class_fractal_tree_1_1_tree_builder_a5277c397ded85184011c9ccda8f83563}} 
+\index{Fractal\+Tree\+::\+Tree\+Builder@{Fractal\+Tree\+::\+Tree\+Builder}!default\+Branch\+Colour@{default\+Branch\+Colour}}
+\index{default\+Branch\+Colour@{default\+Branch\+Colour}!Fractal\+Tree\+::\+Tree\+Builder@{Fractal\+Tree\+::\+Tree\+Builder}}
+\subsubsection{\texorpdfstring{default\+Branch\+Colour}{defaultBranchColour}}
+{\footnotesize\ttfamily Color Fractal\+Tree.\+Tree\+Builder.\+default\+Branch\+Colour = Color.\+white}
+
+
+
+The branch colour for the default tree. 
+
+\mbox{\Hypertarget{class_fractal_tree_1_1_tree_builder_a6f7229c6652a8d52f4227f5e7dce3123}\label{class_fractal_tree_1_1_tree_builder_a6f7229c6652a8d52f4227f5e7dce3123}} 
 \index{Fractal\+Tree\+::\+Tree\+Builder@{Fractal\+Tree\+::\+Tree\+Builder}!default\+Growth\+Count@{default\+Growth\+Count}}
 \index{default\+Growth\+Count@{default\+Growth\+Count}!Fractal\+Tree\+::\+Tree\+Builder@{Fractal\+Tree\+::\+Tree\+Builder}}
 \subsubsection{\texorpdfstring{default\+Growth\+Count}{defaultGrowthCount}}
@@ -220,7 +238,7 @@ The angle for default tree branching.
 
 The number of tree generations. 
 
-\hypertarget{class_fractal_tree_1_1_tree_builder_a34195cdf1a552ee1027bfbf42682ea29}{}\label{class_fractal_tree_1_1_tree_builder_a34195cdf1a552ee1027bfbf42682ea29} 
+\mbox{\Hypertarget{class_fractal_tree_1_1_tree_builder_a34195cdf1a552ee1027bfbf42682ea29}\label{class_fractal_tree_1_1_tree_builder_a34195cdf1a552ee1027bfbf42682ea29}} 
 \index{Fractal\+Tree\+::\+Tree\+Builder@{Fractal\+Tree\+::\+Tree\+Builder}!default\+Initial\+Length@{default\+Initial\+Length}}
 \index{default\+Initial\+Length@{default\+Initial\+Length}!Fractal\+Tree\+::\+Tree\+Builder@{Fractal\+Tree\+::\+Tree\+Builder}}
 \subsubsection{\texorpdfstring{default\+Initial\+Length}{defaultInitialLength}}
@@ -230,17 +248,17 @@ The number of tree generations.
 
 The default length of the initial branches for the default tree generation. 
 
-\hypertarget{class_fractal_tree_1_1_tree_builder_aab288ec80d45e50e41a31ca3313e44be}{}\label{class_fractal_tree_1_1_tree_builder_aab288ec80d45e50e41a31ca3313e44be} 
-\index{Fractal\+Tree\+::\+Tree\+Builder@{Fractal\+Tree\+::\+Tree\+Builder}!default\+Length\+Degradation@{default\+Length\+Degradation}}
-\index{default\+Length\+Degradation@{default\+Length\+Degradation}!Fractal\+Tree\+::\+Tree\+Builder@{Fractal\+Tree\+::\+Tree\+Builder}}
-\subsubsection{\texorpdfstring{default\+Length\+Degradation}{defaultLengthDegradation}}
-{\footnotesize\ttfamily float Fractal\+Tree.\+Tree\+Builder.\+default\+Length\+Degradation = 0.\+67f}
+\mbox{\Hypertarget{class_fractal_tree_1_1_tree_builder_a002013c39a026974af2745840d7784bd}\label{class_fractal_tree_1_1_tree_builder_a002013c39a026974af2745840d7784bd}} 
+\index{Fractal\+Tree\+::\+Tree\+Builder@{Fractal\+Tree\+::\+Tree\+Builder}!default\+Length\+Reduction\+On\+New\+Generation@{default\+Length\+Reduction\+On\+New\+Generation}}
+\index{default\+Length\+Reduction\+On\+New\+Generation@{default\+Length\+Reduction\+On\+New\+Generation}!Fractal\+Tree\+::\+Tree\+Builder@{Fractal\+Tree\+::\+Tree\+Builder}}
+\subsubsection{\texorpdfstring{default\+Length\+Reduction\+On\+New\+Generation}{defaultLengthReductionOnNewGeneration}}
+{\footnotesize\ttfamily float Fractal\+Tree.\+Tree\+Builder.\+default\+Length\+Reduction\+On\+New\+Generation = 0.\+67f}
 
 
 
 The length degradation for the default tree. Branches are reduced in size by this factor. 
 
-\hypertarget{class_fractal_tree_1_1_tree_builder_a1f60a72d865f9cca5bb155a72ff5f6ef}{}\label{class_fractal_tree_1_1_tree_builder_a1f60a72d865f9cca5bb155a72ff5f6ef} 
+\mbox{\Hypertarget{class_fractal_tree_1_1_tree_builder_a1f60a72d865f9cca5bb155a72ff5f6ef}\label{class_fractal_tree_1_1_tree_builder_a1f60a72d865f9cca5bb155a72ff5f6ef}} 
 \index{Fractal\+Tree\+::\+Tree\+Builder@{Fractal\+Tree\+::\+Tree\+Builder}!default\+Width@{default\+Width}}
 \index{default\+Width@{default\+Width}!Fractal\+Tree\+::\+Tree\+Builder@{Fractal\+Tree\+::\+Tree\+Builder}}
 \subsubsection{\texorpdfstring{default\+Width}{defaultWidth}}
@@ -250,7 +268,7 @@ The length degradation for the default tree. Branches are reduced in size by thi
 
 The width of the branches for the default tree generator. 
 
-\hypertarget{class_fractal_tree_1_1_tree_builder_a10a0d2b7b57b98c4232ba414cdfa8436}{}\label{class_fractal_tree_1_1_tree_builder_a10a0d2b7b57b98c4232ba414cdfa8436} 
+\mbox{\Hypertarget{class_fractal_tree_1_1_tree_builder_a10a0d2b7b57b98c4232ba414cdfa8436}\label{class_fractal_tree_1_1_tree_builder_a10a0d2b7b57b98c4232ba414cdfa8436}} 
 \index{Fractal\+Tree\+::\+Tree\+Builder@{Fractal\+Tree\+::\+Tree\+Builder}!l\+Tree\+Angle@{l\+Tree\+Angle}}
 \index{l\+Tree\+Angle@{l\+Tree\+Angle}!Fractal\+Tree\+::\+Tree\+Builder@{Fractal\+Tree\+::\+Tree\+Builder}}
 \subsubsection{\texorpdfstring{l\+Tree\+Angle}{lTreeAngle}}
@@ -260,7 +278,7 @@ The width of the branches for the default tree generator.
 
 The angles used to branch an L tree. 
 
-\hypertarget{class_fractal_tree_1_1_tree_builder_acc1a7487b339290c552ef136fec40b02}{}\label{class_fractal_tree_1_1_tree_builder_acc1a7487b339290c552ef136fec40b02} 
+\mbox{\Hypertarget{class_fractal_tree_1_1_tree_builder_acc1a7487b339290c552ef136fec40b02}\label{class_fractal_tree_1_1_tree_builder_acc1a7487b339290c552ef136fec40b02}} 
 \index{Fractal\+Tree\+::\+Tree\+Builder@{Fractal\+Tree\+::\+Tree\+Builder}!l\+Tree\+Auto\+Width@{l\+Tree\+Auto\+Width}}
 \index{l\+Tree\+Auto\+Width@{l\+Tree\+Auto\+Width}!Fractal\+Tree\+::\+Tree\+Builder@{Fractal\+Tree\+::\+Tree\+Builder}}
 \subsubsection{\texorpdfstring{l\+Tree\+Auto\+Width}{lTreeAutoWidth}}
@@ -270,7 +288,7 @@ The angles used to branch an L tree.
 
 When true, the width of the branches will be set automatically based on the colours. 
 
-\hypertarget{class_fractal_tree_1_1_tree_builder_a0ed6efbc756277236c9b209ebcba829a}{}\label{class_fractal_tree_1_1_tree_builder_a0ed6efbc756277236c9b209ebcba829a} 
+\mbox{\Hypertarget{class_fractal_tree_1_1_tree_builder_a0ed6efbc756277236c9b209ebcba829a}\label{class_fractal_tree_1_1_tree_builder_a0ed6efbc756277236c9b209ebcba829a}} 
 \index{Fractal\+Tree\+::\+Tree\+Builder@{Fractal\+Tree\+::\+Tree\+Builder}!l\+Tree\+Axiom@{l\+Tree\+Axiom}}
 \index{l\+Tree\+Axiom@{l\+Tree\+Axiom}!Fractal\+Tree\+::\+Tree\+Builder@{Fractal\+Tree\+::\+Tree\+Builder}}
 \subsubsection{\texorpdfstring{l\+Tree\+Axiom}{lTreeAxiom}}
@@ -280,7 +298,7 @@ When true, the width of the branches will be set automatically based on the colo
 
 The l tree axiom. The initial seed used to generate a L tree. 
 
-\hypertarget{class_fractal_tree_1_1_tree_builder_a7416e2e2bea136c1406f79a98a8026ee}{}\label{class_fractal_tree_1_1_tree_builder_a7416e2e2bea136c1406f79a98a8026ee} 
+\mbox{\Hypertarget{class_fractal_tree_1_1_tree_builder_a7416e2e2bea136c1406f79a98a8026ee}\label{class_fractal_tree_1_1_tree_builder_a7416e2e2bea136c1406f79a98a8026ee}} 
 \index{Fractal\+Tree\+::\+Tree\+Builder@{Fractal\+Tree\+::\+Tree\+Builder}!l\+Tree\+Branch\+Length@{l\+Tree\+Branch\+Length}}
 \index{l\+Tree\+Branch\+Length@{l\+Tree\+Branch\+Length}!Fractal\+Tree\+::\+Tree\+Builder@{Fractal\+Tree\+::\+Tree\+Builder}}
 \subsubsection{\texorpdfstring{l\+Tree\+Branch\+Length}{lTreeBranchLength}}
@@ -290,7 +308,7 @@ The l tree axiom. The initial seed used to generate a L tree.
 
 The length of the l tree branch. 
 
-\hypertarget{class_fractal_tree_1_1_tree_builder_adf9df8010eaa8ed629b6e5210474b7eb}{}\label{class_fractal_tree_1_1_tree_builder_adf9df8010eaa8ed629b6e5210474b7eb} 
+\mbox{\Hypertarget{class_fractal_tree_1_1_tree_builder_adf9df8010eaa8ed629b6e5210474b7eb}\label{class_fractal_tree_1_1_tree_builder_adf9df8010eaa8ed629b6e5210474b7eb}} 
 \index{Fractal\+Tree\+::\+Tree\+Builder@{Fractal\+Tree\+::\+Tree\+Builder}!l\+Tree\+Colours@{l\+Tree\+Colours}}
 \index{l\+Tree\+Colours@{l\+Tree\+Colours}!Fractal\+Tree\+::\+Tree\+Builder@{Fractal\+Tree\+::\+Tree\+Builder}}
 \subsubsection{\texorpdfstring{l\+Tree\+Colours}{lTreeColours}}
@@ -300,7 +318,7 @@ The length of the l tree branch.
 
 The L tree colours. 
 
-\hypertarget{class_fractal_tree_1_1_tree_builder_af50b64e86abfc4709fdfc6368ff7504b}{}\label{class_fractal_tree_1_1_tree_builder_af50b64e86abfc4709fdfc6368ff7504b} 
+\mbox{\Hypertarget{class_fractal_tree_1_1_tree_builder_af50b64e86abfc4709fdfc6368ff7504b}\label{class_fractal_tree_1_1_tree_builder_af50b64e86abfc4709fdfc6368ff7504b}} 
 \index{Fractal\+Tree\+::\+Tree\+Builder@{Fractal\+Tree\+::\+Tree\+Builder}!l\+Tree\+Growth\+Count@{l\+Tree\+Growth\+Count}}
 \index{l\+Tree\+Growth\+Count@{l\+Tree\+Growth\+Count}!Fractal\+Tree\+::\+Tree\+Builder@{Fractal\+Tree\+::\+Tree\+Builder}}
 \subsubsection{\texorpdfstring{l\+Tree\+Growth\+Count}{lTreeGrowthCount}}
@@ -310,7 +328,7 @@ The L tree colours.
 
 The number of L tree generations. 
 
-\hypertarget{class_fractal_tree_1_1_tree_builder_a4ba732b60fd74e4db9f5422a7e9ffd82}{}\label{class_fractal_tree_1_1_tree_builder_a4ba732b60fd74e4db9f5422a7e9ffd82} 
+\mbox{\Hypertarget{class_fractal_tree_1_1_tree_builder_a4ba732b60fd74e4db9f5422a7e9ffd82}\label{class_fractal_tree_1_1_tree_builder_a4ba732b60fd74e4db9f5422a7e9ffd82}} 
 \index{Fractal\+Tree\+::\+Tree\+Builder@{Fractal\+Tree\+::\+Tree\+Builder}!l\+Tree\+Mass\+Based\+On\+Width@{l\+Tree\+Mass\+Based\+On\+Width}}
 \index{l\+Tree\+Mass\+Based\+On\+Width@{l\+Tree\+Mass\+Based\+On\+Width}!Fractal\+Tree\+::\+Tree\+Builder@{Fractal\+Tree\+::\+Tree\+Builder}}
 \subsubsection{\texorpdfstring{l\+Tree\+Mass\+Based\+On\+Width}{lTreeMassBasedOnWidth}}
@@ -320,7 +338,7 @@ The number of L tree generations.
 
 When true, the mass of the branches will be set automatically based on colours. Used only when generating a moving tree. 
 
-\hypertarget{class_fractal_tree_1_1_tree_builder_a725a1ff0ebe0fbbc78e22eedea80a50e}{}\label{class_fractal_tree_1_1_tree_builder_a725a1ff0ebe0fbbc78e22eedea80a50e} 
+\mbox{\Hypertarget{class_fractal_tree_1_1_tree_builder_a725a1ff0ebe0fbbc78e22eedea80a50e}\label{class_fractal_tree_1_1_tree_builder_a725a1ff0ebe0fbbc78e22eedea80a50e}} 
 \index{Fractal\+Tree\+::\+Tree\+Builder@{Fractal\+Tree\+::\+Tree\+Builder}!l\+Tree\+Rules@{l\+Tree\+Rules}}
 \index{l\+Tree\+Rules@{l\+Tree\+Rules}!Fractal\+Tree\+::\+Tree\+Builder@{Fractal\+Tree\+::\+Tree\+Builder}}
 \subsubsection{\texorpdfstring{l\+Tree\+Rules}{lTreeRules}}
@@ -343,7 +361,7 @@ When true, the mass of the branches will be set automatically based on colours. 
 
 The rules applied to the axoim. 
 
-\hypertarget{class_fractal_tree_1_1_tree_builder_a382d4bba4cac7e05681e75109801dd92}{}\label{class_fractal_tree_1_1_tree_builder_a382d4bba4cac7e05681e75109801dd92} 
+\mbox{\Hypertarget{class_fractal_tree_1_1_tree_builder_a382d4bba4cac7e05681e75109801dd92}\label{class_fractal_tree_1_1_tree_builder_a382d4bba4cac7e05681e75109801dd92}} 
 \index{Fractal\+Tree\+::\+Tree\+Builder@{Fractal\+Tree\+::\+Tree\+Builder}!l\+Tree\+Width@{l\+Tree\+Width}}
 \index{l\+Tree\+Width@{l\+Tree\+Width}!Fractal\+Tree\+::\+Tree\+Builder@{Fractal\+Tree\+::\+Tree\+Builder}}
 \subsubsection{\texorpdfstring{l\+Tree\+Width}{lTreeWidth}}
@@ -353,11 +371,11 @@ The rules applied to the axoim.
 
 The max branch width for L trees. 
 
-\hypertarget{class_fractal_tree_1_1_tree_builder_aa2f66ebffbf59d18232884f85e95490d}{}\label{class_fractal_tree_1_1_tree_builder_aa2f66ebffbf59d18232884f85e95490d} 
+\mbox{\Hypertarget{class_fractal_tree_1_1_tree_builder_aa2f66ebffbf59d18232884f85e95490d}\label{class_fractal_tree_1_1_tree_builder_aa2f66ebffbf59d18232884f85e95490d}} 
 \index{Fractal\+Tree\+::\+Tree\+Builder@{Fractal\+Tree\+::\+Tree\+Builder}!tree\+Type@{tree\+Type}}
 \index{tree\+Type@{tree\+Type}!Fractal\+Tree\+::\+Tree\+Builder@{Fractal\+Tree\+::\+Tree\+Builder}}
 \subsubsection{\texorpdfstring{tree\+Type}{treeType}}
-{\footnotesize\ttfamily \hyperlink{class_fractal_tree_1_1_tree_builder_a955d67cfa976440cc427e591be74f979}{Tree\+Type} Fractal\+Tree.\+Tree\+Builder.\+tree\+Type = Tree\+Type.\+Default}
+{\footnotesize\ttfamily \hyperlink{class_fractal_tree_1_1_tree_builder_a955d67cfa976440cc427e591be74f979}{Tree\+Type} Fractal\+Tree.\+Tree\+Builder.\+tree\+Type = Tree\+Type.\+Branching}
 
 
 
@@ -367,4 +385,4 @@ The tree type to generate.
 
 The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
 \item 
-Tree\+Builder.\+cs\end{DoxyCompactItemize}
+F\+T/\+Scripts/\+Tree Builders/Tree\+Builder.\+cs\end{DoxyCompactItemize}

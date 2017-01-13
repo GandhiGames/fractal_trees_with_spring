@@ -1,5 +1,10 @@
 \hypertarget{class_fractal_tree_1_1_moving_tree_builder}{}\section{Fractal\+Tree.\+Moving\+Tree\+Builder Class Reference}
 \label{class_fractal_tree_1_1_moving_tree_builder}\index{Fractal\+Tree.\+Moving\+Tree\+Builder@{Fractal\+Tree.\+Moving\+Tree\+Builder}}
+
+
+Builds a moving tree and provides methods of applying forces to generated trees.  
+
+
 Inheritance diagram for Fractal\+Tree.\+Moving\+Tree\+Builder\+:\begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -11,12 +16,19 @@ Inheritance diagram for Fractal\+Tree.\+Moving\+Tree\+Builder\+:\begin{figure}[H
 \item 
 override void \hyperlink{class_fractal_tree_1_1_moving_tree_builder_a4c58924b1d19c896cd1af1256ce242eb}{Build} ()
 \begin{DoxyCompactList}\small\item\em Build this instance. \end{DoxyCompactList}\item 
+override void \hyperlink{class_fractal_tree_1_1_moving_tree_builder_a4b1bc4aee0ed9d1515b7c33c997ace8c}{Remove} ()
+\begin{DoxyCompactList}\small\item\em Deletes all child branches and clears branch list. \end{DoxyCompactList}\item 
 void \hyperlink{class_fractal_tree_1_1_moving_tree_builder_a7da9440aa0482b959854bb28ff281a9a}{Apply\+Directed\+Force} (Vector2 force, Vector2 position, float radius)
 \begin{DoxyCompactList}\small\item\em Applies a directed force to all branches within range. \end{DoxyCompactList}\item 
 void \hyperlink{class_fractal_tree_1_1_moving_tree_builder_aac060965e91832c1dfefd94b7c9b152b}{Apply\+Push\+Force} (float force, Vector2 position, float radius)
 \begin{DoxyCompactList}\small\item\em Applies a push force to all branches within range. \end{DoxyCompactList}\item 
 void \hyperlink{class_fractal_tree_1_1_moving_tree_builder_ace24108b660cb1dcebb609eef51588ed}{Apply\+Pull\+Force} (float force, Vector2 position, float radius)
 \begin{DoxyCompactList}\small\item\em Applies a pull force to all branches in range. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+float \hyperlink{class_fractal_tree_1_1_moving_tree_builder_a43a9108048a9be7582ba79ed110fff9d}{force\+Distance\+Multi} = 4f
+\begin{DoxyCompactList}\small\item\em All forces applies to this tree are multiplied by this value. Use this to create trees that are more sensitive to forces than others. \end{DoxyCompactList}\end{DoxyCompactItemize}
 \subsection*{Properties}
 \begin{DoxyCompactItemize}
 \item 
@@ -25,8 +37,13 @@ List$<$ \hyperlink{interface_fractal_tree_1_1_moving_branch}{Moving\+Branch} $>$
 \subsection*{Additional Inherited Members}
 
 
+\subsection{Detailed Description}
+Builds a moving tree and provides methods of applying forces to generated trees. 
+
+
+
 \subsection{Member Function Documentation}
-\hypertarget{class_fractal_tree_1_1_moving_tree_builder_a7da9440aa0482b959854bb28ff281a9a}{}\label{class_fractal_tree_1_1_moving_tree_builder_a7da9440aa0482b959854bb28ff281a9a} 
+\mbox{\Hypertarget{class_fractal_tree_1_1_moving_tree_builder_a7da9440aa0482b959854bb28ff281a9a}\label{class_fractal_tree_1_1_moving_tree_builder_a7da9440aa0482b959854bb28ff281a9a}} 
 \index{Fractal\+Tree\+::\+Moving\+Tree\+Builder@{Fractal\+Tree\+::\+Moving\+Tree\+Builder}!Apply\+Directed\+Force@{Apply\+Directed\+Force}}
 \index{Apply\+Directed\+Force@{Apply\+Directed\+Force}!Fractal\+Tree\+::\+Moving\+Tree\+Builder@{Fractal\+Tree\+::\+Moving\+Tree\+Builder}}
 \subsubsection{\texorpdfstring{Apply\+Directed\+Force()}{ApplyDirectedForce()}}
@@ -45,7 +62,7 @@ Applies a directed force to all branches within range.
 {\em radius} & Radius.\\
 \hline
 \end{DoxyParams}
-\hypertarget{class_fractal_tree_1_1_moving_tree_builder_ace24108b660cb1dcebb609eef51588ed}{}\label{class_fractal_tree_1_1_moving_tree_builder_ace24108b660cb1dcebb609eef51588ed} 
+\mbox{\Hypertarget{class_fractal_tree_1_1_moving_tree_builder_ace24108b660cb1dcebb609eef51588ed}\label{class_fractal_tree_1_1_moving_tree_builder_ace24108b660cb1dcebb609eef51588ed}} 
 \index{Fractal\+Tree\+::\+Moving\+Tree\+Builder@{Fractal\+Tree\+::\+Moving\+Tree\+Builder}!Apply\+Pull\+Force@{Apply\+Pull\+Force}}
 \index{Apply\+Pull\+Force@{Apply\+Pull\+Force}!Fractal\+Tree\+::\+Moving\+Tree\+Builder@{Fractal\+Tree\+::\+Moving\+Tree\+Builder}}
 \subsubsection{\texorpdfstring{Apply\+Pull\+Force()}{ApplyPullForce()}}
@@ -64,7 +81,7 @@ Applies a pull force to all branches in range.
 {\em radius} & Radius.\\
 \hline
 \end{DoxyParams}
-\hypertarget{class_fractal_tree_1_1_moving_tree_builder_aac060965e91832c1dfefd94b7c9b152b}{}\label{class_fractal_tree_1_1_moving_tree_builder_aac060965e91832c1dfefd94b7c9b152b} 
+\mbox{\Hypertarget{class_fractal_tree_1_1_moving_tree_builder_aac060965e91832c1dfefd94b7c9b152b}\label{class_fractal_tree_1_1_moving_tree_builder_aac060965e91832c1dfefd94b7c9b152b}} 
 \index{Fractal\+Tree\+::\+Moving\+Tree\+Builder@{Fractal\+Tree\+::\+Moving\+Tree\+Builder}!Apply\+Push\+Force@{Apply\+Push\+Force}}
 \index{Apply\+Push\+Force@{Apply\+Push\+Force}!Fractal\+Tree\+::\+Moving\+Tree\+Builder@{Fractal\+Tree\+::\+Moving\+Tree\+Builder}}
 \subsubsection{\texorpdfstring{Apply\+Push\+Force()}{ApplyPushForce()}}
@@ -83,7 +100,7 @@ Applies a push force to all branches within range.
 {\em radius} & Radius.\\
 \hline
 \end{DoxyParams}
-\hypertarget{class_fractal_tree_1_1_moving_tree_builder_a4c58924b1d19c896cd1af1256ce242eb}{}\label{class_fractal_tree_1_1_moving_tree_builder_a4c58924b1d19c896cd1af1256ce242eb} 
+\mbox{\Hypertarget{class_fractal_tree_1_1_moving_tree_builder_a4c58924b1d19c896cd1af1256ce242eb}\label{class_fractal_tree_1_1_moving_tree_builder_a4c58924b1d19c896cd1af1256ce242eb}} 
 \index{Fractal\+Tree\+::\+Moving\+Tree\+Builder@{Fractal\+Tree\+::\+Moving\+Tree\+Builder}!Build@{Build}}
 \index{Build@{Build}!Fractal\+Tree\+::\+Moving\+Tree\+Builder@{Fractal\+Tree\+::\+Moving\+Tree\+Builder}}
 \subsubsection{\texorpdfstring{Build()}{Build()}}
@@ -97,10 +114,37 @@ Build this instance.
 
 Implements \hyperlink{class_fractal_tree_1_1_tree_builder}{Fractal\+Tree.\+Tree\+Builder}.
 
+\mbox{\Hypertarget{class_fractal_tree_1_1_moving_tree_builder_a4b1bc4aee0ed9d1515b7c33c997ace8c}\label{class_fractal_tree_1_1_moving_tree_builder_a4b1bc4aee0ed9d1515b7c33c997ace8c}} 
+\index{Fractal\+Tree\+::\+Moving\+Tree\+Builder@{Fractal\+Tree\+::\+Moving\+Tree\+Builder}!Remove@{Remove}}
+\index{Remove@{Remove}!Fractal\+Tree\+::\+Moving\+Tree\+Builder@{Fractal\+Tree\+::\+Moving\+Tree\+Builder}}
+\subsubsection{\texorpdfstring{Remove()}{Remove()}}
+{\footnotesize\ttfamily override void Fractal\+Tree.\+Moving\+Tree\+Builder.\+Remove (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Deletes all child branches and clears branch list. 
+
+
+
+Implements \hyperlink{class_fractal_tree_1_1_tree_builder}{Fractal\+Tree.\+Tree\+Builder}.
+
+
+
+\subsection{Member Data Documentation}
+\mbox{\Hypertarget{class_fractal_tree_1_1_moving_tree_builder_a43a9108048a9be7582ba79ed110fff9d}\label{class_fractal_tree_1_1_moving_tree_builder_a43a9108048a9be7582ba79ed110fff9d}} 
+\index{Fractal\+Tree\+::\+Moving\+Tree\+Builder@{Fractal\+Tree\+::\+Moving\+Tree\+Builder}!force\+Distance\+Multi@{force\+Distance\+Multi}}
+\index{force\+Distance\+Multi@{force\+Distance\+Multi}!Fractal\+Tree\+::\+Moving\+Tree\+Builder@{Fractal\+Tree\+::\+Moving\+Tree\+Builder}}
+\subsubsection{\texorpdfstring{force\+Distance\+Multi}{forceDistanceMulti}}
+{\footnotesize\ttfamily float Fractal\+Tree.\+Moving\+Tree\+Builder.\+force\+Distance\+Multi = 4f}
+
+
+
+All forces applies to this tree are multiplied by this value. Use this to create trees that are more sensitive to forces than others. 
+
 
 
 \subsection{Property Documentation}
-\hypertarget{class_fractal_tree_1_1_moving_tree_builder_aca75f30f0c8170efd0b62eca6eee9e00}{}\label{class_fractal_tree_1_1_moving_tree_builder_aca75f30f0c8170efd0b62eca6eee9e00} 
+\mbox{\Hypertarget{class_fractal_tree_1_1_moving_tree_builder_aca75f30f0c8170efd0b62eca6eee9e00}\label{class_fractal_tree_1_1_moving_tree_builder_aca75f30f0c8170efd0b62eca6eee9e00}} 
 \index{Fractal\+Tree\+::\+Moving\+Tree\+Builder@{Fractal\+Tree\+::\+Moving\+Tree\+Builder}!branches@{branches}}
 \index{branches@{branches}!Fractal\+Tree\+::\+Moving\+Tree\+Builder@{Fractal\+Tree\+::\+Moving\+Tree\+Builder}}
 \subsubsection{\texorpdfstring{branches}{branches}}
@@ -114,4 +158,4 @@ The branches.
 
 The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
 \item 
-Moving\+Tree\+Builder.\+cs\end{DoxyCompactItemize}
+F\+T/\+Scripts/\+Tree Builders/Moving\+Tree\+Builder.\+cs\end{DoxyCompactItemize}

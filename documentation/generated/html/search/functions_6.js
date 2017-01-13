@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['ltree',['LTree',['../class_fractal_tree_1_1_l_tree.html#aa8fd4aff64da19419567e96b74d7c229',1,'FractalTree::LTree']]]
+  ['increasedamping',['IncreaseDamping',['../class_fractal_tree_1_1_point_mass.html#aaade3e27a4d89806c8c1357b3c498898',1,'FractalTree::PointMass']]]
 ];

@@ -1,0 +1,402 @@
+\begin{theindex}
+
+  \item {active}
+    \subitem {Fractal\+Tree\+::\+Demo\+::\+Trees\+To\+Demo}, 
+		\hyperpage{59}
+  \item {active\+Tree}
+    \subitem {Fractal\+Tree\+::\+Demo\+::\+Demo\+Tree\+Creator}, 
+		\hyperpage{25}
+  \item {Apply\+Directed\+Force}
+    \subitem {Fractal\+Tree\+::\+Moving\+Tree\+Builder}, \hyperpage{34}
+  \item {Apply\+Force}
+    \subitem {Fractal\+Tree\+::\+Point\+Mass}, \hyperpage{37}
+  \item {Apply\+Pull\+Force}
+    \subitem {Fractal\+Tree\+::\+Moving\+Tree\+Builder}, \hyperpage{34}
+  \item {Apply\+Push\+Force}
+    \subitem {Fractal\+Tree\+::\+Moving\+Tree\+Builder}, \hyperpage{34}
+
+  \indexspace
+
+  \item {branch\+Prefab}
+    \subitem {Fractal\+Tree\+::\+Tree\+Builder}, \hyperpage{52}
+  \item {branches}
+    \subitem {Fractal\+Tree\+::\+Moving\+Tree\+Builder}, \hyperpage{35}
+    \subitem {Fractal\+Tree\+::\+Stationary\+Tree\+Builder}, 
+		\hyperpage{48}
+  \item {Build}
+    \subitem {Fractal\+Tree\+::\+Moving\+Tree\+Builder}, \hyperpage{35}
+    \subitem {Fractal\+Tree\+::\+Stationary\+Tree\+Builder}, 
+		\hyperpage{48}
+  \item {Build\+Moving}
+    \subitem {Fractal\+Tree\+::\+Demo\+::\+Trees\+To\+Demo}, 
+		\hyperpage{58}
+  \item {build\+On\+Start}
+    \subitem {Fractal\+Tree\+::\+Tree\+Builder}, \hyperpage{52}
+  \item {Build\+Stationary}
+    \subitem {Fractal\+Tree\+::\+Demo\+::\+Trees\+To\+Demo}, 
+		\hyperpage{58}
+
+  \indexspace
+
+  \item {Clear}
+    \subitem {Fractal\+Tree\+::\+Demo\+Leaf\+Placement}, \hyperpage{22}
+  \item {colonization\+Dir}
+    \subitem {Fractal\+Tree\+::\+Branch}, \hyperpage{12}
+    \subitem {Fractal\+Tree\+::\+Stationary\+Branch}, \hyperpage{46}
+  \item {colonization\+Initial\+Length}
+    \subitem {Fractal\+Tree\+::\+Tree\+Builder}, \hyperpage{52}
+  \item {colonization\+Leaf\+Count}
+    \subitem {Fractal\+Tree\+::\+Branch}, \hyperpage{13}
+    \subitem {Fractal\+Tree\+::\+Stationary\+Branch}, \hyperpage{46}
+  \item {colonization\+Leaf\+Parent}
+    \subitem {Fractal\+Tree\+::\+Tree\+Builder}, \hyperpage{53}
+  \item {colonization\+Max\+Distance}
+    \subitem {Fractal\+Tree\+::\+Tree\+Builder}, \hyperpage{53}
+  \item {colonization\+Min\+Distance}
+    \subitem {Fractal\+Tree\+::\+Tree\+Builder}, \hyperpage{53}
+  \item {Colonization\+Tree}
+    \subitem {Fractal\+Tree\+::\+Colonization\+Tree}, \hyperpage{16}
+  \item {colonization\+Width}
+    \subitem {Fractal\+Tree\+::\+Tree\+Builder}, \hyperpage{53}
+  \item {color}
+    \subitem {Fractal\+Tree\+::\+Stationary\+Branch}, \hyperpage{46}
+  \item {Create\+Tree}
+    \subitem {Fractal\+Tree\+::\+Tree\+Builder}, \hyperpage{52}
+
+  \indexspace
+
+  \item {default\+Angle}
+    \subitem {Fractal\+Tree\+::\+Tree\+Builder}, \hyperpage{53}
+  \item {default\+Branch\+Colour}
+    \subitem {Fractal\+Tree\+::\+Tree\+Builder}, \hyperpage{53}
+  \item {default\+Growth\+Count}
+    \subitem {Fractal\+Tree\+::\+Tree\+Builder}, \hyperpage{54}
+  \item {default\+Initial\+Length}
+    \subitem {Fractal\+Tree\+::\+Tree\+Builder}, \hyperpage{54}
+  \item {default\+Length\+Reduction\+On\+New\+Generation}
+    \subitem {Fractal\+Tree\+::\+Tree\+Builder}, \hyperpage{54}
+  \item {Default\+Tree}
+    \subitem {Fractal\+Tree\+::\+Default\+Tree}, \hyperpage{18}
+  \item {default\+Width}
+    \subitem {Fractal\+Tree\+::\+Tree\+Builder}, \hyperpage{54}
+  \item {Do\+Branching$<$ T $>$}
+    \subitem {Fractal\+Tree\+::\+Branch}, \hyperpage{10}
+    \subitem {Fractal\+Tree\+::\+Moving\+Branch\+Impl}, \hyperpage{30}
+    \subitem {Fractal\+Tree\+::\+Stationary\+Branch}, \hyperpage{42}
+  \item {Do\+Build$<$ T $>$}
+    \subitem {Fractal\+Tree\+::\+Tree\+Builder}, \hyperpage{52}
+  \item {Do\+Colonization\+Reset}
+    \subitem {Fractal\+Tree\+::\+Branch}, \hyperpage{11}
+    \subitem {Fractal\+Tree\+::\+Stationary\+Branch}, \hyperpage{43}
+  \item {Do\+Update}
+    \subitem {Fractal\+Tree\+::\+Point\+Mass}, \hyperpage{38}
+    \subitem {Fractal\+Tree\+::\+Spring}, \hyperpage{39}
+
+  \indexspace
+
+  \item {end}
+    \subitem {Fractal\+Tree\+::\+Spring}, \hyperpage{40}
+  \item {end\+Point}
+    \subitem {Fractal\+Tree\+::\+Moving\+Branch}, \hyperpage{28}
+    \subitem {Fractal\+Tree\+::\+Moving\+Branch\+Impl}, \hyperpage{32}
+  \item {end\+Pos}
+    \subitem {Fractal\+Tree\+::\+Branch}, \hyperpage{13}
+    \subitem {Fractal\+Tree\+::\+Moving\+Branch\+Impl}, \hyperpage{32}
+    \subitem {Fractal\+Tree\+::\+Stationary\+Branch}, \hyperpage{46}
+
+  \indexspace
+
+  \item {force\+Applied}
+    \subitem {Fractal\+Tree\+::\+Point\+Mass}, \hyperpage{38}
+  \item {force\+Distance\+Multi}
+    \subitem {Fractal\+Tree\+::\+Moving\+Tree\+Builder}, \hyperpage{35}
+  \item {Fractal\+Tree}, \hyperpage{7}
+  \item {Fractal\+Tree.\+Branch}, \hyperpage{9}
+  \item {Fractal\+Tree.\+Colonization\+Leaf}, \hyperpage{14}
+  \item {Fractal\+Tree.\+Colonization\+Leaf\+Generator}, \hyperpage{15}
+  \item {Fractal\+Tree.\+Colonization\+Tree}, \hyperpage{16}
+  \item {Fractal\+Tree.\+Default\+Tree}, \hyperpage{17}
+  \item {Fractal\+Tree.\+Demo}, \hyperpage{8}
+  \item {Fractal\+Tree.\+Demo.\+Demo\+Branch\+Tree\+UI}, \hyperpage{19}
+  \item {Fractal\+Tree.\+Demo.\+Demo\+Colonization\+Tree\+UI}, 
+		\hyperpage{20}
+  \item {Fractal\+Tree.\+Demo.\+Demo\+Controls}, \hyperpage{20}
+  \item {Fractal\+Tree.\+Demo.\+Demo\+Force\+Controller}, 
+		\hyperpage{21}
+  \item {Fractal\+Tree.\+Demo.\+Demo\+L\+Tree\+UI}, \hyperpage{22}
+  \item {Fractal\+Tree.\+Demo.\+Demo\+Scene\+Switcher}, \hyperpage{23}
+  \item {Fractal\+Tree.\+Demo.\+Demo\+Tree\+Creator}, \hyperpage{24}
+  \item {Fractal\+Tree.\+Demo.\+Demo\+Tree\+Data}, \hyperpage{25}
+  \item {Fractal\+Tree.\+Demo.\+Trees\+To\+Demo}, \hyperpage{57}
+  \item {Fractal\+Tree.\+Demo\+Leaf\+Placement}, \hyperpage{22}
+  \item {Fractal\+Tree.\+L\+Rule}, \hyperpage{25}
+  \item {Fractal\+Tree.\+L\+Tree}, \hyperpage{26}
+  \item {Fractal\+Tree.\+Moving\+Branch}, \hyperpage{27}
+  \item {Fractal\+Tree.\+Moving\+Branch\+Impl}, \hyperpage{29}
+  \item {Fractal\+Tree.\+Moving\+Tree\+Builder}, \hyperpage{33}
+  \item {Fractal\+Tree.\+Moving\+Tree\+Builder\+Editor}, \hyperpage{36}
+  \item {Fractal\+Tree.\+Point\+Mass}, \hyperpage{36}
+  \item {Fractal\+Tree.\+Spring}, \hyperpage{39}
+  \item {Fractal\+Tree.\+Stationary\+Branch}, \hyperpage{40}
+  \item {Fractal\+Tree.\+Stationary\+Tree\+Builder}, \hyperpage{47}
+  \item {Fractal\+Tree.\+Stationary\+Tree\+Builder\+Editor}, 
+		\hyperpage{49}
+  \item {Fractal\+Tree.\+Tree}, \hyperpage{49}
+  \item {Fractal\+Tree.\+Tree\+Builder}, \hyperpage{50}
+  \item {Fractal\+Tree.\+Tree\+Builder\+Editor}, \hyperpage{56}
+  \item {Fractal\+Tree\+::\+Branch}
+    \subitem {colonization\+Dir}, \hyperpage{12}
+    \subitem {colonization\+Leaf\+Count}, \hyperpage{13}
+    \subitem {Do\+Branching$<$ T $>$}, \hyperpage{10}
+    \subitem {Do\+Colonization\+Reset}, \hyperpage{11}
+    \subitem {end\+Pos}, \hyperpage{13}
+    \subitem {has\+Branched}, \hyperpage{13}
+    \subitem {Setup}, \hyperpage{11, 12}
+    \subitem {start\+Pos}, \hyperpage{13}
+    \subitem {transform}, \hyperpage{13}
+  \item {Fractal\+Tree\+::\+Colonization\+Leaf}
+    \subitem {has\+Been\+Reached}, \hyperpage{14}
+    \subitem {position}, \hyperpage{14}
+  \item {Fractal\+Tree\+::\+Colonization\+Leaf\+Generator}
+    \subitem {num\+To\+Create}, \hyperpage{15}
+  \item {Fractal\+Tree\+::\+Colonization\+Tree}
+    \subitem {Colonization\+Tree}, \hyperpage{16}
+    \subitem {Generate$<$ T $>$}, \hyperpage{17}
+  \item {Fractal\+Tree\+::\+Default\+Tree}
+    \subitem {Default\+Tree}, \hyperpage{18}
+    \subitem {Generate$<$ T $>$}, \hyperpage{18}
+  \item {Fractal\+Tree\+::\+Demo\+::\+Demo\+Tree\+Creator}
+    \subitem {active\+Tree}, \hyperpage{25}
+    \subitem {leaf\+Generator}, \hyperpage{24}
+    \subitem {showing\+Stationary}, \hyperpage{24}
+    \subitem {tree\+Builders}, \hyperpage{24}
+  \item {Fractal\+Tree\+::\+Demo\+::\+Trees\+To\+Demo}
+    \subitem {active}, \hyperpage{59}
+    \subitem {Build\+Moving}, \hyperpage{58}
+    \subitem {Build\+Stationary}, \hyperpage{58}
+    \subitem {Hide}, \hyperpage{58}
+    \subitem {moving\+Tree}, \hyperpage{58}
+    \subitem {Show}, \hyperpage{58}
+    \subitem {stationary\+Tree}, \hyperpage{59}
+  \item {Fractal\+Tree\+::\+Demo\+Leaf\+Placement}
+    \subitem {Clear}, \hyperpage{22}
+  \item {Fractal\+Tree\+::\+L\+Tree}
+    \subitem {Generate$<$ T $>$}, \hyperpage{27}
+    \subitem {L\+Tree}, \hyperpage{26}
+  \item {Fractal\+Tree\+::\+Moving\+Branch}
+    \subitem {end\+Point}, \hyperpage{28}
+    \subitem {start\+Point}, \hyperpage{28}
+  \item {Fractal\+Tree\+::\+Moving\+Branch\+Impl}
+    \subitem {Do\+Branching$<$ T $>$}, \hyperpage{30}
+    \subitem {end\+Point}, \hyperpage{32}
+    \subitem {end\+Pos}, \hyperpage{32}
+    \subitem {Setup}, \hyperpage{30, 31}
+    \subitem {start\+Point}, \hyperpage{32}
+    \subitem {start\+Pos}, \hyperpage{32}
+  \item {Fractal\+Tree\+::\+Moving\+Tree\+Builder}
+    \subitem {Apply\+Directed\+Force}, \hyperpage{34}
+    \subitem {Apply\+Pull\+Force}, \hyperpage{34}
+    \subitem {Apply\+Push\+Force}, \hyperpage{34}
+    \subitem {branches}, \hyperpage{35}
+    \subitem {Build}, \hyperpage{35}
+    \subitem {force\+Distance\+Multi}, \hyperpage{35}
+    \subitem {Remove}, \hyperpage{35}
+  \item {Fractal\+Tree\+::\+Point\+Mass}
+    \subitem {Apply\+Force}, \hyperpage{37}
+    \subitem {Do\+Update}, \hyperpage{38}
+    \subitem {force\+Applied}, \hyperpage{38}
+    \subitem {Increase\+Damping}, \hyperpage{38}
+    \subitem {Point\+Mass}, \hyperpage{37}
+    \subitem {position}, \hyperpage{38}
+    \subitem {velocity}, \hyperpage{38}
+  \item {Fractal\+Tree\+::\+Spring}
+    \subitem {Do\+Update}, \hyperpage{39}
+    \subitem {end}, \hyperpage{40}
+    \subitem {Setup}, \hyperpage{39}
+    \subitem {start}, \hyperpage{40}
+  \item {Fractal\+Tree\+::\+Stationary\+Branch}
+    \subitem {colonization\+Dir}, \hyperpage{46}
+    \subitem {colonization\+Leaf\+Count}, \hyperpage{46}
+    \subitem {color}, \hyperpage{46}
+    \subitem {Do\+Branching$<$ T $>$}, \hyperpage{42}
+    \subitem {Do\+Colonization\+Reset}, \hyperpage{43}
+    \subitem {end\+Pos}, \hyperpage{46}
+    \subitem {has\+Branched}, \hyperpage{47}
+    \subitem {Length\+Degradation}, \hyperpage{45}
+    \subitem {m\+\_\+\+Renderer}, \hyperpage{45}
+    \subitem {m\+\_\+\+Width}, \hyperpage{46}
+    \subitem {S\+P\+R\+I\+T\+E\+\_\+\+S\+I\+ZE}, \hyperpage{46}
+    \subitem {Setup}, \hyperpage{43, 44}
+    \subitem {start\+Pos}, \hyperpage{47}
+    \subitem {Update\+Color}, \hyperpage{45}
+    \subitem {Update\+Sprite}, \hyperpage{45}
+  \item {Fractal\+Tree\+::\+Stationary\+Tree\+Builder}
+    \subitem {branches}, \hyperpage{48}
+    \subitem {Build}, \hyperpage{48}
+    \subitem {Remove}, \hyperpage{48}
+  \item {Fractal\+Tree\+::\+Tree\+Builder}
+    \subitem {branch\+Prefab}, \hyperpage{52}
+    \subitem {build\+On\+Start}, \hyperpage{52}
+    \subitem {colonization\+Initial\+Length}, \hyperpage{52}
+    \subitem {colonization\+Leaf\+Parent}, \hyperpage{53}
+    \subitem {colonization\+Max\+Distance}, \hyperpage{53}
+    \subitem {colonization\+Min\+Distance}, \hyperpage{53}
+    \subitem {colonization\+Width}, \hyperpage{53}
+    \subitem {Create\+Tree}, \hyperpage{52}
+    \subitem {default\+Angle}, \hyperpage{53}
+    \subitem {default\+Branch\+Colour}, \hyperpage{53}
+    \subitem {default\+Growth\+Count}, \hyperpage{54}
+    \subitem {default\+Initial\+Length}, \hyperpage{54}
+    \subitem {default\+Length\+Reduction\+On\+New\+Generation}, 
+		\hyperpage{54}
+    \subitem {default\+Width}, \hyperpage{54}
+    \subitem {Do\+Build$<$ T $>$}, \hyperpage{52}
+    \subitem {l\+Tree\+Angle}, \hyperpage{54}
+    \subitem {l\+Tree\+Auto\+Width}, \hyperpage{54}
+    \subitem {l\+Tree\+Axiom}, \hyperpage{55}
+    \subitem {l\+Tree\+Branch\+Length}, \hyperpage{55}
+    \subitem {l\+Tree\+Colours}, \hyperpage{55}
+    \subitem {l\+Tree\+Growth\+Count}, \hyperpage{55}
+    \subitem {l\+Tree\+Mass\+Based\+On\+Width}, \hyperpage{55}
+    \subitem {l\+Tree\+Rules}, \hyperpage{55}
+    \subitem {l\+Tree\+Width}, \hyperpage{56}
+    \subitem {Tree\+Type}, \hyperpage{51}
+    \subitem {tree\+Type}, \hyperpage{56}
+
+  \indexspace
+
+  \item {Generate$<$ T $>$}
+    \subitem {Fractal\+Tree\+::\+Colonization\+Tree}, \hyperpage{17}
+    \subitem {Fractal\+Tree\+::\+Default\+Tree}, \hyperpage{18}
+    \subitem {Fractal\+Tree\+::\+L\+Tree}, \hyperpage{27}
+
+  \indexspace
+
+  \item {has\+Been\+Reached}
+    \subitem {Fractal\+Tree\+::\+Colonization\+Leaf}, \hyperpage{14}
+  \item {has\+Branched}
+    \subitem {Fractal\+Tree\+::\+Branch}, \hyperpage{13}
+    \subitem {Fractal\+Tree\+::\+Stationary\+Branch}, \hyperpage{47}
+  \item {Hide}
+    \subitem {Fractal\+Tree\+::\+Demo\+::\+Trees\+To\+Demo}, 
+		\hyperpage{58}
+
+  \indexspace
+
+  \item {Increase\+Damping}
+    \subitem {Fractal\+Tree\+::\+Point\+Mass}, \hyperpage{38}
+
+  \indexspace
+
+  \item {L\+Tree}
+    \subitem {Fractal\+Tree\+::\+L\+Tree}, \hyperpage{26}
+  \item {l\+Tree\+Angle}
+    \subitem {Fractal\+Tree\+::\+Tree\+Builder}, \hyperpage{54}
+  \item {l\+Tree\+Auto\+Width}
+    \subitem {Fractal\+Tree\+::\+Tree\+Builder}, \hyperpage{54}
+  \item {l\+Tree\+Axiom}
+    \subitem {Fractal\+Tree\+::\+Tree\+Builder}, \hyperpage{55}
+  \item {l\+Tree\+Branch\+Length}
+    \subitem {Fractal\+Tree\+::\+Tree\+Builder}, \hyperpage{55}
+  \item {l\+Tree\+Colours}
+    \subitem {Fractal\+Tree\+::\+Tree\+Builder}, \hyperpage{55}
+  \item {l\+Tree\+Growth\+Count}
+    \subitem {Fractal\+Tree\+::\+Tree\+Builder}, \hyperpage{55}
+  \item {l\+Tree\+Mass\+Based\+On\+Width}
+    \subitem {Fractal\+Tree\+::\+Tree\+Builder}, \hyperpage{55}
+  \item {l\+Tree\+Rules}
+    \subitem {Fractal\+Tree\+::\+Tree\+Builder}, \hyperpage{55}
+  \item {l\+Tree\+Width}
+    \subitem {Fractal\+Tree\+::\+Tree\+Builder}, \hyperpage{56}
+  \item {leaf\+Generator}
+    \subitem {Fractal\+Tree\+::\+Demo\+::\+Demo\+Tree\+Creator}, 
+		\hyperpage{24}
+  \item {Length\+Degradation}
+    \subitem {Fractal\+Tree\+::\+Stationary\+Branch}, \hyperpage{45}
+
+  \indexspace
+
+  \item {m\+\_\+\+Renderer}
+    \subitem {Fractal\+Tree\+::\+Stationary\+Branch}, \hyperpage{45}
+  \item {m\+\_\+\+Width}
+    \subitem {Fractal\+Tree\+::\+Stationary\+Branch}, \hyperpage{46}
+  \item {moving\+Tree}
+    \subitem {Fractal\+Tree\+::\+Demo\+::\+Trees\+To\+Demo}, 
+		\hyperpage{58}
+
+  \indexspace
+
+  \item {num\+To\+Create}
+    \subitem {Fractal\+Tree\+::\+Colonization\+Leaf\+Generator}, 
+		\hyperpage{15}
+
+  \indexspace
+
+  \item {Point\+Mass}
+    \subitem {Fractal\+Tree\+::\+Point\+Mass}, \hyperpage{37}
+  \item {position}
+    \subitem {Fractal\+Tree\+::\+Colonization\+Leaf}, \hyperpage{14}
+    \subitem {Fractal\+Tree\+::\+Point\+Mass}, \hyperpage{38}
+
+  \indexspace
+
+  \item {Remove}
+    \subitem {Fractal\+Tree\+::\+Moving\+Tree\+Builder}, \hyperpage{35}
+    \subitem {Fractal\+Tree\+::\+Stationary\+Tree\+Builder}, 
+		\hyperpage{48}
+
+  \indexspace
+
+  \item {S\+P\+R\+I\+T\+E\+\_\+\+S\+I\+ZE}
+    \subitem {Fractal\+Tree\+::\+Stationary\+Branch}, \hyperpage{46}
+  \item {Setup}
+    \subitem {Fractal\+Tree\+::\+Branch}, \hyperpage{11, 12}
+    \subitem {Fractal\+Tree\+::\+Moving\+Branch\+Impl}, 
+		\hyperpage{30, 31}
+    \subitem {Fractal\+Tree\+::\+Spring}, \hyperpage{39}
+    \subitem {Fractal\+Tree\+::\+Stationary\+Branch}, 
+		\hyperpage{43, 44}
+  \item {Show}
+    \subitem {Fractal\+Tree\+::\+Demo\+::\+Trees\+To\+Demo}, 
+		\hyperpage{58}
+  \item {showing\+Stationary}
+    \subitem {Fractal\+Tree\+::\+Demo\+::\+Demo\+Tree\+Creator}, 
+		\hyperpage{24}
+  \item {start}
+    \subitem {Fractal\+Tree\+::\+Spring}, \hyperpage{40}
+  \item {start\+Point}
+    \subitem {Fractal\+Tree\+::\+Moving\+Branch}, \hyperpage{28}
+    \subitem {Fractal\+Tree\+::\+Moving\+Branch\+Impl}, \hyperpage{32}
+  \item {start\+Pos}
+    \subitem {Fractal\+Tree\+::\+Branch}, \hyperpage{13}
+    \subitem {Fractal\+Tree\+::\+Moving\+Branch\+Impl}, \hyperpage{32}
+    \subitem {Fractal\+Tree\+::\+Stationary\+Branch}, \hyperpage{47}
+  \item {stationary\+Tree}
+    \subitem {Fractal\+Tree\+::\+Demo\+::\+Trees\+To\+Demo}, 
+		\hyperpage{59}
+
+  \indexspace
+
+  \item {transform}
+    \subitem {Fractal\+Tree\+::\+Branch}, \hyperpage{13}
+  \item {tree\+Builders}
+    \subitem {Fractal\+Tree\+::\+Demo\+::\+Demo\+Tree\+Creator}, 
+		\hyperpage{24}
+  \item {Tree\+Type}
+    \subitem {Fractal\+Tree\+::\+Tree\+Builder}, \hyperpage{51}
+  \item {tree\+Type}
+    \subitem {Fractal\+Tree\+::\+Tree\+Builder}, \hyperpage{56}
+
+  \indexspace
+
+  \item {Update\+Color}
+    \subitem {Fractal\+Tree\+::\+Stationary\+Branch}, \hyperpage{45}
+  \item {Update\+Sprite}
+    \subitem {Fractal\+Tree\+::\+Stationary\+Branch}, \hyperpage{45}
+
+  \indexspace
+
+  \item {velocity}
+    \subitem {Fractal\+Tree\+::\+Point\+Mass}, \hyperpage{38}
+
+\end{theindex}

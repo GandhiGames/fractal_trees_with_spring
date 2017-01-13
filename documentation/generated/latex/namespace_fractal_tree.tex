@@ -1,5 +1,8 @@
 \hypertarget{namespace_fractal_tree}{}\section{Fractal\+Tree Namespace Reference}
 \label{namespace_fractal_tree}\index{Fractal\+Tree@{Fractal\+Tree}}
+\subsection*{Namespaces}
+\begin{DoxyCompactItemize}
+\end{DoxyCompactItemize}
 \subsection*{Classes}
 \begin{DoxyCompactItemize}
 \item 
@@ -13,6 +16,8 @@ class \hyperlink{class_fractal_tree_1_1_colonization_tree}{Colonization\+Tree}
 \begin{DoxyCompactList}\small\item\em Spawns a fractal tree using space colonization\+: \href{http://algorithmicbotany.org/papers/colonization.egwnp2007.pdf}{\tt http\+://algorithmicbotany.\+org/papers/colonization.\+egwnp2007.\+pdf} \end{DoxyCompactList}\item 
 class \hyperlink{class_fractal_tree_1_1_default_tree}{Default\+Tree}
 \begin{DoxyCompactList}\small\item\em Spawns a fractal tree. \end{DoxyCompactList}\item 
+class \hyperlink{class_fractal_tree_1_1_demo_leaf_placement}{Demo\+Leaf\+Placement}
+\begin{DoxyCompactList}\small\item\em For demo purposes. Spawns a leaf object (used for space colonization tree algorithm) at mouse position on left-\/click. \end{DoxyCompactList}\item 
 class {\bfseries Extensions}
 \begin{DoxyCompactList}\small\item\em Extension methods used by the Fractal \hyperlink{interface_fractal_tree_1_1_tree}{Tree} generator. \end{DoxyCompactList}\item 
 class \hyperlink{class_fractal_tree_1_1_l_rule}{L\+Rule}
@@ -24,6 +29,8 @@ interface \hyperlink{interface_fractal_tree_1_1_moving_branch}{Moving\+Branch}
 class \hyperlink{class_fractal_tree_1_1_moving_branch_impl}{Moving\+Branch\+Impl}
 \begin{DoxyCompactList}\small\item\em Extends a normal branch and adds spring functionality. Force can be applied to the start and end point of the branch. \end{DoxyCompactList}\item 
 class \hyperlink{class_fractal_tree_1_1_moving_tree_builder}{Moving\+Tree\+Builder}
+\begin{DoxyCompactList}\small\item\em Builds a moving tree and provides methods of applying forces to generated trees. \end{DoxyCompactList}\item 
+class \hyperlink{class_fractal_tree_1_1_moving_tree_builder_editor}{Moving\+Tree\+Builder\+Editor}
 \item 
 class \hyperlink{class_fractal_tree_1_1_point_mass}{Point\+Mass}
 \begin{DoxyCompactList}\small\item\em Added to the start and end of movable branches. Used to add spring force to a branch. \end{DoxyCompactList}\item 
@@ -33,7 +40,11 @@ class \hyperlink{class_fractal_tree_1_1_stationary_branch}{Stationary\+Branch}
 \begin{DoxyCompactList}\small\item\em A stationary branch. Forces cannot be applied to it. It is a line drawn onscreen by rotating and scaling a sprite between a start and end point. \end{DoxyCompactList}\item 
 class \hyperlink{class_fractal_tree_1_1_stationary_tree_builder}{Stationary\+Tree\+Builder}
 \begin{DoxyCompactList}\small\item\em Builds a stationary tree. \end{DoxyCompactList}\item 
-interface \hyperlink{interface_fractal_tree_1_1_tree}{Tree}
+class \hyperlink{class_fractal_tree_1_1_stationary_tree_builder_editor}{Stationary\+Tree\+Builder\+Editor}
 \item 
+interface \hyperlink{interface_fractal_tree_1_1_tree}{Tree}
+\begin{DoxyCompactList}\small\item\em All trees should have a method of generating themselves. \end{DoxyCompactList}\item 
 class \hyperlink{class_fractal_tree_1_1_tree_builder}{Tree\+Builder}
-\begin{DoxyCompactList}\small\item\em The base tree builder class. Provides paramaters for default, L, and colonization tree generation. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em The base tree builder class. Provides paramaters for default, L, and colonization tree generation. \end{DoxyCompactList}\item 
+class \hyperlink{class_fractal_tree_1_1_tree_builder_editor}{Tree\+Builder\+Editor}
+\begin{DoxyCompactList}\small\item\em Custom editor for tree builder class. Hides variables not in use based on Tree\+Type. \end{DoxyCompactList}\end{DoxyCompactItemize}

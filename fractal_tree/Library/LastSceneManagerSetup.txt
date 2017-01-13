@@ -1,4 +1,4 @@
 sceneSetups:
-- path: Assets/Scenes/L System Generator Demo.unity
+- path: Assets/FT/Scenes/Specific Demos/Branch Generator Demo.unity
   isLoaded: 1
   isActive: 1
